@@ -87,11 +87,69 @@ drops those documents from `gretel_pool`, so no test text can ever enter trainin
 it finds is recorded in `data/manifest.json` (`gretel_pool_dropped_duplicates`) and below.
 
 <!-- duplicates:begin -->
-NOT MEASURED (run `python scripts/data_stats.py`).
+Documents dropped from `gretel_pool`: **11**.
 <!-- duplicates:end -->
 
 ## Statistics
 
 <!-- stats:begin -->
-NOT MEASURED (run `python scripts/data_stats.py`).
+### Raw files read
+
+| raw file | documents | gold spans | spans failing the checks |
+|---|---:|---:|---:|
+| gretel_en_test | 2,891 | 12,853 | 0 |
+| gretel_en_train | 26,019 | 118,965 | 0 |
+| nemotron_test | 100,000 | 850,340 | 0 |
+| nemotron_train | 100,000 | 825,456 | 0 |
+
+### Sets
+
+| set | documents | mean length (chars) | label cardinality | no category |
+|---|---:|---:|---:|---:|
+| train | 79,834 | 1,001.9 | 1.955 | 4.35% |
+| calibration | 10,026 | 1,017.8 | 1.954 | 4.12% |
+| dev | 10,140 | 1,001.1 | 1.945 | 4.66% |
+| test_shift | 100,000 | 958.5 | 2.168 | 2.54% |
+| test_ood | 2,891 | 1,412.0 | 1.478 | 24.63% |
+| gretel_pool | 26,008 | 1,408.1 | 1.492 | 24.20% |
+
+### Category prevalence (rate and count)
+
+| category | train | calibration | dev | test_shift | test_ood | gretel_pool |
+|---|---:|---:|---:|---:|---:|---:|
+| IDENTITY | 45.33% (36,189) | 45.14% (4,526) | 45.56% (4,620) | 53.05% (53,048) | 66.41% (1,920) | 67.43% (17,536) |
+| CONTACT | 68.91% (55,010) | 68.59% (6,877) | 67.73% (6,868) | 69.21% (69,210) | 61.71% (1,784) | 61.47% (15,987) |
+| FINANCIAL | 27.52% (21,970) | 27.65% (2,772) | 27.64% (2,803) | 32.70% (32,697) | 15.74% (455) | 15.84% (4,119) |
+| HEALTH | 12.38% (9,885) | 12.12% (1,215) | 12.01% (1,218) | 18.27% (18,268) | 0.00% (0) | 0.00% (0) |
+| CREDENTIALS | 19.53% (15,591) | 19.72% (1,977) | 19.81% (2,009) | 19.43% (19,425) | 3.91% (113) | 4.46% (1,161) |
+| SPECIAL_CATEGORY | 21.82% (17,417) | 22.16% (2,222) | 21.79% (2,209) | 24.17% (24,168) | 0.00% (0) | 0.00% (0) |
+
+### Co-occurrence matrix (train; documents positive for both)
+
+| | IDENTITY | CONTACT | FINANCIAL | HEALTH | CREDENTIALS | SPECIAL_CATEGORY |
+|---|---:|---:|---:|---:|---:|---:|
+| IDENTITY | 36,189 | 25,483 | 8,461 | 6,885 | 4,033 | 8,577 |
+| CONTACT | 25,483 | 55,010 | 14,071 | 5,046 | 9,846 | 11,350 |
+| FINANCIAL | 8,461 | 14,071 | 21,970 | 1,594 | 3,700 | 4,535 |
+| HEALTH | 6,885 | 5,046 | 1,594 | 9,885 | 1,001 | 2,851 |
+| CREDENTIALS | 4,033 | 9,846 | 3,700 | 1,001 | 15,591 | 3,111 |
+| SPECIAL_CATEGORY | 8,577 | 11,350 | 4,535 | 2,851 | 3,111 | 17,417 |
+
+### Trivial baseline: always predict the train majority class, evaluated on dev
+
+| category | majority class (train) | accuracy (dev) | F1 (dev, positive class) |
+|---|---:|---:|---:|
+| IDENTITY | 0 | 0.5444 | 0.0000 (undefined, set to 0) |
+| CONTACT | 1 | 0.6773 | 0.8076 |
+| FINANCIAL | 0 | 0.7236 | 0.0000 (undefined, set to 0) |
+| HEALTH | 0 | 0.8799 | 0.0000 (undefined, set to 0) |
+| CREDENTIALS | 0 | 0.8019 | 0.0000 (undefined, set to 0) |
+| SPECIAL_CATEGORY | 0 | 0.7821 | 0.0000 (undefined, set to 0) |
+
+### Prevalence flags (< 2% or > 98%; reported, definition unchanged)
+
+- **HEALTH** in `test_ood`: 0.00% (low)
+- **SPECIAL_CATEGORY** in `test_ood`: 0.00% (low)
+- **HEALTH** in `gretel_pool`: 0.00% (low)
+- **SPECIAL_CATEGORY** in `gretel_pool`: 0.00% (low)
 <!-- stats:end -->

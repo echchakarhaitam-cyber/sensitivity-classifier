@@ -1,0 +1,341 @@
+{
+  "cooccurrence_train": {
+    "CONTACT": {
+      "CONTACT": 55010,
+      "CREDENTIALS": 9846,
+      "FINANCIAL": 14071,
+      "HEALTH": 5046,
+      "IDENTITY": 25483,
+      "SPECIAL_CATEGORY": 11350
+    },
+    "CREDENTIALS": {
+      "CONTACT": 9846,
+      "CREDENTIALS": 15591,
+      "FINANCIAL": 3700,
+      "HEALTH": 1001,
+      "IDENTITY": 4033,
+      "SPECIAL_CATEGORY": 3111
+    },
+    "FINANCIAL": {
+      "CONTACT": 14071,
+      "CREDENTIALS": 3700,
+      "FINANCIAL": 21970,
+      "HEALTH": 1594,
+      "IDENTITY": 8461,
+      "SPECIAL_CATEGORY": 4535
+    },
+    "HEALTH": {
+      "CONTACT": 5046,
+      "CREDENTIALS": 1001,
+      "FINANCIAL": 1594,
+      "HEALTH": 9885,
+      "IDENTITY": 6885,
+      "SPECIAL_CATEGORY": 2851
+    },
+    "IDENTITY": {
+      "CONTACT": 25483,
+      "CREDENTIALS": 4033,
+      "FINANCIAL": 8461,
+      "HEALTH": 6885,
+      "IDENTITY": 36189,
+      "SPECIAL_CATEGORY": 8577
+    },
+    "SPECIAL_CATEGORY": {
+      "CONTACT": 11350,
+      "CREDENTIALS": 3111,
+      "FINANCIAL": 4535,
+      "HEALTH": 2851,
+      "IDENTITY": 8577,
+      "SPECIAL_CATEGORY": 17417
+    }
+  },
+  "gretel_pool_dropped_duplicates": 11,
+  "load_counts": {
+    "gretel_en_test": {
+      "documents": 2891,
+      "invalid_spans": 0,
+      "spans": 12853
+    },
+    "gretel_en_train": {
+      "documents": 26019,
+      "invalid_spans": 0,
+      "spans": 118965
+    },
+    "nemotron_test": {
+      "documents": 100000,
+      "invalid_spans": 0,
+      "spans": 850340
+    },
+    "nemotron_train": {
+      "documents": 100000,
+      "invalid_spans": 0,
+      "spans": 825456
+    }
+  },
+  "majority_baseline_dev": {
+    "CONTACT": {
+      "accuracy": 0.6773175542406311,
+      "f1": 0.8076199435559737,
+      "f1_defined": true,
+      "majority": 1
+    },
+    "CREDENTIALS": {
+      "accuracy": 0.8018737672583827,
+      "f1": 0.0,
+      "f1_defined": false,
+      "majority": 0
+    },
+    "FINANCIAL": {
+      "accuracy": 0.7235700197238659,
+      "f1": 0.0,
+      "f1_defined": false,
+      "majority": 0
+    },
+    "HEALTH": {
+      "accuracy": 0.8798816568047337,
+      "f1": 0.0,
+      "f1_defined": false,
+      "majority": 0
+    },
+    "IDENTITY": {
+      "accuracy": 0.5443786982248521,
+      "f1": 0.0,
+      "f1_defined": false,
+      "majority": 0
+    },
+    "SPECIAL_CATEGORY": {
+      "accuracy": 0.7821499013806706,
+      "f1": 0.0,
+      "f1_defined": false,
+      "majority": 0
+    }
+  },
+  "prevalence_flags": [
+    {
+      "category": "HEALTH",
+      "rate": 0.0,
+      "set": "test_ood",
+      "side": "low"
+    },
+    {
+      "category": "SPECIAL_CATEGORY",
+      "rate": 0.0,
+      "set": "test_ood",
+      "side": "low"
+    },
+    {
+      "category": "HEALTH",
+      "rate": 0.0,
+      "set": "gretel_pool",
+      "side": "low"
+    },
+    {
+      "category": "SPECIAL_CATEGORY",
+      "rate": 0.0,
+      "set": "gretel_pool",
+      "side": "low"
+    }
+  ],
+  "set_sha256": {
+    "calibration": "4091e2215c2fa42e541b817c84f515373545a6a527cb6f8b643455a46aaa8372",
+    "dev": "44df60ff56e146a8e81e871849e7f2ac99b9423cae67bb58a8c860229c852adc",
+    "gretel_pool": "47ded3f74f14e6825b0cb6f32ab37df64ca3423d3af314dae797a17e6007e72a",
+    "test_ood": "77926c8bf1632cbb574895be942d0ab1d34fbb391eb5a0c9578365716173948b",
+    "test_shift": "ec35a04af00c86d78475e808e5a43107bf332ac7e811a45a8fb977b71df929bb",
+    "train": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+  },
+  "sets": {
+    "calibration": {
+      "documents": 10026,
+      "label_cardinality": 1.9538200678236586,
+      "mean_length_chars": 1017.8379214043487,
+      "prevalence": {
+        "CONTACT": {
+          "count": 6877,
+          "rate": 0.6859166167963295
+        },
+        "CREDENTIALS": {
+          "count": 1977,
+          "rate": 0.1971873129862358
+        },
+        "FINANCIAL": {
+          "count": 2772,
+          "rate": 0.2764811490125673
+        },
+        "HEALTH": {
+          "count": 1215,
+          "rate": 0.12118491921005387
+        },
+        "IDENTITY": {
+          "count": 4526,
+          "rate": 0.4514262916417315
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 2222,
+          "rate": 0.22162377817674048
+        }
+      },
+      "share_no_category": 0.04119289846399362
+    },
+    "dev": {
+      "documents": 10140,
+      "label_cardinality": 1.9454635108481262,
+      "mean_length_chars": 1001.1393491124261,
+      "prevalence": {
+        "CONTACT": {
+          "count": 6868,
+          "rate": 0.6773175542406311
+        },
+        "CREDENTIALS": {
+          "count": 2009,
+          "rate": 0.19812623274161736
+        },
+        "FINANCIAL": {
+          "count": 2803,
+          "rate": 0.27642998027613414
+        },
+        "HEALTH": {
+          "count": 1218,
+          "rate": 0.12011834319526628
+        },
+        "IDENTITY": {
+          "count": 4620,
+          "rate": 0.4556213017751479
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 2209,
+          "rate": 0.21785009861932939
+        }
+      },
+      "share_no_category": 0.04664694280078895
+    },
+    "gretel_pool": {
+      "documents": 26008,
+      "label_cardinality": 1.491964011073516,
+      "mean_length_chars": 1408.1141187326975,
+      "prevalence": {
+        "CONTACT": {
+          "count": 15987,
+          "rate": 0.6146954783143648
+        },
+        "CREDENTIALS": {
+          "count": 1161,
+          "rate": 0.04464011073515841
+        },
+        "FINANCIAL": {
+          "count": 4119,
+          "rate": 0.1583743463549677
+        },
+        "HEALTH": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "IDENTITY": {
+          "count": 17536,
+          "rate": 0.674254075669025
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "share_no_category": 0.24196401107351584
+    },
+    "test_ood": {
+      "documents": 2891,
+      "label_cardinality": 1.4776893808370806,
+      "mean_length_chars": 1411.9920442753373,
+      "prevalence": {
+        "CONTACT": {
+          "count": 1784,
+          "rate": 0.6170875129712902
+        },
+        "CREDENTIALS": {
+          "count": 113,
+          "rate": 0.03908682116914562
+        },
+        "FINANCIAL": {
+          "count": 455,
+          "rate": 0.15738498789346247
+        },
+        "HEALTH": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "IDENTITY": {
+          "count": 1920,
+          "rate": 0.6641300588031823
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "share_no_category": 0.24628156347284677
+    },
+    "test_shift": {
+      "documents": 100000,
+      "label_cardinality": 2.16816,
+      "mean_length_chars": 958.53844,
+      "prevalence": {
+        "CONTACT": {
+          "count": 69210,
+          "rate": 0.6921
+        },
+        "CREDENTIALS": {
+          "count": 19425,
+          "rate": 0.19425
+        },
+        "FINANCIAL": {
+          "count": 32697,
+          "rate": 0.32697
+        },
+        "HEALTH": {
+          "count": 18268,
+          "rate": 0.18268
+        },
+        "IDENTITY": {
+          "count": 53048,
+          "rate": 0.53048
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 24168,
+          "rate": 0.24168
+        }
+      },
+      "share_no_category": 0.02536
+    },
+    "train": {
+      "documents": 79834,
+      "label_cardinality": 1.954831274895408,
+      "mean_length_chars": 1001.9349650524839,
+      "prevalence": {
+        "CONTACT": {
+          "count": 55010,
+          "rate": 0.6890547886865246
+        },
+        "CREDENTIALS": {
+          "count": 15591,
+          "rate": 0.19529273241977102
+        },
+        "FINANCIAL": {
+          "count": 21970,
+          "rate": 0.2751960317659143
+        },
+        "HEALTH": {
+          "count": 9885,
+          "rate": 0.1238194253075131
+        },
+        "IDENTITY": {
+          "count": 36189,
+          "rate": 0.4533031039406769
+        },
+        "SPECIAL_CATEGORY": {
+          "count": 17417,
+          "rate": 0.21816519277500815
+        }
+      },
+      "share_no_category": 0.0434902422526743
+    }
+  }
+}
