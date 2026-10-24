@@ -9,7 +9,11 @@ description = "Document-level sensitive-content classification with calibration,
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "Haitam Echchakar"}]
-dependencies = []
+# Our own public library, pinned to an exact commit (498adcc) so that its Document/Span model,
+# dataset loaders and split hashing cannot change under us. pyarrow comes with its [data] extra.
+dependencies = [
+    "privgate[data] @ git+https://github.com/echchakarhaitam-cyber/llm-privacy-gateway@498adccdf1cb5c4b3340a20293a88104fa678fcc",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.5"]
