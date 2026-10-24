@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensclf"
+version = "0.1.0"
+description = "Document-level sensitive-content classification with calibration, abstention and conformal guarantees."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Haitam Echchakar"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+# Exact pins: the versions installed in llm-privacy-gateway's environment.
+ml = ["scikit-learn==1.7.2", "numpy==2.2.6", "scipy==1.15.3"]
+plots = ["matplotlib==3.10.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Integration tests are opt-in: `pytest -m data`, `pytest -m slow`.
+addopts = "-m 'not data and not slow'"
+markers = [
+    "data: integration tests that need the real raw files (SENSCLF_RAW_DIR) or data/processed/",
+    "slow: tests that take minutes",
+]
+
+[tool.ruff]
+line-length = 100

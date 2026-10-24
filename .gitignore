@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+data/raw/
+data/processed/
+models/
+results/*/predictions*.jsonl
