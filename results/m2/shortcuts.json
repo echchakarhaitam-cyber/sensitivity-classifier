@@ -1,0 +1,2854 @@
+{
+  "per_domain": {
+    "dev": {
+      "char_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 276,
+          "domain": "Agriculture",
+          "macro_ap": 0.9394012367633954,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 348,
+          "domain": "Automotive",
+          "macro_ap": 0.9741154488578219,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 326,
+          "domain": "Biotechnology",
+          "macro_ap": 0.9571150603752797,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 208,
+          "domain": "Chemicals",
+          "macro_ap": 0.966199218135115,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 392,
+          "domain": "Civil Rights",
+          "macro_ap": 0.9784978171337283,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 332,
+          "domain": "Construction",
+          "macro_ap": 0.9613979857383504,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 266,
+          "domain": "Consumer Goods",
+          "macro_ap": 0.9567464444258008,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 444,
+          "domain": "Cybersecurity",
+          "macro_ap": 0.9279349888587576,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 370,
+          "domain": "Ecommerce",
+          "macro_ap": 0.982343162257207,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 338,
+          "domain": "Education",
+          "macro_ap": 0.9717827583104693,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 314,
+          "domain": "Energy",
+          "macro_ap": 0.9732409290799748,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 304,
+          "domain": "Entertainment",
+          "macro_ap": 0.9669384247748368,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 390,
+          "domain": "Finance",
+          "macro_ap": 0.9787137064788376,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 410,
+          "domain": "Government",
+          "macro_ap": 0.9804335255440648,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 394,
+          "domain": "Healthcare",
+          "macro_ap": 0.9630532202951985,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Hospitality",
+          "macro_ap": 0.9777907773502861,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 356,
+          "domain": "Identity Management",
+          "macro_ap": 0.981767270019403,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 416,
+          "domain": "Identity Verification Services",
+          "macro_ap": 0.9924852512229893,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 336,
+          "domain": "Insurance",
+          "macro_ap": 0.9928333745349839,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 354,
+          "domain": "Legal",
+          "macro_ap": 0.96937342959788,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 320,
+          "domain": "Logistics",
+          "macro_ap": 0.94144258184218,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 260,
+          "domain": "Manufacturing",
+          "macro_ap": 0.979332405451507,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 334,
+          "domain": "Media",
+          "macro_ap": 0.934347876195155,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Non-Profit",
+          "macro_ap": 0.9748903308557927,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 274,
+          "domain": "Pharmaceuticals",
+          "macro_ap": 0.9758075223577708,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Real Estate",
+          "macro_ap": 0.9755790861738088,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 388,
+          "domain": "Retail",
+          "macro_ap": 0.9705347045262845,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 422,
+          "domain": "Technology",
+          "macro_ap": 0.9396711179625866,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 340,
+          "domain": "Telecommunications",
+          "macro_ap": 0.9716023698309121,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Transportation",
+          "macro_ap": 0.953135044491156,
+          "seen_in_train": true
+        }
+      ],
+      "domain_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 276,
+          "domain": "Agriculture",
+          "macro_ap": 0.3206521739130435,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 348,
+          "domain": "Automotive",
+          "macro_ap": 0.2006704980842912,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 326,
+          "domain": "Biotechnology",
+          "macro_ap": 0.3062372188139059,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 208,
+          "domain": "Chemicals",
+          "macro_ap": 0.2948717948717949,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 392,
+          "domain": "Civil Rights",
+          "macro_ap": 0.3954081632653061,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 332,
+          "domain": "Construction",
+          "macro_ap": 0.29216867469879515,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 266,
+          "domain": "Consumer Goods",
+          "macro_ap": 0.2744360902255639,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 444,
+          "domain": "Cybersecurity",
+          "macro_ap": 0.29354354354354356,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 370,
+          "domain": "Ecommerce",
+          "macro_ap": 0.3297297297297297,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 338,
+          "domain": "Education",
+          "macro_ap": 0.3678500986193294,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 314,
+          "domain": "Energy",
+          "macro_ap": 0.28450106157112526,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 304,
+          "domain": "Entertainment",
+          "macro_ap": 0.362938596491228,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 390,
+          "domain": "Finance",
+          "macro_ap": 0.3162393162393162,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 410,
+          "domain": "Government",
+          "macro_ap": 0.35894308943089426,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 394,
+          "domain": "Healthcare",
+          "macro_ap": 0.4242808798646362,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Hospitality",
+          "macro_ap": 0.3282997762863535,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 356,
+          "domain": "Identity Management",
+          "macro_ap": 0.38202247191011235,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 416,
+          "domain": "Identity Verification Services",
+          "macro_ap": 0.3922275641025641,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 336,
+          "domain": "Insurance",
+          "macro_ap": 0.38492063492063494,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 354,
+          "domain": "Legal",
+          "macro_ap": 0.4001883239171375,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 320,
+          "domain": "Logistics",
+          "macro_ap": 0.2765625,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 260,
+          "domain": "Manufacturing",
+          "macro_ap": 0.24230769230769234,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 334,
+          "domain": "Media",
+          "macro_ap": 0.3612774451097805,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Non-Profit",
+          "macro_ap": 0.35548523206751054,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 274,
+          "domain": "Pharmaceuticals",
+          "macro_ap": 0.34610705596107055,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Real Estate",
+          "macro_ap": 0.3260626398210291,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 388,
+          "domain": "Retail",
+          "macro_ap": 0.2869415807560137,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 422,
+          "domain": "Technology",
+          "macro_ap": 0.24526066350710898,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 340,
+          "domain": "Telecommunications",
+          "macro_ap": 0.30588235294117644,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Transportation",
+          "macro_ap": 0.2088607594936709,
+          "seen_in_train": true
+        }
+      ],
+      "word_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 276,
+          "domain": "Agriculture",
+          "macro_ap": 0.9452811775997074,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 348,
+          "domain": "Automotive",
+          "macro_ap": 0.9803355737939695,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 326,
+          "domain": "Biotechnology",
+          "macro_ap": 0.9505158959819372,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 208,
+          "domain": "Chemicals",
+          "macro_ap": 0.9704867383390446,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 392,
+          "domain": "Civil Rights",
+          "macro_ap": 0.9731795002599846,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 332,
+          "domain": "Construction",
+          "macro_ap": 0.9644562437303291,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 266,
+          "domain": "Consumer Goods",
+          "macro_ap": 0.9553566225818629,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 444,
+          "domain": "Cybersecurity",
+          "macro_ap": 0.9327502707959204,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 370,
+          "domain": "Ecommerce",
+          "macro_ap": 0.987974549074852,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 338,
+          "domain": "Education",
+          "macro_ap": 0.969136797799599,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 314,
+          "domain": "Energy",
+          "macro_ap": 0.9674476881075651,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 304,
+          "domain": "Entertainment",
+          "macro_ap": 0.9595723785400737,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 390,
+          "domain": "Finance",
+          "macro_ap": 0.9760659875651988,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 410,
+          "domain": "Government",
+          "macro_ap": 0.9766757523124715,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 394,
+          "domain": "Healthcare",
+          "macro_ap": 0.9717122850057386,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Hospitality",
+          "macro_ap": 0.9785862774772637,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 356,
+          "domain": "Identity Management",
+          "macro_ap": 0.9909347457445664,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 416,
+          "domain": "Identity Verification Services",
+          "macro_ap": 0.9919722266859603,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 336,
+          "domain": "Insurance",
+          "macro_ap": 0.9938555197489699,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 354,
+          "domain": "Legal",
+          "macro_ap": 0.9708845028857881,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 320,
+          "domain": "Logistics",
+          "macro_ap": 0.9496896963341097,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 260,
+          "domain": "Manufacturing",
+          "macro_ap": 0.9789257078212095,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 334,
+          "domain": "Media",
+          "macro_ap": 0.9392672959765687,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Non-Profit",
+          "macro_ap": 0.9785284290896268,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 274,
+          "domain": "Pharmaceuticals",
+          "macro_ap": 0.974872520657942,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Real Estate",
+          "macro_ap": 0.975293292849535,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 388,
+          "domain": "Retail",
+          "macro_ap": 0.9756483666191595,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 422,
+          "domain": "Technology",
+          "macro_ap": 0.9312282945047099,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 340,
+          "domain": "Telecommunications",
+          "macro_ap": 0.9813081306495781,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Transportation",
+          "macro_ap": 0.9722382368805457,
+          "seen_in_train": true
+        }
+      ],
+      "word_svc": [
+        {
+          "categories_defined": 6,
+          "documents": 276,
+          "domain": "Agriculture",
+          "macro_ap": 0.9509648157271342,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 348,
+          "domain": "Automotive",
+          "macro_ap": 0.9819424268054266,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 326,
+          "domain": "Biotechnology",
+          "macro_ap": 0.9577721564735628,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 208,
+          "domain": "Chemicals",
+          "macro_ap": 0.9722001663251064,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 392,
+          "domain": "Civil Rights",
+          "macro_ap": 0.9742534195216731,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 332,
+          "domain": "Construction",
+          "macro_ap": 0.9650675380972027,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 266,
+          "domain": "Consumer Goods",
+          "macro_ap": 0.9606005707355404,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 444,
+          "domain": "Cybersecurity",
+          "macro_ap": 0.9405239352217999,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 370,
+          "domain": "Ecommerce",
+          "macro_ap": 0.988351490671845,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 338,
+          "domain": "Education",
+          "macro_ap": 0.9686042051527437,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 314,
+          "domain": "Energy",
+          "macro_ap": 0.9714541085221516,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 304,
+          "domain": "Entertainment",
+          "macro_ap": 0.9603468201395652,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 390,
+          "domain": "Finance",
+          "macro_ap": 0.979172872705968,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 410,
+          "domain": "Government",
+          "macro_ap": 0.9787375859919897,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 394,
+          "domain": "Healthcare",
+          "macro_ap": 0.9745037543081839,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Hospitality",
+          "macro_ap": 0.9764963483515275,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 356,
+          "domain": "Identity Management",
+          "macro_ap": 0.9916429052917791,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 416,
+          "domain": "Identity Verification Services",
+          "macro_ap": 0.9933581714596262,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 336,
+          "domain": "Insurance",
+          "macro_ap": 0.9938108633012143,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 354,
+          "domain": "Legal",
+          "macro_ap": 0.9761271477664045,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 320,
+          "domain": "Logistics",
+          "macro_ap": 0.9550288440921655,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 260,
+          "domain": "Manufacturing",
+          "macro_ap": 0.9792882267024915,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 334,
+          "domain": "Media",
+          "macro_ap": 0.9404138643915254,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Non-Profit",
+          "macro_ap": 0.9845332044953571,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 274,
+          "domain": "Pharmaceuticals",
+          "macro_ap": 0.9785233418984908,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 298,
+          "domain": "Real Estate",
+          "macro_ap": 0.9757424619197207,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 388,
+          "domain": "Retail",
+          "macro_ap": 0.9777398166572739,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 422,
+          "domain": "Technology",
+          "macro_ap": 0.9302977547957717,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 340,
+          "domain": "Telecommunications",
+          "macro_ap": 0.9823535126966441,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 316,
+          "domain": "Transportation",
+          "macro_ap": 0.9718003563847243,
+          "seen_in_train": true
+        }
+      ]
+    },
+    "test_shift": {
+      "char_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 3728,
+          "domain": "Access Control Systems",
+          "macro_ap": 0.9852943000052363,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Advertising",
+          "macro_ap": 0.9140504847576066,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3066,
+          "domain": "Automobile",
+          "macro_ap": 0.9523684806303135,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3840,
+          "domain": "Banking",
+          "macro_ap": 0.9469990982104526,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3762,
+          "domain": "Brokerage",
+          "macro_ap": 0.9680318226294765,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Casualty",
+          "macro_ap": 0.9750061313696595,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3620,
+          "domain": "Consulting",
+          "macro_ap": 0.9384890341967345,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3714,
+          "domain": "Credit",
+          "macro_ap": 0.9800911555141667,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3634,
+          "domain": "Disability",
+          "macro_ap": 0.9824897992791272,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3392,
+          "domain": "Elections",
+          "macro_ap": 0.967463063625131,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3146,
+          "domain": "Environmental",
+          "macro_ap": 0.9538511938105568,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3258,
+          "domain": "Fitness",
+          "macro_ap": 0.9546414485642277,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3558,
+          "domain": "Health",
+          "macro_ap": 0.9766614475159751,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3500,
+          "domain": "Healthcare Providers",
+          "macro_ap": 0.9826177410771851,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3566,
+          "domain": "Human Resources",
+          "macro_ap": 0.9699066798016842,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3786,
+          "domain": "Information Technology",
+          "macro_ap": 0.9412484859125451,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3104,
+          "domain": "Insurance",
+          "macro_ap": 0.9755850925358057,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3496,
+          "domain": "Investment",
+          "macro_ap": 0.9620779292213376,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3632,
+          "domain": "Life",
+          "macro_ap": 0.9819470972975034,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3622,
+          "domain": "Marketing",
+          "macro_ap": 0.9307026436818345,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3230,
+          "domain": "Mortgage",
+          "macro_ap": 0.9691083420632526,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2812,
+          "domain": "Product",
+          "macro_ap": 0.9613941171600099,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2930,
+          "domain": "Property",
+          "macro_ap": 0.9626681393871049,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3084,
+          "domain": "Public Safety",
+          "macro_ap": 0.9658930818792174,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3574,
+          "domain": "Services",
+          "macro_ap": 0.9627036858380981,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3576,
+          "domain": "Social Science",
+          "macro_ap": 0.9656037006562125,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3190,
+          "domain": "Sports",
+          "macro_ap": 0.9489383365514615,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3458,
+          "domain": "Travel",
+          "macro_ap": 0.9765243965692257,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3794,
+          "domain": "User Account and Transaction Services",
+          "macro_ap": 0.9732682420526042,
+          "seen_in_train": false
+        }
+      ],
+      "domain_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 3728,
+          "domain": "Access Control Systems",
+          "macro_ap": 0.39552038626609437,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Advertising",
+          "macro_ap": 0.3449287913779831,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3066,
+          "domain": "Automobile",
+          "macro_ap": 0.17460317460317462,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3840,
+          "domain": "Banking",
+          "macro_ap": 0.3540364583333333,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3762,
+          "domain": "Brokerage",
+          "macro_ap": 0.3790536948431685,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Casualty",
+          "macro_ap": 0.3974692070823711,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3620,
+          "domain": "Consulting",
+          "macro_ap": 0.34198895027624304,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3714,
+          "domain": "Credit",
+          "macro_ap": 0.3670346436905403,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3634,
+          "domain": "Disability",
+          "macro_ap": 0.4375343973582828,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3392,
+          "domain": "Elections",
+          "macro_ap": 0.40492334905660377,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3146,
+          "domain": "Environmental",
+          "macro_ap": 0.2843822843822844,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3258,
+          "domain": "Fitness",
+          "macro_ap": 0.37794147738899114,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3558,
+          "domain": "Health",
+          "macro_ap": 0.44449128724002246,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3500,
+          "domain": "Healthcare Providers",
+          "macro_ap": 0.40552380952380945,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3566,
+          "domain": "Human Resources",
+          "macro_ap": 0.308094971022621,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3786,
+          "domain": "Information Technology",
+          "macro_ap": 0.28728649410107415,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3104,
+          "domain": "Insurance",
+          "macro_ap": 0.3563144329896908,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3496,
+          "domain": "Investment",
+          "macro_ap": 0.3391018306636156,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3632,
+          "domain": "Life",
+          "macro_ap": 0.40574522760646103,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3622,
+          "domain": "Marketing",
+          "macro_ap": 0.32569482790355236,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3230,
+          "domain": "Mortgage",
+          "macro_ap": 0.38353973168214656,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2812,
+          "domain": "Product",
+          "macro_ap": 0.37980085348506404,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2930,
+          "domain": "Property",
+          "macro_ap": 0.33037542662116043,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3084,
+          "domain": "Public Safety",
+          "macro_ap": 0.35495028102031995,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3574,
+          "domain": "Services",
+          "macro_ap": 0.3470900951315053,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3576,
+          "domain": "Social Science",
+          "macro_ap": 0.40217188665175235,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3190,
+          "domain": "Sports",
+          "macro_ap": 0.3437826541274817,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3458,
+          "domain": "Travel",
+          "macro_ap": 0.38567572778099085,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3794,
+          "domain": "User Account and Transaction Services",
+          "macro_ap": 0.3868827973994026,
+          "seen_in_train": false
+        }
+      ],
+      "word_lr": [
+        {
+          "categories_defined": 6,
+          "documents": 3728,
+          "domain": "Access Control Systems",
+          "macro_ap": 0.9902323321947225,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Advertising",
+          "macro_ap": 0.9171268467886824,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3066,
+          "domain": "Automobile",
+          "macro_ap": 0.9476515578633339,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3840,
+          "domain": "Banking",
+          "macro_ap": 0.9775398942042419,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3762,
+          "domain": "Brokerage",
+          "macro_ap": 0.9775006749345563,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Casualty",
+          "macro_ap": 0.9736061480581594,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3620,
+          "domain": "Consulting",
+          "macro_ap": 0.9435858476834073,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3714,
+          "domain": "Credit",
+          "macro_ap": 0.979780133584355,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3634,
+          "domain": "Disability",
+          "macro_ap": 0.9818265119812338,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3392,
+          "domain": "Elections",
+          "macro_ap": 0.9666635060697327,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3146,
+          "domain": "Environmental",
+          "macro_ap": 0.962671581513939,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3258,
+          "domain": "Fitness",
+          "macro_ap": 0.9598433712431059,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3558,
+          "domain": "Health",
+          "macro_ap": 0.9790339027100576,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3500,
+          "domain": "Healthcare Providers",
+          "macro_ap": 0.9828819848204299,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3566,
+          "domain": "Human Resources",
+          "macro_ap": 0.967402255722134,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3786,
+          "domain": "Information Technology",
+          "macro_ap": 0.9512548980268637,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3104,
+          "domain": "Insurance",
+          "macro_ap": 0.9752122690409456,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3496,
+          "domain": "Investment",
+          "macro_ap": 0.9671608682349122,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3632,
+          "domain": "Life",
+          "macro_ap": 0.9845217269606441,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3622,
+          "domain": "Marketing",
+          "macro_ap": 0.9357173461887789,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3230,
+          "domain": "Mortgage",
+          "macro_ap": 0.972140373690278,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2812,
+          "domain": "Product",
+          "macro_ap": 0.9662755640894586,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2930,
+          "domain": "Property",
+          "macro_ap": 0.9572537334815013,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3084,
+          "domain": "Public Safety",
+          "macro_ap": 0.9659179912936522,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3574,
+          "domain": "Services",
+          "macro_ap": 0.9690183448678445,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3576,
+          "domain": "Social Science",
+          "macro_ap": 0.9681134259366552,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3190,
+          "domain": "Sports",
+          "macro_ap": 0.9516219096221746,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3458,
+          "domain": "Travel",
+          "macro_ap": 0.9798156472522886,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3794,
+          "domain": "User Account and Transaction Services",
+          "macro_ap": 0.9793701519836885,
+          "seen_in_train": false
+        }
+      ],
+      "word_svc": [
+        {
+          "categories_defined": 6,
+          "documents": 3728,
+          "domain": "Access Control Systems",
+          "macro_ap": 0.9907687215519961,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Advertising",
+          "macro_ap": 0.9202857835327977,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3066,
+          "domain": "Automobile",
+          "macro_ap": 0.9501396207742606,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3840,
+          "domain": "Banking",
+          "macro_ap": 0.9807103986239426,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3762,
+          "domain": "Brokerage",
+          "macro_ap": 0.9804083745244142,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3464,
+          "domain": "Casualty",
+          "macro_ap": 0.9750646031522171,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3620,
+          "domain": "Consulting",
+          "macro_ap": 0.9457406730366804,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3714,
+          "domain": "Credit",
+          "macro_ap": 0.9817482180828757,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3634,
+          "domain": "Disability",
+          "macro_ap": 0.9834775181277665,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3392,
+          "domain": "Elections",
+          "macro_ap": 0.9678536048756476,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3146,
+          "domain": "Environmental",
+          "macro_ap": 0.9644041432926066,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3258,
+          "domain": "Fitness",
+          "macro_ap": 0.9607341911720167,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3558,
+          "domain": "Health",
+          "macro_ap": 0.981523786454427,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3500,
+          "domain": "Healthcare Providers",
+          "macro_ap": 0.9839408732709164,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3566,
+          "domain": "Human Resources",
+          "macro_ap": 0.9699902268404487,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3786,
+          "domain": "Information Technology",
+          "macro_ap": 0.9537176979328614,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3104,
+          "domain": "Insurance",
+          "macro_ap": 0.9775265647935644,
+          "seen_in_train": true
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3496,
+          "domain": "Investment",
+          "macro_ap": 0.9694563029512713,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3632,
+          "domain": "Life",
+          "macro_ap": 0.9849741584990727,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3622,
+          "domain": "Marketing",
+          "macro_ap": 0.9385944995745147,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3230,
+          "domain": "Mortgage",
+          "macro_ap": 0.9741118063508493,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2812,
+          "domain": "Product",
+          "macro_ap": 0.9681497698631686,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 2930,
+          "domain": "Property",
+          "macro_ap": 0.9582024958406928,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3084,
+          "domain": "Public Safety",
+          "macro_ap": 0.9678468644131369,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3574,
+          "domain": "Services",
+          "macro_ap": 0.9706703870894091,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3576,
+          "domain": "Social Science",
+          "macro_ap": 0.9707198625266601,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3190,
+          "domain": "Sports",
+          "macro_ap": 0.9546195600336419,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3458,
+          "domain": "Travel",
+          "macro_ap": 0.9810625785104269,
+          "seen_in_train": false
+        },
+        {
+          "categories_defined": 6,
+          "documents": 3794,
+          "domain": "User Account and Transaction Services",
+          "macro_ap": 0.9806109625159841,
+          "seen_in_train": false
+        }
+      ]
+    }
+  },
+  "rule": {
+    "domain_u_threshold": 0.25,
+    "field_words": [
+      "account",
+      "address",
+      "age",
+      "api",
+      "bank",
+      "bban",
+      "belief",
+      "beneficiary",
+      "bic",
+      "biometric",
+      "birth",
+      "blood",
+      "card",
+      "certificate",
+      "city",
+      "company",
+      "cookie",
+      "coordinate",
+      "country",
+      "county",
+      "credit",
+      "customer",
+      "cvv",
+      "debit",
+      "device",
+      "dob",
+      "driver",
+      "e-mail",
+      "education",
+      "email",
+      "employee",
+      "employment",
+      "ethnicity",
+      "fax",
+      "gender",
+      "health",
+      "http",
+      "iban",
+      "ipv4",
+      "ipv6",
+      "key",
+      "language",
+      "latlng",
+      "license",
+      "login",
+      "mac",
+      "medical",
+      "mrn",
+      "name",
+      "national",
+      "occupation",
+      "passcode",
+      "passport",
+      "password",
+      "phone",
+      "pin",
+      "plate",
+      "political",
+      "postcode",
+      "race",
+      "record",
+      "religious",
+      "routing",
+      "security",
+      "sexuality",
+      "ssn",
+      "state",
+      "street",
+      "swift",
+      "tax",
+      "tel",
+      "url",
+      "user",
+      "username",
+      "vehicle",
+      "zip"
+    ],
+    "statistic": "U = MI(F; D) / H(F) on train documents (F = feature occurs)"
+  },
+  "top_features": {
+    "CONTACT": [
+      {
+        "annotation": "field label",
+        "coef": 73.65271358073868,
+        "doc_freq": 24138,
+        "feature": "email",
+        "u_domain": 0.07331778937598675
+      },
+      {
+        "annotation": "field label",
+        "coef": 51.03348594205166,
+        "doc_freq": 4393,
+        "feature": "county",
+        "u_domain": 0.07390480878684035
+      },
+      {
+        "annotation": "other",
+        "coef": 37.888702362904176,
+        "doc_freq": 6600,
+        "feature": "usa",
+        "u_domain": 0.07235303294826287
+      },
+      {
+        "annotation": "other",
+        "coef": 37.41884304455822,
+        "doc_freq": 34948,
+        "feature": "com",
+        "u_domain": 0.1282004768586764
+      },
+      {
+        "annotation": "field label",
+        "coef": 35.16691317684414,
+        "doc_freq": 4775,
+        "feature": "fax",
+        "u_domain": 0.02300131589709176
+      },
+      {
+        "annotation": "field label",
+        "coef": 34.87657864075981,
+        "doc_freq": 3814,
+        "feature": "coordinate",
+        "u_domain": 0.17353363800202123
+      },
+      {
+        "annotation": "field label",
+        "coef": 29.154857315457072,
+        "doc_freq": 4341,
+        "feature": "country",
+        "u_domain": 0.06540338316983722
+      },
+      {
+        "annotation": "field label",
+        "coef": 27.954221440597298,
+        "doc_freq": 3525,
+        "feature": "fax number",
+        "u_domain": 0.02054819296930867
+      },
+      {
+        "annotation": "field label",
+        "coef": 27.373979540889742,
+        "doc_freq": 9936,
+        "feature": "phone number",
+        "u_domain": 0.14203758115979417
+      },
+      {
+        "annotation": "field label",
+        "coef": 26.465980267638642,
+        "doc_freq": 11433,
+        "feature": "phone",
+        "u_domain": 0.13175284086320807
+      },
+      {
+        "annotation": "other",
+        "coef": 25.818458163702815,
+        "doc_freq": 1428,
+        "feature": "coordinates",
+        "u_domain": 0.14730840756040198
+      },
+      {
+        "annotation": "other",
+        "coef": 25.219091507431944,
+        "doc_freq": 42140,
+        "feature": "at",
+        "u_domain": 0.0722210495024844
+      },
+      {
+        "annotation": "field label",
+        "coef": 24.350634732164455,
+        "doc_freq": 18548,
+        "feature": "address",
+        "u_domain": 0.07640183605675112
+      },
+      {
+        "annotation": "other",
+        "coef": 24.177608461194882,
+        "doc_freq": 23394,
+        "feature": "contact",
+        "u_domain": 0.047768066950933434
+      },
+      {
+        "annotation": "field label",
+        "coef": 23.943560443351426,
+        "doc_freq": 4423,
+        "feature": "street",
+        "u_domain": 0.11971274036799734
+      },
+      {
+        "annotation": "field label",
+        "coef": 22.033081839708533,
+        "doc_freq": 3997,
+        "feature": "the email",
+        "u_domain": 0.05548528287997941
+      },
+      {
+        "annotation": "other",
+        "coef": 20.964180263700914,
+        "doc_freq": 5623,
+        "feature": "gmail com",
+        "u_domain": 0.04193564711991704
+      },
+      {
+        "annotation": "other",
+        "coef": 20.962337444900133,
+        "doc_freq": 5625,
+        "feature": "gmail",
+        "u_domain": 0.041939143570824976
+      },
+      {
+        "annotation": "other",
+        "coef": 20.823826053090457,
+        "doc_freq": 2218,
+        "feature": "the usa",
+        "u_domain": 0.05512684732721721
+      },
+      {
+        "annotation": "other",
+        "coef": 20.635213156139876,
+        "doc_freq": 1899,
+        "feature": "based in",
+        "u_domain": 0.10579052514450527
+      },
+      {
+        "annotation": "other",
+        "coef": 19.226374563013447,
+        "doc_freq": 42998,
+        "feature": "in",
+        "u_domain": 0.08707781899357808
+      },
+      {
+        "annotation": "other",
+        "coef": 19.013650851038577,
+        "doc_freq": 5519,
+        "feature": "us at",
+        "u_domain": 0.08864652924756028
+      },
+      {
+        "annotation": "field label",
+        "coef": 18.741400172119796,
+        "doc_freq": 5658,
+        "feature": "state",
+        "u_domain": 0.07238312939375
+      },
+      {
+        "annotation": "other",
+        "coef": 17.679280504817697,
+        "doc_freq": 6105,
+        "feature": "located",
+        "u_domain": 0.208148271624384
+      },
+      {
+        "annotation": "other",
+        "coef": 17.60805911922926,
+        "doc_freq": 2864,
+        "feature": "co",
+        "u_domain": 0.03086687764324427
+      }
+    ],
+    "CREDENTIALS": [
+      {
+        "annotation": "field label",
+        "coef": 77.71112603695973,
+        "doc_freq": 5770,
+        "feature": "password",
+        "u_domain": 0.12129298939836433
+      },
+      {
+        "annotation": "field label",
+        "coef": 51.34145862648525,
+        "doc_freq": 3117,
+        "feature": "user name",
+        "u_domain": 0.16269267087652783
+      },
+      {
+        "annotation": "field label",
+        "coef": 39.277801354091906,
+        "doc_freq": 1373,
+        "feature": "username",
+        "u_domain": 0.1421187895833041
+      },
+      {
+        "annotation": "field label",
+        "coef": 33.443294315302296,
+        "doc_freq": 2579,
+        "feature": "the password",
+        "u_domain": 0.08699489991062896
+      },
+      {
+        "annotation": "field label",
+        "coef": 31.60004249458429,
+        "doc_freq": 3649,
+        "feature": "cookie",
+        "u_domain": 0.06078786264417032
+      },
+      {
+        "annotation": "field label",
+        "coef": 30.960196501458046,
+        "doc_freq": 3802,
+        "feature": "api",
+        "u_domain": 0.520886764363168
+      },
+      {
+        "annotation": "field label",
+        "coef": 30.55725773339353,
+        "doc_freq": 6885,
+        "feature": "user",
+        "u_domain": 0.2150948143257613
+      },
+      {
+        "annotation": "field label",
+        "coef": 28.143201309871202,
+        "doc_freq": 3472,
+        "feature": "api key",
+        "u_domain": 0.5305178146565411
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.90354191029836,
+        "doc_freq": 3020,
+        "feature": "http cookie",
+        "u_domain": 0.05706815534958686
+      },
+      {
+        "annotation": "other",
+        "coef": 20.29322501263255,
+        "doc_freq": 1169,
+        "feature": "user_session",
+        "u_domain": 0.0432430398890303
+      },
+      {
+        "annotation": "other",
+        "coef": 20.252431024968796,
+        "doc_freq": 3207,
+        "feature": "path",
+        "u_domain": 0.07154975231066721
+      },
+      {
+        "annotation": "field label",
+        "coef": 16.915058841648612,
+        "doc_freq": 2420,
+        "feature": "the api",
+        "u_domain": 0.4686870680264667
+      },
+      {
+        "annotation": "field label",
+        "coef": 15.841440100803501,
+        "doc_freq": 7407,
+        "feature": "http",
+        "u_domain": 0.06049378303717267
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.649179802097253,
+        "doc_freq": 1743,
+        "feature": "the http",
+        "u_domain": 0.05864016860798632
+      },
+      {
+        "annotation": "field label",
+        "coef": 13.775346881111199,
+        "doc_freq": 775,
+        "feature": "password for",
+        "u_domain": 0.05174622392168309
+      },
+      {
+        "annotation": "domain/topic word",
+        "coef": 12.485863452650356,
+        "doc_freq": 641,
+        "feature": "passwords",
+        "u_domain": 0.3023374126124869
+      },
+      {
+        "annotation": "other",
+        "coef": 12.011365355829135,
+        "doc_freq": 1019,
+        "feature": "expires",
+        "u_domain": 0.03987800969642524
+      },
+      {
+        "annotation": "other",
+        "coef": 11.097942816134152,
+        "doc_freq": 7252,
+        "feature": "secure",
+        "u_domain": 0.0869823430165277
+      },
+      {
+        "annotation": "field label",
+        "coef": 10.946465338828201,
+        "doc_freq": 10226,
+        "feature": "key",
+        "u_domain": 0.20873376645996305
+      },
+      {
+        "annotation": "other",
+        "coef": 10.816496473043832,
+        "doc_freq": 11147,
+        "feature": "access",
+        "u_domain": 0.11892198761834359
+      },
+      {
+        "annotation": "other",
+        "coef": 10.324126557175832,
+        "doc_freq": 1433,
+        "feature": "for accessing",
+        "u_domain": 0.05937101821067258
+      },
+      {
+        "annotation": "other",
+        "coef": 10.198491387535217,
+        "doc_freq": 289,
+        "feature": "csrf_token",
+        "u_domain": 0.034984469465202915
+      },
+      {
+        "annotation": "field label",
+        "coef": 9.95435685184079,
+        "doc_freq": 507,
+        "feature": "user id",
+        "u_domain": 0.24265598651014506
+      },
+      {
+        "annotation": "other",
+        "coef": 9.811505553284082,
+        "doc_freq": 1016,
+        "feature": "gmt",
+        "u_domain": 0.042029551379466026
+      },
+      {
+        "annotation": "other",
+        "coef": 9.63421433945764,
+        "doc_freq": 4855,
+        "feature": "2025",
+        "u_domain": 0.03607532782543182
+      }
+    ],
+    "FINANCIAL": [
+      {
+        "annotation": "field label",
+        "coef": 91.00829089533647,
+        "doc_freq": 4415,
+        "feature": "pin",
+        "u_domain": 0.014303763565509909
+      },
+      {
+        "annotation": "field label",
+        "coef": 67.61853946808212,
+        "doc_freq": 6965,
+        "feature": "account number",
+        "u_domain": 0.36440895949940016
+      },
+      {
+        "annotation": "field label",
+        "coef": 58.75430794082907,
+        "doc_freq": 2687,
+        "feature": "cvv",
+        "u_domain": 0.06483156682942907
+      },
+      {
+        "annotation": "field label",
+        "coef": 38.39226342424799,
+        "doc_freq": 4382,
+        "feature": "bic",
+        "u_domain": 0.0608943874828346
+      },
+      {
+        "annotation": "field label",
+        "coef": 38.11218363658513,
+        "doc_freq": 4324,
+        "feature": "swift bic",
+        "u_domain": 0.06102858539934947
+      },
+      {
+        "annotation": "field label",
+        "coef": 36.46747591799122,
+        "doc_freq": 9691,
+        "feature": "account",
+        "u_domain": 0.2636090402523445
+      },
+      {
+        "annotation": "field label",
+        "coef": 35.78758050813687,
+        "doc_freq": 4530,
+        "feature": "swift",
+        "u_domain": 0.05837484359703442
+      },
+      {
+        "annotation": "field label",
+        "coef": 32.69272952000185,
+        "doc_freq": 5186,
+        "feature": "routing number",
+        "u_domain": 0.204155842236068
+      },
+      {
+        "annotation": "field label",
+        "coef": 32.37188655365758,
+        "doc_freq": 4839,
+        "feature": "bank routing",
+        "u_domain": 0.20441192686544338
+      },
+      {
+        "annotation": "field label",
+        "coef": 30.68947118768073,
+        "doc_freq": 1646,
+        "feature": "the pin",
+        "u_domain": 0.01596895891432484
+      },
+      {
+        "annotation": "field label",
+        "coef": 29.02088614844097,
+        "doc_freq": 5903,
+        "feature": "credit debit",
+        "u_domain": 0.10799969847490286
+      },
+      {
+        "annotation": "other",
+        "coef": 27.335267196331014,
+        "doc_freq": 39841,
+        "feature": "number",
+        "u_domain": 0.1391312662694305
+      },
+      {
+        "annotation": "field label",
+        "coef": 27.08297612804968,
+        "doc_freq": 5460,
+        "feature": "routing",
+        "u_domain": 0.19034684689771825
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.840989103828136,
+        "doc_freq": 5745,
+        "feature": "bank",
+        "u_domain": 0.18591617982765016
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.248682758941527,
+        "doc_freq": 6284,
+        "feature": "debit",
+        "u_domain": 0.11230292433702263
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.23872249735621,
+        "doc_freq": 6149,
+        "feature": "debit card",
+        "u_domain": 0.10964365327392653
+      },
+      {
+        "annotation": "field label",
+        "coef": 24.553416997343138,
+        "doc_freq": 1210,
+        "feature": "the cvv",
+        "u_domain": 0.0476852458753788
+      },
+      {
+        "annotation": "field label",
+        "coef": 22.148864622045817,
+        "doc_freq": 7675,
+        "feature": "credit",
+        "u_domain": 0.11415963772412817
+      },
+      {
+        "annotation": "field label",
+        "coef": 20.21893083998112,
+        "doc_freq": 8170,
+        "feature": "card",
+        "u_domain": 0.10660275458883903
+      },
+      {
+        "annotation": "other",
+        "coef": 16.979870956334203,
+        "doc_freq": 4731,
+        "feature": "transactions",
+        "u_domain": 0.12697483281032468
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.716984695854958,
+        "doc_freq": 2462,
+        "feature": "the swift",
+        "u_domain": 0.05941751813693799
+      },
+      {
+        "annotation": "other",
+        "coef": 14.627069843470792,
+        "doc_freq": 906,
+        "feature": "4532",
+        "u_domain": 0.061322999822266404
+      },
+      {
+        "annotation": "other",
+        "coef": 14.600344791917653,
+        "doc_freq": 905,
+        "feature": "4921",
+        "u_domain": 0.062453740614931426
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.341135547260677,
+        "doc_freq": 2438,
+        "feature": "the bank",
+        "u_domain": 0.1791261152673663
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.102115320354187,
+        "doc_freq": 2727,
+        "feature": "the account",
+        "u_domain": 0.24115528417938129
+      }
+    ],
+    "HEALTH": [
+      {
+        "annotation": "field label",
+        "coef": 50.33443676994873,
+        "doc_freq": 3087,
+        "feature": "blood type",
+        "u_domain": 0.17095160237455115
+      },
+      {
+        "annotation": "field label",
+        "coef": 46.876911153006134,
+        "doc_freq": 3469,
+        "feature": "blood",
+        "u_domain": 0.20860800523565792
+      },
+      {
+        "annotation": "field label",
+        "coef": 37.38150536484525,
+        "doc_freq": 4657,
+        "feature": "health plan",
+        "u_domain": 0.128934241899027
+      },
+      {
+        "annotation": "field label",
+        "coef": 36.406696702230896,
+        "doc_freq": 4571,
+        "feature": "beneficiary number",
+        "u_domain": 0.12897185100512237
+      },
+      {
+        "annotation": "field label",
+        "coef": 33.73284965790357,
+        "doc_freq": 4535,
+        "feature": "plan beneficiary",
+        "u_domain": 0.1301856389848593
+      },
+      {
+        "annotation": "field label",
+        "coef": 32.92411688658427,
+        "doc_freq": 4839,
+        "feature": "record number",
+        "u_domain": 0.5472093809001715
+      },
+      {
+        "annotation": "field label",
+        "coef": 32.77199972600017,
+        "doc_freq": 4881,
+        "feature": "medical record",
+        "u_domain": 0.5466362628672291
+      },
+      {
+        "annotation": "field label",
+        "coef": 31.499991983569053,
+        "doc_freq": 4997,
+        "feature": "beneficiary",
+        "u_domain": 0.13358691383021898
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.648368603984583,
+        "doc_freq": 6734,
+        "feature": "medical",
+        "u_domain": 0.4112635386742087
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.5486883400253,
+        "doc_freq": 7736,
+        "feature": "health",
+        "u_domain": 0.12532804821298818
+      },
+      {
+        "annotation": "field label",
+        "coef": 24.02448213224294,
+        "doc_freq": 6241,
+        "feature": "record",
+        "u_domain": 0.41012621737064386
+      },
+      {
+        "annotation": "other",
+        "coef": 21.84497411600939,
+        "doc_freq": 8560,
+        "feature": "type",
+        "u_domain": 0.062433084150719895
+      },
+      {
+        "annotation": "other",
+        "coef": 17.97189442618545,
+        "doc_freq": 11598,
+        "feature": "plan",
+        "u_domain": 0.12060154424747986
+      },
+      {
+        "annotation": "other",
+        "coef": 16.133775183770044,
+        "doc_freq": 39841,
+        "feature": "number",
+        "u_domain": 0.1391312662694305
+      },
+      {
+        "annotation": "other",
+        "coef": 11.54112171643001,
+        "doc_freq": 2179,
+        "feature": "positive",
+        "u_domain": 0.12895721154115738
+      },
+      {
+        "annotation": "field label",
+        "coef": 11.448839791059532,
+        "doc_freq": 1837,
+        "feature": "the health",
+        "u_domain": 0.06834655821057783
+      },
+      {
+        "annotation": "field label",
+        "coef": 10.85799507789159,
+        "doc_freq": 1260,
+        "feature": "the medical",
+        "u_domain": 0.29774955066687625
+      },
+      {
+        "annotation": "field label",
+        "coef": 10.603392599537555,
+        "doc_freq": 336,
+        "feature": "with blood",
+        "u_domain": 0.0877857227343886
+      },
+      {
+        "annotation": "other",
+        "coef": 9.360105772732348,
+        "doc_freq": 893,
+        "feature": "aet",
+        "u_domain": 0.09124010952510363
+      },
+      {
+        "annotation": "other",
+        "coef": 9.051238296006364,
+        "doc_freq": 758,
+        "feature": "type is",
+        "u_domain": 0.143778156217815
+      },
+      {
+        "annotation": "field label",
+        "coef": 8.648330055543843,
+        "doc_freq": 391,
+        "feature": "the blood",
+        "u_domain": 0.07763429428857921
+      },
+      {
+        "annotation": "other",
+        "coef": 8.149360060476356,
+        "doc_freq": 433,
+        "feature": "type positive",
+        "u_domain": 0.12278445395315488
+      },
+      {
+        "annotation": "domain/topic word",
+        "coef": 7.85658413682584,
+        "doc_freq": 3751,
+        "feature": "patient",
+        "u_domain": 0.5489015031673381
+      },
+      {
+        "annotation": "field label",
+        "coef": 7.658160632556498,
+        "doc_freq": 589,
+        "feature": "mrn",
+        "u_domain": 0.2796406968863427
+      },
+      {
+        "annotation": "other",
+        "coef": 6.352824770575311,
+        "doc_freq": 676,
+        "feature": "number aet",
+        "u_domain": 0.07774943428080028
+      }
+    ],
+    "IDENTITY": [
+      {
+        "annotation": "field label",
+        "coef": 46.57399299449369,
+        "doc_freq": 2293,
+        "feature": "national id",
+        "u_domain": 0.05072675984091654
+      },
+      {
+        "annotation": "field label",
+        "coef": 45.452343046672155,
+        "doc_freq": 1744,
+        "feature": "tax id",
+        "u_domain": 0.1975309193282016
+      },
+      {
+        "annotation": "field label",
+        "coef": 42.78096936680381,
+        "doc_freq": 5153,
+        "feature": "license number",
+        "u_domain": 0.2122114817325395
+      },
+      {
+        "annotation": "field label",
+        "coef": 36.80134764778539,
+        "doc_freq": 4806,
+        "feature": "certificate license",
+        "u_domain": 0.213861073550644
+      },
+      {
+        "annotation": "field label",
+        "coef": 34.14231704998425,
+        "doc_freq": 1297,
+        "feature": "ssn",
+        "u_domain": 0.04122051595382486
+      },
+      {
+        "annotation": "field label",
+        "coef": 33.327507792898786,
+        "doc_freq": 25059,
+        "feature": "name",
+        "u_domain": 0.0495474882366517
+      },
+      {
+        "annotation": "field label",
+        "coef": 30.31880889422581,
+        "doc_freq": 2939,
+        "feature": "national",
+        "u_domain": 0.062030504172860455
+      },
+      {
+        "annotation": "field label",
+        "coef": 29.417908920965775,
+        "doc_freq": 6853,
+        "feature": "first name",
+        "u_domain": 0.14701874467896495
+      },
+      {
+        "annotation": "field label",
+        "coef": 27.132736703684067,
+        "doc_freq": 2818,
+        "feature": "tax",
+        "u_domain": 0.15085347328362475
+      },
+      {
+        "annotation": "field label",
+        "coef": 26.14915061397287,
+        "doc_freq": 5712,
+        "feature": "certificate",
+        "u_domain": 0.1763137376847878
+      },
+      {
+        "annotation": "field label",
+        "coef": 25.18697440227025,
+        "doc_freq": 10238,
+        "feature": "license",
+        "u_domain": 0.34177892306145174
+      },
+      {
+        "annotation": "field label",
+        "coef": 23.424403200258478,
+        "doc_freq": 6820,
+        "feature": "of birth",
+        "u_domain": 0.32940546952362687
+      },
+      {
+        "annotation": "field label",
+        "coef": 23.33360157761788,
+        "doc_freq": 6861,
+        "feature": "birth",
+        "u_domain": 0.3299431179152061
+      },
+      {
+        "annotation": "other",
+        "coef": 23.165607513166595,
+        "doc_freq": 3224,
+        "feature": "born on",
+        "u_domain": 0.20966771451277197
+      },
+      {
+        "annotation": "other",
+        "coef": 22.53404572760954,
+        "doc_freq": 3289,
+        "feature": "born",
+        "u_domain": 0.2061310978380944
+      },
+      {
+        "annotation": "field label",
+        "coef": 20.02071881703346,
+        "doc_freq": 5054,
+        "feature": "last name",
+        "u_domain": 0.12042494905151443
+      },
+      {
+        "annotation": "other",
+        "coef": 18.0361163105385,
+        "doc_freq": 2196,
+        "feature": "her",
+        "u_domain": 0.12818075204590443
+      },
+      {
+        "annotation": "other",
+        "coef": 16.8076905913755,
+        "doc_freq": 2068,
+        "feature": "his",
+        "u_domain": 0.10498116497486433
+      },
+      {
+        "annotation": "other",
+        "coef": 15.312241653831578,
+        "doc_freq": 10282,
+        "feature": "first",
+        "u_domain": 0.0669573671927041
+      },
+      {
+        "annotation": "other",
+        "coef": 15.143550536142904,
+        "doc_freq": 698,
+        "feature": "john",
+        "u_domain": 0.02495970494316026
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.600064078247577,
+        "doc_freq": 324,
+        "feature": "the ssn",
+        "u_domain": 0.02560492965801333
+      },
+      {
+        "annotation": "field label",
+        "coef": 14.344664661839664,
+        "doc_freq": 764,
+        "feature": "the national",
+        "u_domain": 0.03999473278257945
+      },
+      {
+        "annotation": "other",
+        "coef": 13.993383577082875,
+        "doc_freq": 926,
+        "feature": "ethan",
+        "u_domain": 0.028102445217200032
+      },
+      {
+        "annotation": "other",
+        "coef": 13.561643255952811,
+        "doc_freq": 25264,
+        "feature": "id",
+        "u_domain": 0.09825591133274658
+      },
+      {
+        "annotation": "field label",
+        "coef": 13.359038128618574,
+        "doc_freq": 2801,
+        "feature": "social security",
+        "u_domain": 0.3106342029251491
+      }
+    ],
+    "SPECIAL_CATEGORY": [
+      {
+        "annotation": "field label",
+        "coef": 59.430678044247045,
+        "doc_freq": 7555,
+        "feature": "biometric",
+        "u_domain": 0.030757160385672243
+      },
+      {
+        "annotation": "field label",
+        "coef": 58.76257616005802,
+        "doc_freq": 7012,
+        "feature": "biometric identifier",
+        "u_domain": 0.030312982044779117
+      },
+      {
+        "annotation": "field label",
+        "coef": 45.07321697560867,
+        "doc_freq": 2952,
+        "feature": "ethnicity",
+        "u_domain": 0.12877674275176024
+      },
+      {
+        "annotation": "other",
+        "coef": 37.4399027380048,
+        "doc_freq": 4048,
+        "feature": "bio",
+        "u_domain": 0.028241934142555214
+      },
+      {
+        "annotation": "other",
+        "coef": 33.527411280786794,
+        "doc_freq": 1436,
+        "feature": "white",
+        "u_domain": 0.08874296553974176
+      },
+      {
+        "annotation": "field label",
+        "coef": 31.311081913163516,
+        "doc_freq": 2307,
+        "feature": "political",
+        "u_domain": 0.08453018212235623
+      },
+      {
+        "annotation": "field label",
+        "coef": 30.561828197149133,
+        "doc_freq": 2495,
+        "feature": "religious",
+        "u_domain": 0.09454695620809507
+      },
+      {
+        "annotation": "other",
+        "coef": 29.55151549867658,
+        "doc_freq": 507,
+        "feature": "straight",
+        "u_domain": 0.0946405744727984
+      },
+      {
+        "annotation": "other",
+        "coef": 28.253189400169383,
+        "doc_freq": 15042,
+        "feature": "identifier",
+        "u_domain": 0.16040379887220033
+      },
+      {
+        "annotation": "other",
+        "coef": 25.90415000560821,
+        "doc_freq": 560,
+        "feature": "christian",
+        "u_domain": 0.06097802247060713
+      },
+      {
+        "annotation": "field label",
+        "coef": 24.94015542078632,
+        "doc_freq": 1782,
+        "feature": "political view",
+        "u_domain": 0.07242597417815604
+      },
+      {
+        "annotation": "other",
+        "coef": 23.12169185291001,
+        "doc_freq": 437,
+        "feature": "supporter",
+        "u_domain": 0.05484463348089222
+      },
+      {
+        "annotation": "field label",
+        "coef": 21.55910819484012,
+        "doc_freq": 664,
+        "feature": "sexuality",
+        "u_domain": 0.15188314382691576
+      },
+      {
+        "annotation": "other",
+        "coef": 20.86123594023131,
+        "doc_freq": 306,
+        "feature": "mexican",
+        "u_domain": 0.059266159573091226
+      },
+      {
+        "annotation": "field label",
+        "coef": 20.356900714604024,
+        "doc_freq": 2208,
+        "feature": "race ethnicity",
+        "u_domain": 0.13479333534477567
+      },
+      {
+        "annotation": "field label",
+        "coef": 19.660720833663035,
+        "doc_freq": 2780,
+        "feature": "race",
+        "u_domain": 0.1962859080874723
+      },
+      {
+        "annotation": "other",
+        "coef": 19.32947491718159,
+        "doc_freq": 258,
+        "feature": "protestant",
+        "u_domain": 0.042297475560611204
+      },
+      {
+        "annotation": "other",
+        "coef": 18.932459051452692,
+        "doc_freq": 249,
+        "feature": "gay",
+        "u_domain": 0.07139027890779394
+      },
+      {
+        "annotation": "other",
+        "coef": 17.785126616760856,
+        "doc_freq": 384,
+        "feature": "islam",
+        "u_domain": 0.05561988423645611
+      },
+      {
+        "annotation": "field label",
+        "coef": 17.690600831659072,
+        "doc_freq": 1997,
+        "feature": "religious belief",
+        "u_domain": 0.09358610413947702
+      },
+      {
+        "annotation": "other",
+        "coef": 17.447295700847835,
+        "doc_freq": 397,
+        "feature": "black",
+        "u_domain": 0.06891735241981367
+      },
+      {
+        "annotation": "field label",
+        "coef": 16.956692125293703,
+        "doc_freq": 2121,
+        "feature": "belief",
+        "u_domain": 0.09385776978362981
+      },
+      {
+        "annotation": "field label",
+        "coef": 16.114321080342883,
+        "doc_freq": 2860,
+        "feature": "the biometric",
+        "u_domain": 0.04088427393042158
+      },
+      {
+        "annotation": "other",
+        "coef": 15.80356990143418,
+        "doc_freq": 2497,
+        "feature": "view",
+        "u_domain": 0.04595947974118666
+      },
+      {
+        "annotation": "other",
+        "coef": 15.368561104082668,
+        "doc_freq": 210,
+        "feature": "catholic",
+        "u_domain": 0.05372309487514702
+      }
+    ]
+  },
+  "train_domains": [
+    "agriculture",
+    "automotive",
+    "biotechnology",
+    "chemicals",
+    "civil rights",
+    "construction",
+    "consumer goods",
+    "cybersecurity",
+    "ecommerce",
+    "education",
+    "energy",
+    "entertainment",
+    "finance",
+    "government",
+    "healthcare",
+    "hospitality",
+    "identity management",
+    "identity verification services",
+    "insurance",
+    "legal",
+    "logistics",
+    "manufacturing",
+    "media",
+    "non-profit",
+    "pharmaceuticals",
+    "real estate",
+    "retail",
+    "technology",
+    "telecommunications",
+    "transportation"
+  ]
+}
