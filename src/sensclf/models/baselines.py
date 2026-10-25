@@ -39,6 +39,7 @@ class DetectorBaseline:
 
     name = "regex_detector"
     probabilistic = False
+    default_threshold = 0.5   # scores are 0/1
     covered = tuple(c for c in CATEGORIES if c in DETECTOR_RULES)
 
     def __init__(self) -> None:

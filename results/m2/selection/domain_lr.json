@@ -1,0 +1,58 @@
+{
+  "convergence_warnings": 0,
+  "criterion": "macro average precision over the six categories on dev",
+  "family": "domain_lr",
+  "grid": [
+    {
+      "C": 0.1,
+      "dev_ap": {
+        "CONTACT": 0.8230628795161569,
+        "CREDENTIALS": 0.550626530191523,
+        "FINANCIAL": 0.4985100079275873,
+        "HEALTH": 0.5544064451998044,
+        "IDENTITY": 0.7359534976208328,
+        "SPECIAL_CATEGORY": 0.367560048369402
+      },
+      "dev_macro_ap": 0.5883532348042178,
+      "head_seconds": 0.9857670000001235
+    },
+    {
+      "C": 1.0,
+      "dev_ap": {
+        "CONTACT": 0.8230628795161569,
+        "CREDENTIALS": 0.5505210579698989,
+        "FINANCIAL": 0.4983770659979286,
+        "HEALTH": 0.5544064451998044,
+        "IDENTITY": 0.7359534976208328,
+        "SPECIAL_CATEGORY": 0.367560048369402
+      },
+      "dev_macro_ap": 0.5883134991123372,
+      "head_seconds": 0.9883294999999634
+    },
+    {
+      "C": 10.0,
+      "dev_ap": {
+        "CONTACT": 0.8230628795161569,
+        "CREDENTIALS": 0.5505210579698989,
+        "FINANCIAL": 0.4983770659979286,
+        "HEALTH": 0.5544064451998044,
+        "IDENTITY": 0.7359534976208328,
+        "SPECIAL_CATEGORY": 0.367560048369402
+      },
+      "dev_macro_ap": 0.5883134991123372,
+      "head_seconds": 0.9570969999986119
+    }
+  ],
+  "grid_train_seconds": 2.931193499998699,
+  "peak_memory_mb": 466.62890625,
+  "seed": 0,
+  "selected_C": 0.1,
+  "selected_model_train_seconds": 0.9857670000001235,
+  "training_set": {
+    "doc_ids_sha256": "5823c0c5d47e234ab70fb8e795d974b6fbb81012ab3b50a6f4aad6e68f277526",
+    "documents": 79834,
+    "name": "train",
+    "processed_sha256": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+  },
+  "vectorizer_seconds": 0.0
+}
