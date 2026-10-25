@@ -1,0 +1,3687 @@
+{
+  "models": {
+    "char_lr": {
+      "params": {
+        "C": 10.0
+      },
+      "probabilistic": true,
+      "training_set": {
+        "doc_ids_sha256": "5823c0c5d47e234ab70fb8e795d974b6fbb81012ab3b50a6f4aad6e68f277526",
+        "documents": 79834,
+        "name": "train",
+        "processed_sha256": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+      }
+    },
+    "domain_lr": {
+      "params": {
+        "C": 0.1
+      },
+      "probabilistic": true,
+      "training_set": {
+        "doc_ids_sha256": "5823c0c5d47e234ab70fb8e795d974b6fbb81012ab3b50a6f4aad6e68f277526",
+        "documents": 79834,
+        "name": "train",
+        "processed_sha256": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+      }
+    },
+    "regex_detector": {
+      "covered": [
+        "CONTACT",
+        "FINANCIAL"
+      ],
+      "params": {},
+      "probabilistic": false
+    },
+    "word_lr": {
+      "params": {
+        "C": 10.0
+      },
+      "probabilistic": true,
+      "training_set": {
+        "doc_ids_sha256": "5823c0c5d47e234ab70fb8e795d974b6fbb81012ab3b50a6f4aad6e68f277526",
+        "documents": 79834,
+        "name": "train",
+        "processed_sha256": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+      }
+    },
+    "word_svc": {
+      "params": {
+        "C": 1.0
+      },
+      "probabilistic": false,
+      "training_set": {
+        "doc_ids_sha256": "5823c0c5d47e234ab70fb8e795d974b6fbb81012ab3b50a6f4aad6e68f277526",
+        "documents": 79834,
+        "name": "train",
+        "processed_sha256": "841705dde5b6598f9f06d8c9ccbd322fedc2c206a81ca80f6e85e7474ac778ad"
+      }
+    }
+  },
+  "operating_points": {
+    "char_lr": {
+      "default": {
+        "CONTACT": 0.5,
+        "CREDENTIALS": 0.5,
+        "FINANCIAL": 0.5,
+        "HEALTH": 0.5,
+        "IDENTITY": 0.5,
+        "SPECIAL_CATEGORY": 0.5
+      },
+      "dev_f1": {
+        "CONTACT": 0.4696074483409212,
+        "CREDENTIALS": 0.39804856056272886,
+        "FINANCIAL": 0.36028239453533867,
+        "HEALTH": 0.27961979689875505,
+        "IDENTITY": 0.40407751411347953,
+        "SPECIAL_CATEGORY": 0.35860773430365267
+      }
+    },
+    "domain_lr": {
+      "default": {
+        "CONTACT": 0.5,
+        "CREDENTIALS": 0.5,
+        "FINANCIAL": 0.5,
+        "HEALTH": 0.5,
+        "IDENTITY": 0.5,
+        "SPECIAL_CATEGORY": 0.5
+      },
+      "dev_f1": {
+        "CONTACT": 0.4706783987440781,
+        "CREDENTIALS": 0.24688355430263342,
+        "FINANCIAL": 0.2289340042080891,
+        "HEALTH": 0.31523742422592277,
+        "IDENTITY": 0.3815158362241929,
+        "SPECIAL_CATEGORY": 0.20120738620346157
+      }
+    },
+    "regex_detector": {
+      "default": {
+        "CONTACT": 0.5,
+        "CREDENTIALS": null,
+        "FINANCIAL": 0.5,
+        "HEALTH": null,
+        "IDENTITY": null,
+        "SPECIAL_CATEGORY": null
+      },
+      "dev_f1": {
+        "CONTACT": 0.0,
+        "CREDENTIALS": null,
+        "FINANCIAL": 0.0,
+        "HEALTH": null,
+        "IDENTITY": null,
+        "SPECIAL_CATEGORY": null
+      }
+    },
+    "word_lr": {
+      "default": {
+        "CONTACT": 0.5,
+        "CREDENTIALS": 0.5,
+        "FINANCIAL": 0.5,
+        "HEALTH": 0.5,
+        "IDENTITY": 0.5,
+        "SPECIAL_CATEGORY": 0.5
+      },
+      "dev_f1": {
+        "CONTACT": 0.4942523056939974,
+        "CREDENTIALS": 0.36035819175821715,
+        "FINANCIAL": 0.26189413625150065,
+        "HEALTH": 0.20207963616716182,
+        "IDENTITY": 0.46400155375766733,
+        "SPECIAL_CATEGORY": 0.25241713484024936
+      }
+    },
+    "word_svc": {
+      "default": {
+        "CONTACT": 0.0,
+        "CREDENTIALS": 0.0,
+        "FINANCIAL": 0.0,
+        "HEALTH": 0.0,
+        "IDENTITY": 0.0,
+        "SPECIAL_CATEGORY": 0.0
+      },
+      "dev_f1": {
+        "CONTACT": -0.08540851808679073,
+        "CREDENTIALS": -0.1618830583769547,
+        "FINANCIAL": -0.21406346592965464,
+        "HEALTH": -0.20681685019921825,
+        "IDENTITY": -0.14246110990565375,
+        "SPECIAL_CATEGORY": -0.2830492247239407
+      }
+    }
+  },
+  "set_sha256": {
+    "dev": "44df60ff56e146a8e81e871849e7f2ac99b9423cae67bb58a8c860229c852adc",
+    "test_ood": "77926c8bf1632cbb574895be942d0ab1d34fbb391eb5a0c9578365716173948b",
+    "test_shift": "ec35a04af00c86d78475e808e5a43107bf332ac7e811a45a8fb977b71df929bb"
+  },
+  "sets": {
+    "dev": {
+      "bootstrap": {
+        "ci": {
+          "char_lr": {
+            "ap|CONTACT": [
+              0.9941409170364589,
+              0.9959120672209627
+            ],
+            "ap|CREDENTIALS": [
+              0.9591462201183534,
+              0.9710430176051684
+            ],
+            "ap|FINANCIAL": [
+              0.9786584460225515,
+              0.9855290778261526
+            ],
+            "ap|HEALTH": [
+              0.9872615285843731,
+              0.9946989657868943
+            ],
+            "ap|IDENTITY": [
+              0.9720034867358422,
+              0.9776120482591267
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9530228524081823,
+              0.9668622904533042
+            ],
+            "f1|CONTACT": [
+              0.9649150545207158,
+              0.9710846032114914
+            ],
+            "f1|CREDENTIALS": [
+              0.9128566670905968,
+              0.9303410613797254
+            ],
+            "f1|FINANCIAL": [
+              0.9443206707992512,
+              0.9564344995162031
+            ],
+            "f1|HEALTH": [
+              0.9627077929036245,
+              0.9764899480477431
+            ],
+            "f1|IDENTITY": [
+              0.9081464054132482,
+              0.9208274317097846
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.9039718460214441,
+              0.9225946409643265
+            ],
+            "macro_ap": [
+              0.9763590063430733,
+              0.9801343867465135
+            ],
+            "macro_f1": [
+              0.9368650672493197,
+              0.9426549697398353
+            ],
+            "micro_f1": [
+              0.9399838047683904,
+              0.9449872374921782
+            ]
+          },
+          "domain_lr": {
+            "ap|CONTACT": [
+              0.8108569948568927,
+              0.8341699926494959
+            ],
+            "ap|CREDENTIALS": [
+              0.5247260156021402,
+              0.5788243658611966
+            ],
+            "ap|FINANCIAL": [
+              0.47442654060647294,
+              0.5218667221621018
+            ],
+            "ap|HEALTH": [
+              0.5174679921914206,
+              0.5917581780658343
+            ],
+            "ap|IDENTITY": [
+              0.7199044543174563,
+              0.7521127731231003
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.34499517721842843,
+              0.38914504819959955
+            ],
+            "f1|CONTACT": [
+              0.8038286276315882,
+              0.8201247109743481
+            ],
+            "f1|CREDENTIALS": [
+              0.500617040441519,
+              0.5465207276790036
+            ],
+            "f1|FINANCIAL": [
+              0.4594384096762089,
+              0.4889801524160067
+            ],
+            "f1|HEALTH": [
+              0.5094507005780387,
+              0.5753205635205176
+            ],
+            "f1|IDENTITY": [
+              0.6734264120368322,
+              0.6995239645745671
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.395899332458552,
+              0.42338099671295687
+            ],
+            "macro_ap": [
+              0.5786703456481236,
+              0.5985683559659503
+            ],
+            "macro_f1": [
+              0.5672533888519178,
+              0.5821203268277935
+            ],
+            "micro_f1": [
+              0.6187001789368451,
+              0.6290958897386908
+            ]
+          },
+          "regex_detector": {
+            "ap|CONTACT": [
+              0.873616586655223,
+              0.8854824984737261
+            ],
+            "ap|FINANCIAL": [
+              0.29105653955321337,
+              0.3150382926459553
+            ],
+            "f1|CONTACT": [
+              0.7999254387447318,
+              0.8149394756194237
+            ],
+            "f1|FINANCIAL": [
+              0.41957298054256453,
+              0.4453873299360572
+            ],
+            "macro_ap": [
+              0.5844851723328653,
+              0.5978625248014657
+            ],
+            "macro_f1": [
+              0.6127757904040583,
+              0.6273464841413191
+            ],
+            "micro_f1": [
+              0.6388348211289349,
+              0.6520886643846997
+            ]
+          },
+          "word_lr": {
+            "ap|CONTACT": [
+              0.9935258146521105,
+              0.9953112734130717
+            ],
+            "ap|CREDENTIALS": [
+              0.9559346143025454,
+              0.9680797255947526
+            ],
+            "ap|FINANCIAL": [
+              0.9833418144265945,
+              0.9891268448176882
+            ],
+            "ap|HEALTH": [
+              0.9903717243655635,
+              0.9971398812720534
+            ],
+            "ap|IDENTITY": [
+              0.9749702855536562,
+              0.980150078576649
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9547056315162022,
+              0.9667728669594854
+            ],
+            "f1|CONTACT": [
+              0.9615580372358712,
+              0.9681368553858832
+            ],
+            "f1|CREDENTIALS": [
+              0.906423018377895,
+              0.924921833476947
+            ],
+            "f1|FINANCIAL": [
+              0.9608924192429044,
+              0.9701317257052441
+            ],
+            "f1|HEALTH": [
+              0.9813229304347346,
+              0.990591847013583
+            ],
+            "f1|IDENTITY": [
+              0.9133618496255682,
+              0.9255067471304029
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.9041114350456696,
+              0.9218428806909711
+            ],
+            "macro_ap": [
+              0.9776095338063296,
+              0.981014547268976
+            ],
+            "macro_f1": [
+              0.9416312896768769,
+              0.9468769103900753
+            ],
+            "micro_f1": [
+              0.9427506794474922,
+              0.9474845889097876
+            ]
+          },
+          "word_svc": {
+            "ap|CONTACT": [
+              0.9942243993756109,
+              0.9958962634532439
+            ],
+            "ap|CREDENTIALS": [
+              0.9586737959712948,
+              0.9708219320618683
+            ],
+            "ap|FINANCIAL": [
+              0.9839823871480157,
+              0.9900899412216548
+            ],
+            "ap|HEALTH": [
+              0.9912084198052683,
+              0.9976156982656937
+            ],
+            "ap|IDENTITY": [
+              0.9759181992479883,
+              0.9810129786826925
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9594624368656415,
+              0.9709942235363787
+            ],
+            "f1|CONTACT": [
+              0.9645461006529865,
+              0.9709431301298503
+            ],
+            "f1|CREDENTIALS": [
+              0.9203892105795983,
+              0.9373128459176427
+            ],
+            "f1|FINANCIAL": [
+              0.9706645170358782,
+              0.9788566942470451
+            ],
+            "f1|HEALTH": [
+              0.9878095537247154,
+              0.9946528449241712
+            ],
+            "f1|IDENTITY": [
+              0.9181565796779567,
+              0.9297879069495649
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.9165693310351238,
+              0.9330303604222625
+            ],
+            "macro_ap": [
+              0.9793404834365028,
+              0.9827364354402338
+            ],
+            "macro_f1": [
+              0.9496796206246224,
+              0.9547014396692861
+            ],
+            "micro_f1": [
+              0.9491098009615077,
+              0.9536388426254016
+            ]
+          }
+        },
+        "ci_operating_point": "dev_f1",
+        "groups": 5070,
+        "level": 0.95,
+        "n_resamples": 1000,
+        "paired_macro_ap": {
+          "char_lr - domain_lr": {
+            "ci": [
+              0.38034521617186995,
+              0.39924746296807
+            ],
+            "model_a": "char_lr",
+            "model_b": "domain_lr",
+            "point": 0.3898376238171214,
+            "share_a_better": 1.0
+          },
+          "char_lr - word_svc": {
+            "ci": [
+              -0.003905003839783155,
+              -0.0015719879402980449
+            ],
+            "model_a": "char_lr",
+            "model_b": "word_svc",
+            "point": -0.00276222443759222,
+            "share_a_better": 0.0
+          },
+          "word_lr - char_lr": {
+            "ci": [
+              -4.097313654039236e-05,
+              0.002169516140782321
+            ],
+            "model_a": "word_lr",
+            "model_b": "char_lr",
+            "point": 0.001077133934810126,
+            "share_a_better": 0.969
+          },
+          "word_lr - domain_lr": {
+            "ci": [
+              0.3813844925883553,
+              0.4001840229161264
+            ],
+            "model_a": "word_lr",
+            "model_b": "domain_lr",
+            "point": 0.3909147577519315,
+            "share_a_better": 1.0
+          },
+          "word_lr - word_svc": {
+            "ci": [
+              -0.002037107800101159,
+              -0.0013604584665248833
+            ],
+            "model_a": "word_lr",
+            "model_b": "word_svc",
+            "point": -0.001685090502782094,
+            "share_a_better": 0.0
+          },
+          "word_svc - domain_lr": {
+            "ci": [
+              0.38296915355200717,
+              0.4019333237795846
+            ],
+            "model_a": "word_svc",
+            "model_b": "domain_lr",
+            "point": 0.3925998482547136,
+            "share_a_better": 1.0
+          }
+        },
+        "seed": 0
+      },
+      "documents": 10140,
+      "models": {
+        "char_lr": {
+          "macro": {
+            "average_precision": 0.9781908586213391,
+            "brier": 0.03097731869694662,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.11534412667189053,
+            "roc_auc": 0.9877440550277847
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.9673603504928806,
+                  "precision": 0.9702651237732532,
+                  "recall": 0.9644729178800233,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9679296051196277,
+                  "precision": 0.9668749091965713,
+                  "recall": 0.9689866045428073,
+                  "threshold": 0.4696074483409212
+                }
+              },
+              "average_precision": 0.995048506959108,
+              "brier": 0.03599792116397135,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.13233144278432518,
+              "positives": 6868,
+              "roc_auc": 0.9898400665429696
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.9123537061118335,
+                  "precision": 0.9553376906318083,
+                  "recall": 0.8730711796913887,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9217036470288191,
+                  "precision": 0.9450836820083682,
+                  "recall": 0.8994524639123942,
+                  "threshold": 0.39804856056272886
+                }
+              },
+              "average_precision": 0.9652928642269887,
+              "brier": 0.026371325467158063,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.10287219626230461,
+              "positives": 2009,
+              "roc_auc": 0.9888282215946332
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9417386509832751,
+                  "precision": 0.9711902956785443,
+                  "recall": 0.9140206921155904,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9506903353057199,
+                  "precision": 0.9556596971881759,
+                  "recall": 0.9457723867285052,
+                  "threshold": 0.36028239453533867
+                }
+              },
+              "average_precision": 0.9822608482540784,
+              "brier": 0.025767347867527154,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.10347072508496752,
+              "positives": 2803,
+              "roc_auc": 0.9905155261372977
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.95772289660946,
+                  "precision": 0.9769427839453458,
+                  "recall": 0.9392446633825944,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9701675521046179,
+                  "precision": 0.9658258746948739,
+                  "recall": 0.9745484400656814,
+                  "threshold": 0.27961979689875505
+                }
+              },
+              "average_precision": 0.9914577085237746,
+              "brier": 0.0073984253994010445,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.031003904544747447,
+              "positives": 1218,
+              "roc_auc": 0.9982069561818188
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9094553959238223,
+                  "precision": 0.9366827253957329,
+                  "recall": 0.8837662337662338,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9145271368215795,
+                  "precision": 0.9154196486662329,
+                  "recall": 0.9136363636363637,
+                  "threshold": 0.40407751411347953
+                }
+              },
+              "average_precision": 0.9750675566175341,
+              "brier": 0.05819986021783087,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.19814170421589428,
+              "positives": 4620,
+              "roc_auc": 0.976358107472238
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.8991090777751023,
+                  "precision": 0.9603909465020576,
+                  "recall": 0.8451788139429606,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9133162909597955,
+                  "precision": 0.9383954154727794,
+                  "recall": 0.8895427795382526,
+                  "threshold": 0.35860773430365267
+                }
+              },
+              "average_precision": 0.9600176671465522,
+              "brier": 0.03212903206579123,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.12424478713910413,
+              "positives": 2209,
+              "roc_auc": 0.9827154522377507
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.04000657462195924,
+              "macro_f1": 0.931290012982729,
+              "micro_f1": 0.9367825048049452,
+              "subset_accuracy": 0.7850098619329389
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.03711374095989481,
+              "macro_f1": 0.9397224278900267,
+              "micro_f1": 0.9424420086668366,
+              "subset_accuracy": 0.7985207100591716
+            }
+          }
+        },
+        "domain_lr": {
+          "macro": {
+            "average_precision": 0.5883532348042178,
+            "brier": 0.15105586730074208,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.46619554019726794,
+            "roc_auc": 0.7372190439067919
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.8070061205886183,
+                  "precision": 0.7299175500588928,
+                  "recall": 0.902300524170064,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8122534516765286,
+                  "precision": 0.7042539546814878,
+                  "recall": 0.9593768200349446,
+                  "threshold": 0.4706783987440781
+                }
+              },
+              "average_precision": 0.8230628795161569,
+              "brier": 0.19311888102029148,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.5676469534212166,
+              "positives": 6868,
+              "roc_auc": 0.7055740594913797
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.48834782608695654,
+                  "precision": 0.8106235565819861,
+                  "recall": 0.34942757590841217,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.5243641549797956,
+                  "precision": 0.5018198362147407,
+                  "recall": 0.5490293678446988,
+                  "threshold": 0.24688355430263342
+                }
+              },
+              "average_precision": 0.550626530191523,
+              "brier": 0.11858542332532934,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.3934755615194498,
+              "positives": 2009,
+              "roc_auc": 0.7687071871082649
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.23488881929220168,
+                  "precision": 0.9615384615384616,
+                  "recall": 0.1337852301105958,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.4745839465640213,
+                  "precision": 0.34759535655058044,
+                  "recall": 0.7477702461648233,
+                  "threshold": 0.2289340042080891
+                }
+              },
+              "average_precision": 0.4985100079275873,
+              "brier": 0.17435949876944085,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.5275643853944566,
+              "positives": 2803,
+              "roc_auc": 0.6708879935538992
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.4466501240694789,
+                  "precision": 0.9137055837563451,
+                  "recall": 0.2955665024630542,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.5427542754275427,
+                  "precision": 0.600597609561753,
+                  "recall": 0.49507389162561577,
+                  "threshold": 0.31523742422592277
+                }
+              },
+              "average_precision": 0.5544064451998044,
+              "brier": 0.0715270093753672,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.25581859191010486,
+              "positives": 1218,
+              "roc_auc": 0.8398681659586512
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.6535840188014101,
+                  "precision": 0.7149100257069408,
+                  "recall": 0.6019480519480519,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.6865134865134865,
+                  "precision": 0.6374768089053804,
+                  "recall": 0.7437229437229437,
+                  "threshold": 0.3815158362241929
+                }
+              },
+              "average_precision": 0.7359534976208328,
+              "brier": 0.19117390678833698,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.5631356996543044,
+              "positives": 4620,
+              "roc_auc": 0.7726784145805884
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.19300269127258746,
+                  "precision": 0.6403061224489796,
+                  "recall": 0.1136260751471254,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.40912995459565593,
+                  "precision": 0.28063973063973063,
+                  "recall": 0.7546401086464464,
+                  "threshold": 0.20120738620346157
+                }
+              },
+              "average_precision": 0.367560048369402,
+              "brier": 0.15757048452568656,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.48953204928407495,
+              "positives": 2209,
+              "roc_auc": 0.6655984427479679
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.2106673241288626,
+              "macro_f1": 0.4705799333518756,
+              "micro_f1": 0.6246742217927318,
+              "subset_accuracy": 0.25857988165680473
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.3066568047337278,
+              "macro_f1": 0.5749332116261718,
+              "micro_f1": 0.6241917615066975,
+              "subset_accuracy": 0.11055226824457594
+            }
+          }
+        },
+        "regex_detector": {
+          "macro": {
+            "average_precision": 0.5911895121195102,
+            "brier": null,
+            "categories": [
+              "CONTACT",
+              "FINANCIAL"
+            ],
+            "excluded": [
+              "IDENTITY",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": null,
+            "roc_auc": 0.6691523834934083
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.774503694471646,
+                  "precision": 0.9965635738831615,
+                  "recall": 0.6333721607454863,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8076199435559737,
+                  "precision": 0.6773175542406311,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.8795190955110167,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 6868,
+              "roc_auc": 0.8143939043336234
+            },
+            "CREDENTIALS": {
+              "covered": false
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.10126582278481013,
+                  "precision": 0.7638190954773869,
+                  "recall": 0.05422761327149483,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.4331298771536738,
+                  "precision": 0.27642998027613414,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.3028599287280037,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 2803,
+              "roc_auc": 0.5239108626531932
+            },
+            "HEALTH": {
+              "covered": false
+            },
+            "IDENTITY": {
+              "covered": false
+            },
+            "SPECIAL_CATEGORY": {
+              "covered": false
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.2579388560157791,
+              "macro_f1": 0.43788475862822807,
+              "micro_f1": 0.6325254654021777,
+              "subset_accuracy": 0.5463510848126233
+            },
+            "dev_f1": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.5231262327416174,
+              "macro_f1": 0.6203749103548237,
+              "micro_f1": 0.6457881205969751,
+              "subset_accuracy": 0.17258382642998027
+            }
+          }
+        },
+        "word_lr": {
+          "macro": {
+            "average_precision": 0.9792679925561493,
+            "brier": 0.030391142875116545,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.1136843912694455,
+            "roc_auc": 0.9877905570387117
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.9645224739564362,
+                  "precision": 0.9651552704475871,
+                  "recall": 0.9638905066977286,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9649097262667443,
+                  "precision": 0.9649097262667443,
+                  "recall": 0.9649097262667443,
+                  "threshold": 0.4942523056939974
+                }
+              },
+              "average_precision": 0.9944099036734573,
+              "brier": 0.03967917270795577,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.14384184662566976,
+              "positives": 6868,
+              "roc_auc": 0.9883891115452693
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.9053129931614939,
+                  "precision": 0.9598438371444507,
+                  "recall": 0.8566450970632156,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.915711739241151,
+                  "precision": 0.9374348279457768,
+                  "recall": 0.8949726231956198,
+                  "threshold": 0.36035819175821715
+                }
+              },
+              "average_precision": 0.961969288456387,
+              "brier": 0.0283768529351626,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.10976736698092847,
+              "positives": 2009,
+              "roc_auc": 0.9866674861658999
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9573372563442442,
+                  "precision": 0.9878557874762809,
+                  "recall": 0.9286478772743489,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9657521965214273,
+                  "precision": 0.9708002883922134,
+                  "recall": 0.9607563325008919,
+                  "threshold": 0.26189413625150065
+                }
+              },
+              "average_precision": 0.9864414786632357,
+              "brier": 0.02030539644608759,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.08720376797397307,
+              "positives": 2803,
+              "roc_auc": 0.992088929426896
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.9744663038928422,
+                  "precision": 0.9940222032450897,
+                  "recall": 0.9556650246305419,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9860997547015535,
+                  "precision": 0.9820846905537459,
+                  "recall": 0.9901477832512315,
+                  "threshold": 0.20207963616716182
+                }
+              },
+              "average_precision": 0.9941016570079203,
+              "brier": 0.005084262525637334,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.024479241130834984,
+              "positives": 1218,
+              "roc_auc": 0.9982183668789424
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9176785117522558,
+                  "precision": 0.9453752582051871,
+                  "recall": 0.8915584415584416,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9198321554770318,
+                  "precision": 0.9389089269612263,
+                  "recall": 0.9015151515151515,
+                  "threshold": 0.46400155375766733
+                }
+              },
+              "average_precision": 0.9776853448378683,
+              "brier": 0.054503452342169786,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.18686678029114456,
+              "positives": 4620,
+              "roc_auc": 0.9785767221908527
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.8914538310412574,
+                  "precision": 0.9742351046698873,
+                  "recall": 0.8216387505658669,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.912963811268896,
+                  "precision": 0.923968474733426,
+                  "recall": 0.9022181982797646,
+                  "threshold": 0.25241713484024936
+                }
+              },
+              "average_precision": 0.9610002826980272,
+              "brier": 0.034397720293686165,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": 0.12994734461412213,
+              "positives": 2209,
+              "roc_auc": 0.9828027260244097
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.038149243918474685,
+              "macro_f1": 0.9351285616914216,
+              "micro_f1": 0.939565160786356,
+              "subset_accuracy": 0.7953648915187377
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.03523997370151216,
+              "macro_f1": 0.9442115639128007,
+              "micro_f1": 0.9451774572977396,
+              "subset_accuracy": 0.809861932938856
+            }
+          }
+        },
+        "word_svc": {
+          "macro": {
+            "average_precision": 0.9809530830589314,
+            "brier": null,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": null,
+            "roc_auc": 0.9883285189658496
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.9666301569916028,
+                  "precision": 0.9695327376592939,
+                  "recall": 0.963744903902155,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9677559282822441,
+                  "precision": 0.9610855829982768,
+                  "recall": 0.9745195107746069,
+                  "threshold": -0.08540851808679073
+                }
+              },
+              "average_precision": 0.9950656184106452,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 6868,
+              "roc_auc": 0.989763171179048
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.9200728976828951,
+                  "precision": 0.9645196506550219,
+                  "recall": 0.8795420607267297,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9290978398983482,
+                  "precision": 0.9491173416407062,
+                  "recall": 0.9099054255848681,
+                  "threshold": -0.1618830583769547
+                }
+              },
+              "average_precision": 0.9646260619116384,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 2009,
+              "roc_auc": 0.9860768590292154
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9673655423883318,
+                  "precision": 0.9891871737509321,
+                  "recall": 0.9464859079557617,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9749774977497749,
+                  "precision": 0.9840116279069767,
+                  "recall": 0.9661077417053158,
+                  "threshold": -0.21406346592965464
+                }
+              },
+              "average_precision": 0.9871407456000251,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 2803,
+              "roc_auc": 0.9920890266766204
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.9850869925434963,
+                  "precision": 0.9941471571906354,
+                  "recall": 0.9761904761904762,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9913757700205339,
+                  "precision": 0.9917830731306492,
+                  "recall": 0.9909688013136289,
+                  "threshold": -0.20681685019921825
+                }
+              },
+              "average_precision": 0.9947553282933344,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 1218,
+              "roc_auc": 0.9984451084733996
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9221197644706144,
+                  "precision": 0.9472723122574754,
+                  "recall": 0.8982683982683982,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9240752757949383,
+                  "precision": 0.9234760051880675,
+                  "recall": 0.9246753246753247,
+                  "threshold": -0.14246110990565375
+                }
+              },
+              "average_precision": 0.9785739595476043,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 4620,
+              "roc_auc": 0.9792395617667355
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.9066731141199227,
+                  "precision": 0.9730150492994292,
+                  "recall": 0.8488003621548211,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9248103012186709,
+                  "precision": 0.9397196261682244,
+                  "recall": 0.9103666817564509,
+                  "threshold": -0.2830492247239407
+                }
+              },
+              "average_precision": 0.965556784590341,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 10140,
+              "log_loss": null,
+              "positives": 2209,
+              "roc_auc": 0.9843573866700793
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.033957922419460884,
+              "macro_f1": 0.9446580780328105,
+              "micro_f1": 0.9464378305506586,
+              "subset_accuracy": 0.8160749506903353
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.03145956607495069,
+              "macro_f1": 0.9520154354940851,
+              "micro_f1": 0.9513620654604594,
+              "subset_accuracy": 0.8285009861932939
+            }
+          }
+        }
+      }
+    },
+    "test_ood": {
+      "bootstrap": {
+        "ci": {
+          "char_lr": {
+            "ap|CONTACT": [
+              0.846248984287626,
+              0.8847272875058177
+            ],
+            "ap|CREDENTIALS": [
+              0.1967233158583697,
+              0.345337224606158
+            ],
+            "ap|FINANCIAL": [
+              0.3142382719838532,
+              0.3904188524426608
+            ],
+            "ap|IDENTITY": [
+              0.8725967108897017,
+              0.9025220116417296
+            ],
+            "f1|CONTACT": [
+              0.8224665215085171,
+              0.8469186094406458
+            ],
+            "f1|CREDENTIALS": [
+              0.2976745829799265,
+              0.43925597108736636
+            ],
+            "f1|FINANCIAL": [
+              0.4040232339726648,
+              0.46839370256485346
+            ],
+            "f1|IDENTITY": [
+              0.7849270489865148,
+              0.8138924456954609
+            ],
+            "macro_ap": [
+              0.5707126104146932,
+              0.6149463072998217
+            ],
+            "macro_f1": [
+              0.5887112373128175,
+              0.629657052348284
+            ],
+            "micro_f1": [
+              0.7395093383350626,
+              0.761060588689897
+            ]
+          },
+          "domain_lr": {
+            "ap|CONTACT": [
+              0.5991006572120374,
+              0.6326617087512971
+            ],
+            "ap|CREDENTIALS": [
+              0.03251470079557247,
+              0.046013490141819435
+            ],
+            "ap|FINANCIAL": [
+              0.14389484607402284,
+              0.1705292286406088
+            ],
+            "ap|IDENTITY": [
+              0.6454514008993428,
+              0.6821255620892425
+            ],
+            "f1|CONTACT": [
+              0.0,
+              0.0
+            ],
+            "f1|CREDENTIALS": [
+              0.0,
+              0.0
+            ],
+            "f1|FINANCIAL": [
+              0.2515875415784699,
+              0.291371158392435
+            ],
+            "f1|IDENTITY": [
+              0.0,
+              0.0
+            ],
+            "macro_ap": [
+              0.35973495330335525,
+              0.3787659979245936
+            ],
+            "macro_f1": [
+              0.06289688539461748,
+              0.07284278959810875
+            ],
+            "micro_f1": [
+              0.11669956190710416,
+              0.13695344201266366
+            ]
+          },
+          "regex_detector": {
+            "ap|CONTACT": [
+              0.6668364150974635,
+              0.7016190304521074
+            ],
+            "ap|FINANCIAL": [
+              0.2898643108077572,
+              0.36106278615310855
+            ],
+            "f1|CONTACT": [
+              0.7492969932943976,
+              0.7750064869730989
+            ],
+            "f1|FINANCIAL": [
+              0.2515875415784699,
+              0.291371158392435
+            ],
+            "macro_ap": [
+              0.4846587364529653,
+              0.5262443241032396
+            ],
+            "macro_f1": [
+              0.50405973111243,
+              0.5305238414929705
+            ],
+            "micro_f1": [
+              0.5454042302698571,
+              0.5707576319367198
+            ]
+          },
+          "word_lr": {
+            "ap|CONTACT": [
+              0.7929494404830085,
+              0.835639630015495
+            ],
+            "ap|CREDENTIALS": [
+              0.19003952926435771,
+              0.35662212978961416
+            ],
+            "ap|FINANCIAL": [
+              0.322874981097651,
+              0.4063706231844408
+            ],
+            "ap|IDENTITY": [
+              0.8459340146325219,
+              0.8804078520522793
+            ],
+            "f1|CONTACT": [
+              0.7871308084294126,
+              0.8133910427440358
+            ],
+            "f1|CREDENTIALS": [
+              0.2716886061137926,
+              0.4138186462324393
+            ],
+            "f1|FINANCIAL": [
+              0.41405375308210757,
+              0.48018443268589217
+            ],
+            "f1|IDENTITY": [
+              0.7221887286264022,
+              0.7559547888945102
+            ],
+            "macro_ap": [
+              0.5527119457533197,
+              0.6022668489779345
+            ],
+            "macro_f1": [
+              0.5618308910559554,
+              0.6027608150377767
+            ],
+            "micro_f1": [
+              0.7012496586857232,
+              0.7229034471153943
+            ]
+          },
+          "word_svc": {
+            "ap|CONTACT": [
+              0.7888170816629771,
+              0.8318814077011671
+            ],
+            "ap|CREDENTIALS": [
+              0.22853154847480972,
+              0.4054660709798989
+            ],
+            "ap|FINANCIAL": [
+              0.3328102876663682,
+              0.41834745910912513
+            ],
+            "ap|IDENTITY": [
+              0.8543009314124954,
+              0.887859169742628
+            ],
+            "f1|CONTACT": [
+              0.7848160556433568,
+              0.8122730008553055
+            ],
+            "f1|CREDENTIALS": [
+              0.3356608851674641,
+              0.46644794960014874
+            ],
+            "f1|FINANCIAL": [
+              0.4403298986592105,
+              0.5087126966308516
+            ],
+            "f1|IDENTITY": [
+              0.7528455415612231,
+              0.7835870065740745
+            ],
+            "macro_ap": [
+              0.567170594838461,
+              0.6178103284167985
+            ],
+            "macro_f1": [
+              0.5903980620596465,
+              0.6300121093815629
+            ],
+            "micro_f1": [
+              0.7207722019036424,
+              0.7434704612069877
+            ]
+          }
+        },
+        "ci_operating_point": "dev_f1",
+        "groups": 2891,
+        "level": 0.95,
+        "n_resamples": 1000,
+        "paired_macro_ap": {
+          "char_lr - domain_lr": {
+            "ci": [
+              0.20253931983377363,
+              0.24475069760437615
+            ],
+            "model_a": "char_lr",
+            "model_b": "domain_lr",
+            "point": 0.21944202457192236,
+            "share_a_better": 1.0
+          },
+          "char_lr - word_svc": {
+            "ci": [
+              -0.013642073693905748,
+              0.012111886263249641
+            ],
+            "model_a": "char_lr",
+            "model_b": "word_svc",
+            "point": -0.00020073433592693313,
+            "share_a_better": 0.46
+          },
+          "word_lr - char_lr": {
+            "ci": [
+              -0.02624250896517983,
+              -0.002064676847104091
+            ],
+            "model_a": "word_lr",
+            "model_b": "char_lr",
+            "point": -0.014510600599997425,
+            "share_a_better": 0.011
+          },
+          "word_lr - domain_lr": {
+            "ci": [
+              0.18650175385897919,
+              0.23160475046922335
+            ],
+            "model_a": "word_lr",
+            "model_b": "domain_lr",
+            "point": 0.20493142397192493,
+            "share_a_better": 1.0
+          },
+          "word_lr - word_svc": {
+            "ci": [
+              -0.018862306965917834,
+              -0.011062766233164071
+            ],
+            "model_a": "word_lr",
+            "model_b": "word_svc",
+            "point": -0.014711334935924358,
+            "share_a_better": 0.0
+          },
+          "word_svc - domain_lr": {
+            "ci": [
+              0.19914022285211974,
+              0.24782881834416254
+            ],
+            "model_a": "word_svc",
+            "model_b": "domain_lr",
+            "point": 0.2196427589078493,
+            "share_a_better": 1.0
+          }
+        },
+        "seed": 0
+      },
+      "documents": 2891,
+      "models": {
+        "char_lr": {
+          "macro": {
+            "average_precision": 0.5888643697811925,
+            "brier": 0.14378521341337078,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "CREDENTIALS"
+            ],
+            "excluded": [
+              "HEALTH",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": 0.5384341106192762,
+            "roc_auc": 0.8146235155732033
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.8388589051657671,
+                  "precision": 0.7745609871855719,
+                  "recall": 0.9147982062780269,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8350202429149798,
+                  "precision": 0.761070110701107,
+                  "recall": 0.9248878923766816,
+                  "threshold": 0.4696074483409212
+                }
+              },
+              "average_precision": 0.8645715130429174,
+              "brier": 0.16262460741491877,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.6251828311567659,
+              "positives": 1784,
+              "roc_auc": 0.8402162553015664
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.36213991769547327,
+                  "precision": 0.3384615384615385,
+                  "recall": 0.3893805309734513,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.36823104693140796,
+                  "precision": 0.31097560975609756,
+                  "recall": 0.45132743362831856,
+                  "threshold": 0.39804856056272886
+                }
+              },
+              "average_precision": 0.2544461590735387,
+              "brier": 0.04659671744624083,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.19753823406909815,
+              "positives": 113,
+              "roc_auc": 0.8331103423230566
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.4478897502153316,
+                  "precision": 0.36827195467422097,
+                  "recall": 0.5714285714285714,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.43669446550416985,
+                  "precision": 0.3333333333333333,
+                  "recall": 0.6329670329670329,
+                  "threshold": 0.36028239453533867
+                }
+              },
+              "average_precision": 0.34880106241950837,
+              "brier": 0.1761002231691004,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.7298093947016128,
+              "positives": 455,
+              "roc_auc": 0.7686686876342048
+            },
+            "HEALTH": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.7766203703703703,
+                  "precision": 0.8736979166666666,
+                  "recall": 0.6989583333333333,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.799557644456732,
+                  "precision": 0.8520919269298762,
+                  "recall": 0.753125,
+                  "threshold": 0.40407751411347953
+                }
+              },
+              "average_precision": 0.8876387445888059,
+              "brier": 0.1898193056232231,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.6012059825496279,
+              "positives": 1920,
+              "roc_auc": 0.8164987770339858
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.1898132134209616,
+              "macro_f1": 0.6063772358617356,
+              "micro_f1": 0.7491715232544852,
+              "subset_accuracy": 0.4347976478727084
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.1984607402282947,
+              "macro_f1": 0.6098758499518224,
+              "micro_f1": 0.7495908346972177,
+              "subset_accuracy": 0.4233829124870287
+            }
+          }
+        },
+        "domain_lr": {
+          "macro": {
+            "average_precision": 0.36942234520927014,
+            "brier": 0.35804725594336984,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "CREDENTIALS"
+            ],
+            "excluded": [
+              "HEALTH",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": 1.0976319604475366,
+            "roc_auc": 0.5
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.4706783987440781
+                }
+              },
+              "average_precision": 0.6170875129712902,
+              "brier": 0.2904050372486895,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.7756916762973807,
+              "positives": 1784,
+              "roc_auc": 0.5
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.24688355430263342
+                }
+              },
+              "average_precision": 0.03908682116914562,
+              "brier": 0.040678630174589156,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.18788535270336124,
+              "positives": 113,
+              "roc_auc": 0.5
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.2719665271966527,
+                  "precision": 0.15738498789346247,
+                  "recall": 1.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.2719665271966527,
+                  "precision": 0.15738498789346247,
+                  "recall": 1.0,
+                  "threshold": 0.2289340042080891
+                }
+              },
+              "average_precision": 0.15738498789346247,
+              "brier": 0.7621986398096093,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 2.5465961219611417,
+              "positives": 455,
+              "roc_auc": 0.5
+            },
+            "HEALTH": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.3815158362241929
+                }
+              },
+              "average_precision": 0.6641300588031823,
+              "brier": 0.3389067165405912,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.8803546908282631,
+              "positives": 1920,
+              "roc_auc": 0.5
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.5407298512625389,
+              "macro_f1": 0.06799163179916318,
+              "micro_f1": 0.12704174228675136,
+              "subset_accuracy": 0.007955724662746454
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.5407298512625389,
+              "macro_f1": 0.06799163179916318,
+              "micro_f1": 0.12704174228675136,
+              "subset_accuracy": 0.007955724662746454
+            }
+          }
+        },
+        "regex_detector": {
+          "macro": {
+            "average_precision": 0.5046952454934934,
+            "brier": null,
+            "categories": [
+              "CONTACT",
+              "FINANCIAL"
+            ],
+            "excluded": [
+              "IDENTITY",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": null,
+            "roc_auc": 0.6060953285784465
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.3714922048997773,
+                  "precision": 0.9045553145336226,
+                  "recall": 0.2337443946188341,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.7632085561497326,
+                  "precision": 0.6170875129712902,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.6842815002198848,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 1784,
+              "roc_auc": 0.5969986652407631
+            },
+            "CREDENTIALS": {
+              "covered": false
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.3724137931034483,
+                  "precision": 0.864,
+                  "recall": 0.23736263736263735,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.2719665271966527,
+                  "precision": 0.15738498789346247,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.32510899076710215,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 455,
+              "roc_auc": 0.6151919919161298
+            },
+            "HEALTH": {
+              "covered": false
+            },
+            "IDENTITY": {
+              "covered": false
+            },
+            "SPECIAL_CATEGORY": {
+              "covered": false
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.30698720166032517,
+              "macro_f1": 0.3719529990016128,
+              "micro_f1": 0.37168141592920356,
+              "subset_accuracy": 0.47284676582497404
+            },
+            "dev_f1": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.6127637495676237,
+              "macro_f1": 0.5175875416731927,
+              "micro_f1": 0.5582845031791547,
+              "subset_accuracy": 0.13317191283292978
+            }
+          }
+        },
+        "word_lr": {
+          "macro": {
+            "average_precision": 0.5743537691811951,
+            "brier": 0.15573265792337296,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "CREDENTIALS"
+            ],
+            "excluded": [
+              "HEALTH",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": 0.5811733767741849,
+            "roc_auc": 0.7613791616225793
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.7998000499875031,
+                  "precision": 0.7216959855660803,
+                  "recall": 0.8968609865470852,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.7999003239471717,
+                  "precision": 0.7200538358008075,
+                  "recall": 0.8996636771300448,
+                  "threshold": 0.4942523056939974
+                }
+              },
+              "average_precision": 0.8141098852359543,
+              "brier": 0.20223878033816722,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.7722016902308826,
+              "positives": 1784,
+              "roc_auc": 0.7740692130389166
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.34146341463414637,
+                  "precision": 0.3157894736842105,
+                  "recall": 0.37168141592920356,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.34532374100719426,
+                  "precision": 0.2909090909090909,
+                  "recall": 0.4247787610619469,
+                  "threshold": 0.36035819175821715
+                }
+              },
+              "average_precision": 0.2574100644066017,
+              "brier": 0.04610045415020046,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.19911204057011908,
+              "positives": 113,
+              "roc_auc": 0.7785030294921539
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.478515625,
+                  "precision": 0.4305799648506151,
+                  "recall": 0.5384615384615384,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.4456437933693138,
+                  "precision": 0.34323040380047504,
+                  "recall": 0.6351648351648351,
+                  "threshold": 0.26189413625150065
+                }
+              },
+              "average_precision": 0.36203867967994,
+              "brier": 0.15615197340132753,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.6687919237453954,
+              "positives": 455,
+              "roc_auc": 0.717358667604973
+            },
+            "HEALTH": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.725733293014817,
+                  "precision": 0.8651766402307137,
+                  "recall": 0.625,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.7394908229721728,
+                  "precision": 0.8566529492455418,
+                  "recall": 0.6505208333333333,
+                  "threshold": 0.46400155375766733
+                }
+              },
+              "average_precision": 0.8638564474022843,
+              "brier": 0.21843942380379658,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": 0.6845878525503426,
+              "positives": 1920,
+              "roc_auc": 0.775585736354274
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.2078865444482878,
+              "macro_f1": 0.5863780956591166,
+              "micro_f1": 0.7197481930519934,
+              "subset_accuracy": 0.3922518159806295
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.2234520927014874,
+              "macro_f1": 0.5825896703239631,
+              "micro_f1": 0.7118001338389471,
+              "subset_accuracy": 0.3614666205465237
+            }
+          }
+        },
+        "word_svc": {
+          "macro": {
+            "average_precision": 0.5890651041171194,
+            "brier": null,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "CREDENTIALS"
+            ],
+            "excluded": [
+              "HEALTH",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": null,
+            "roc_auc": 0.7715823392027001
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.8013211382113821,
+                  "precision": 0.7328066914498141,
+                  "recall": 0.8839686098654709,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.7981243830207305,
+                  "precision": 0.7129629629629629,
+                  "recall": 0.906390134529148,
+                  "threshold": -0.08540851808679073
+                }
+              },
+              "average_precision": 0.810262879540578,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 1784,
+              "roc_auc": 0.7714214679516003
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.3843137254901961,
+                  "precision": 0.34507042253521125,
+                  "recall": 0.4336283185840708,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.40268456375838924,
+                  "precision": 0.32432432432432434,
+                  "recall": 0.5309734513274337,
+                  "threshold": -0.1618830583769547
+                }
+              },
+              "average_precision": 0.30058149183829713,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 113,
+              "roc_auc": 0.8019138999853463
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.49246231155778897,
+                  "precision": 0.4537037037037037,
+                  "recall": 0.5384615384615384,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.47472150814053127,
+                  "precision": 0.3890449438202247,
+                  "recall": 0.6087912087912087,
+                  "threshold": -0.21406346592965464
+                }
+              },
+              "average_precision": 0.37373008110389194,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 455,
+              "roc_auc": 0.725496670816868
+            },
+            "HEALTH": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.7374436090225563,
+                  "precision": 0.8725978647686833,
+                  "recall": 0.6385416666666667,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.769620253164557,
+                  "precision": 0.8366972477064221,
+                  "recall": 0.7125,
+                  "threshold": -0.14246110990565375
+                }
+              },
+              "average_precision": 0.8716859639857112,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 1920,
+              "roc_auc": 0.787497318056986
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": null,
+                "dev_f1": null
+              },
+              "average_precision": null,
+              "brier": null,
+              "covered": true,
+              "defined": false,
+              "documents": 2891,
+              "log_loss": null,
+              "positives": 0,
+              "roc_auc": null
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.200363196125908,
+              "macro_f1": 0.6038851960704809,
+              "micro_f1": 0.7277640700270238,
+              "subset_accuracy": 0.40539605672777584
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "CREDENTIALS"
+              ],
+              "hamming_loss": 0.20996195088204772,
+              "macro_f1": 0.6112876770210519,
+              "micro_f1": 0.732363315696649,
+              "subset_accuracy": 0.3919059149083362
+            }
+          }
+        }
+      }
+    },
+    "test_shift": {
+      "bootstrap": {
+        "ci": {
+          "char_lr": {
+            "ap|CONTACT": [
+              0.9953027753768038,
+              0.9958927483803975
+            ],
+            "ap|CREDENTIALS": [
+              0.9481053139325841,
+              0.9530101568643184
+            ],
+            "ap|FINANCIAL": [
+              0.980869985037931,
+              0.9831008774359041
+            ],
+            "ap|HEALTH": [
+              0.9850150721608582,
+              0.9873982399281145
+            ],
+            "ap|IDENTITY": [
+              0.9725438683416555,
+              0.9743870433417788
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9598360023117832,
+              0.9634395104942858
+            ],
+            "f1|CONTACT": [
+              0.9686223626399358,
+              0.9706271505059042
+            ],
+            "f1|CREDENTIALS": [
+              0.8858184574293522,
+              0.8932361725564926
+            ],
+            "f1|FINANCIAL": [
+              0.9469476723873195,
+              0.9505773825608791
+            ],
+            "f1|HEALTH": [
+              0.9462036726697648,
+              0.9510588227310254
+            ],
+            "f1|IDENTITY": [
+              0.9071299705916108,
+              0.9111611882395707
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.9081346006391651,
+              0.9136963205556203
+            ],
+            "macro_ap": [
+              0.9743222068113386,
+              0.9755583258023344
+            ],
+            "macro_f1": [
+              0.9284893269193578,
+              0.9304715742267806
+            ],
+            "micro_f1": [
+              0.9356537723607204,
+              0.9372851080211514
+            ]
+          },
+          "domain_lr": {
+            "ap|CONTACT": [
+              0.689784450818733,
+              0.6967768614480405
+            ],
+            "ap|CREDENTIALS": [
+              0.19489136445295346,
+              0.2010859834830218
+            ],
+            "ap|FINANCIAL": [
+              0.32453110437225585,
+              0.3315843357586584
+            ],
+            "ap|HEALTH": [
+              0.18354865319275204,
+              0.18974136949258663
+            ],
+            "ap|IDENTITY": [
+              0.5301924379806636,
+              0.5383151184108671
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.2396500294529147,
+              0.24551941272164365
+            ],
+            "f1|CONTACT": [
+              0.8156568389367562,
+              0.8203657367470593
+            ],
+            "f1|CREDENTIALS": [
+              0.0,
+              0.0
+            ],
+            "f1|FINANCIAL": [
+              0.4885915108382754,
+              0.49670487101461885
+            ],
+            "f1|HEALTH": [
+              0.07159582560895932,
+              0.08408246802712345
+            ],
+            "f1|IDENTITY": [
+              0.6896150023138224,
+              0.696517289698947
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.38448697454471564,
+              0.3922328058978806
+            ],
+            "macro_ap": [
+              0.36274566708372546,
+              0.36495370261514243
+            ],
+            "macro_f1": [
+              0.41028683040315833,
+              0.4133144953598096
+            ],
+            "micro_f1": [
+              0.5798349997623643,
+              0.5830152008880481
+            ]
+          },
+          "regex_detector": {
+            "ap|CONTACT": [
+              0.8943029863809162,
+              0.8977704744500323
+            ],
+            "ap|FINANCIAL": [
+              0.3526901750626923,
+              0.3607973079044118
+            ],
+            "f1|CONTACT": [
+              0.8156568389367562,
+              0.8203657367470593
+            ],
+            "f1|FINANCIAL": [
+              0.4885915108382754,
+              0.49670487101461885
+            ],
+            "macro_ap": [
+              0.624244295521615,
+              0.6285837848466279
+            ],
+            "macro_f1": [
+              0.653133126205551,
+              0.657620321257476
+            ],
+            "micro_f1": [
+              0.672877159181692,
+              0.6770832032636833
+            ]
+          },
+          "word_lr": {
+            "ap|CONTACT": [
+              0.9949393425906767,
+              0.9955859132024407
+            ],
+            "ap|CREDENTIALS": [
+              0.9484720374450577,
+              0.9529797713140422
+            ],
+            "ap|FINANCIAL": [
+              0.9861014180172419,
+              0.9880872095354304
+            ],
+            "ap|HEALTH": [
+              0.9936454669914906,
+              0.9952794643919927
+            ],
+            "ap|IDENTITY": [
+              0.9746132552324891,
+              0.9762953189972591
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9595940609347678,
+              0.9631122718246357
+            ],
+            "f1|CONTACT": [
+              0.9682510372746299,
+              0.9702706593648435
+            ],
+            "f1|CREDENTIALS": [
+              0.886645103879613,
+              0.894095927150025
+            ],
+            "f1|FINANCIAL": [
+              0.9666906106110525,
+              0.9695320123196343
+            ],
+            "f1|HEALTH": [
+              0.9732233022142327,
+              0.9766479030631515
+            ],
+            "f1|IDENTITY": [
+              0.9084989260245945,
+              0.9125238112653116
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.9021524738448133,
+              0.9076482164294117
+            ],
+            "macro_ap": [
+              0.9768909066579864,
+              0.9779858240532181
+            ],
+            "macro_f1": [
+              0.9353839549217451,
+              0.9373461604557165
+            ],
+            "micro_f1": [
+              0.9404938785285977,
+              0.9420648682073983
+            ]
+          },
+          "word_svc": {
+            "ap|CONTACT": [
+              0.9953063657314443,
+              0.995936036295951
+            ],
+            "ap|CREDENTIALS": [
+              0.9510053444577907,
+              0.9556518316379078
+            ],
+            "ap|FINANCIAL": [
+              0.9866517377118861,
+              0.988630844328963
+            ],
+            "ap|HEALTH": [
+              0.9942872955932526,
+              0.995850480695324
+            ],
+            "ap|IDENTITY": [
+              0.9753575622630045,
+              0.9770307394694046
+            ],
+            "ap|SPECIAL_CATEGORY": [
+              0.9640359373998234,
+              0.9675260265893496
+            ],
+            "f1|CONTACT": [
+              0.9700492157045058,
+              0.9719963025282645
+            ],
+            "f1|CREDENTIALS": [
+              0.9005381276837898,
+              0.9074677768229146
+            ],
+            "f1|FINANCIAL": [
+              0.9717337880095643,
+              0.9743900792952344
+            ],
+            "f1|HEALTH": [
+              0.984892622314083,
+              0.9873135182620257
+            ],
+            "f1|IDENTITY": [
+              0.912139102252047,
+              0.9161428112305942
+            ],
+            "f1|SPECIAL_CATEGORY": [
+              0.911978027342932,
+              0.9173842564886663
+            ],
+            "macro_ap": [
+              0.9784314810940606,
+              0.9795123948397948
+            ],
+            "macro_f1": [
+              0.9429671387351511,
+              0.9447319640985816
+            ],
+            "micro_f1": [
+              0.9457567219545018,
+              0.9472568145920496
+            ]
+          }
+        },
+        "ci_operating_point": "dev_f1",
+        "groups": 50000,
+        "level": 0.95,
+        "n_resamples": 1000,
+        "paired_macro_ap": {
+          "char_lr - domain_lr": {
+            "ci": [
+              0.6099121022352931,
+              0.6122632391310697
+            ],
+            "model_a": "char_lr",
+            "model_b": "domain_lr",
+            "point": 0.611100267939021,
+            "share_a_better": 1.0
+          },
+          "char_lr - word_svc": {
+            "ci": [
+              -0.004381831519723286,
+              -0.003646962469603804
+            ],
+            "model_a": "char_lr",
+            "model_b": "word_svc",
+            "point": -0.004024296479783418,
+            "share_a_better": 0.0
+          },
+          "word_lr - char_lr": {
+            "ci": [
+              0.0021359660865510445,
+              0.0028247187555141217
+            ],
+            "model_a": "word_lr",
+            "model_b": "char_lr",
+            "point": 0.0024893805794312662,
+            "share_a_better": 1.0
+          },
+          "word_lr - domain_lr": {
+            "ci": [
+              0.6123764297656697,
+              0.614783715956658
+            ],
+            "model_a": "word_lr",
+            "model_b": "domain_lr",
+            "point": 0.6135896485184522,
+            "share_a_better": 1.0
+          },
+          "word_lr - word_svc": {
+            "ci": [
+              -0.0016448177757285882,
+              -0.001433478074967559
+            ],
+            "model_a": "word_lr",
+            "model_b": "word_svc",
+            "point": -0.0015349159003521518,
+            "share_a_better": 0.0
+          },
+          "word_svc - domain_lr": {
+            "ci": [
+              0.613905287793836,
+              0.616346506362566
+            ],
+            "model_a": "word_svc",
+            "model_b": "domain_lr",
+            "point": 0.6151245644188044,
+            "share_a_better": 1.0
+          }
+        },
+        "seed": 0
+      },
+      "documents": 100000,
+      "models": {
+        "char_lr": {
+          "macro": {
+            "average_precision": 0.9749403015629029,
+            "brier": 0.0362155894627264,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.13109092185122298,
+            "roc_auc": 0.9847804157991317
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.9688524947820838,
+                  "precision": 0.975328345315314,
+                  "recall": 0.9624620719549198,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9696473706699885,
+                  "precision": 0.97206209069656,
+                  "recall": 0.9672446178297934,
+                  "threshold": 0.4696074483409212
+                }
+              },
+              "average_precision": 0.9956071441221033,
+              "brier": 0.03471668278432637,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.12817947638588253,
+              "positives": 69210,
+              "roc_auc": 0.9904802142530096
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.8803376637614427,
+                  "precision": 0.9413281753707285,
+                  "recall": 0.8267696267696267,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8895064532506747,
+                  "precision": 0.9247694188243138,
+                  "recall": 0.8568339768339769,
+                  "threshold": 0.39804856056272886
+                }
+              },
+              "average_precision": 0.9506380787616625,
+              "brier": 0.03370990620075295,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.12361924940598064,
+              "positives": 19425,
+              "roc_auc": 0.9818584503035015
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9429992050750503,
+                  "precision": 0.9615384615384616,
+                  "recall": 0.9251613297856073,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.948830832508188,
+                  "precision": 0.9452167051110841,
+                  "recall": 0.9524727039177906,
+                  "threshold": 0.36028239453533867
+                }
+              },
+              "average_precision": 0.9819802658318525,
+              "brier": 0.02943618928211634,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.11628735941816407,
+              "positives": 32697,
+              "roc_auc": 0.9901499731807307
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.9491935262275712,
+                  "precision": 0.9529379310344828,
+                  "recall": 0.945478432231224,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9485902931231863,
+                  "precision": 0.9233919037993055,
+                  "recall": 0.9752025399605868,
+                  "threshold": 0.27961979689875505
+                }
+              },
+              "average_precision": 0.9862647224228442,
+              "brier": 0.014126801408591518,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.0544277099098178,
+              "positives": 18268,
+              "roc_auc": 0.9961903680114229
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9060885912804163,
+                  "precision": 0.9323162827799382,
+                  "recall": 0.8812961845875433,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9092796150398641,
+                  "precision": 0.9102329183746718,
+                  "recall": 0.9083283064394511,
+                  "threshold": 0.40407751411347953
+                }
+              },
+              "average_precision": 0.973502976890533,
+              "brier": 0.07017658862577444,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.23187856086024505,
+              "positives": 53048,
+              "roc_auc": 0.9669773462029354
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.9023108331161498,
+                  "precision": 0.9495794477966721,
+                  "recall": 0.8595249917245945,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.910879848628193,
+                  "precision": 0.9258879343505577,
+                  "recall": 0.8963505461767627,
+                  "threshold": 0.35860773430365267
+                }
+              },
+              "average_precision": 0.9616486213484219,
+              "brier": 0.03512736847479676,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.1321531751272477,
+              "positives": 24168,
+              "roc_auc": 0.9830261428431895
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.04724,
+              "macro_f1": 0.9249637190404524,
+              "micro_f1": 0.9331162395582614,
+              "subset_accuracy": 0.75424
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.045783333333333336,
+              "macro_f1": 0.9294557355366825,
+              "micro_f1": 0.9364496964761623,
+              "subset_accuracy": 0.7609
+            }
+          }
+        },
+        "domain_lr": {
+          "macro": {
+            "average_precision": 0.3638400336238819,
+            "brier": 0.1983728874341413,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.5879148694810179,
+            "roc_auc": 0.5058623827040055
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.8180367590567933,
+                  "precision": 0.6921,
+                  "recall": 1.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8180367590567933,
+                  "precision": 0.6921,
+                  "recall": 1.0,
+                  "threshold": 0.4706783987440781
+                }
+              },
+              "average_precision": 0.693214630490369,
+              "brier": 0.2134699633132162,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.6183124578808733,
+              "positives": 69210,
+              "roc_auc": 0.5026109727472751
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.24688355430263342
+                }
+              },
+              "average_precision": 0.1979806710598124,
+              "brier": 0.15722450271996746,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.4945850526143533,
+              "positives": 19425,
+              "roc_auc": 0.5116904919635296
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.4928069210306186,
+                  "precision": 0.32697,
+                  "recall": 1.0,
+                  "threshold": 0.2289340042080891
+                }
+              },
+              "average_precision": 0.3281434632537721,
+              "brier": 0.22310505423370366,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.6394144824418718,
+              "positives": 32697,
+              "roc_auc": 0.5026564244088323
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.07832678270634474,
+                  "precision": 0.2696520618556701,
+                  "recall": 0.04581782351653164,
+                  "threshold": 0.31523742422592277
+                }
+              },
+              "average_precision": 0.18666487058097198,
+              "brier": 0.15760147934062085,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.5169079226679044,
+              "positives": 18268,
+              "roc_auc": 0.5090404147191624
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.07027354323977775,
+                  "precision": 0.635631443298969,
+                  "recall": 0.03719273111144624,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.6932204275782761,
+                  "precision": 0.53048,
+                  "recall": 1.0,
+                  "threshold": 0.3815158362241929
+                }
+              },
+              "average_precision": 0.534390869356599,
+              "brier": 0.25461624427793644,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.7024594891229454,
+              "positives": 53048,
+              "roc_auc": 0.5065521501868357
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.38845569285667086,
+                  "precision": 0.24267255614266842,
+                  "recall": 0.9729394240317776,
+                  "threshold": 0.20120738620346157
+                }
+              },
+              "average_precision": 0.242645697001767,
+              "brier": 0.18422008071940316,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.5558098121581594,
+              "positives": 24168,
+              "roc_auc": 0.5026238421983975
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.2959233333333333,
+              "macro_f1": 0.14805171704942852,
+              "micro_f1": 0.44500500125031256,
+              "subset_accuracy": 0.10307
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.43034,
+              "macro_f1": 0.41180776387145057,
+              "micro_f1": 0.5813921817851677,
+              "subset_accuracy": 0.01629
+            }
+          }
+        },
+        "regex_detector": {
+          "macro": {
+            "average_precision": 0.6264032876494772,
+            "brier": null,
+            "categories": [
+              "CONTACT",
+              "FINANCIAL"
+            ],
+            "excluded": [
+              "IDENTITY",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "log_loss": null,
+            "roc_auc": 0.6788803641715936
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.8016715881814571,
+                  "precision": 0.9960521798832819,
+                  "recall": 0.6707701199248663,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8180367590567933,
+                  "precision": 0.6921,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.8959820401517335,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 69210,
+              "roc_auc": 0.8323970768510334
+            },
+            "CREDENTIALS": {
+              "covered": false
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.1026600644864118,
+                  "precision": 0.874448258950466,
+                  "recall": 0.05453099672752852,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.4928069210306186,
+                  "precision": 0.32697,
+                  "recall": 1.0,
+                  "threshold": 0.0
+                }
+              },
+              "average_precision": 0.35682453514722084,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 32697,
+              "roc_auc": 0.5253636514921538
+            },
+            "HEALTH": {
+              "covered": false
+            },
+            "IDENTITY": {
+              "covered": false
+            },
+            "SPECIAL_CATEGORY": {
+              "covered": false
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.2707,
+              "macro_f1": 0.45216582633393443,
+              "micro_f1": 0.6403948085072466,
+              "subset_accuracy": 0.52199
+            },
+            "dev_f1": {
+              "categories": [
+                "CONTACT",
+                "FINANCIAL"
+              ],
+              "hamming_loss": 0.490465,
+              "macro_f1": 0.655421840043706,
+              "micro_f1": 0.6750886862510641,
+              "subset_accuracy": 0.20831
+            }
+          }
+        },
+        "word_lr": {
+          "macro": {
+            "average_precision": 0.9774296821423342,
+            "brier": 0.033798313782428556,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": 0.12429085421865138,
+            "roc_auc": 0.9849454735732173
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.9692059051608555,
+                  "precision": 0.9722993703741403,
+                  "recall": 0.9661320618407745,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9692668655678823,
+                  "precision": 0.9715745768125199,
+                  "recall": 0.9669700910273082,
+                  "threshold": 0.4942523056939974
+                }
+              },
+              "average_precision": 0.9952694357070659,
+              "brier": 0.03593645277063037,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.13448285045597952,
+              "positives": 69210,
+              "roc_auc": 0.9897711072189977
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.8806333739342266,
+                  "precision": 0.9525121264746392,
+                  "recall": 0.8188416988416989,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.8903787595491213,
+                  "precision": 0.9252761894187531,
+                  "recall": 0.858018018018018,
+                  "threshold": 0.36035819175821715
+                }
+              },
+              "average_precision": 0.9508598779629456,
+              "brier": 0.03372482956258896,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.12455851331880204,
+              "positives": 19425,
+              "roc_auc": 0.9797509889305112
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9618504336953974,
+                  "precision": 0.9835080542060854,
+                  "recall": 0.9411260971954614,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9681154991979223,
+                  "precision": 0.9672141156358752,
+                  "recall": 0.9690185643942869,
+                  "threshold": 0.26189413625150065
+                }
+              },
+              "average_precision": 0.9871284906849642,
+              "brier": 0.021161043386271935,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.09268245069229386,
+              "positives": 32697,
+              "roc_auc": 0.9917871207152302
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.9786715417428398,
+                  "precision": 0.9905797914096669,
+                  "recall": 0.9670462010072257,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9749925653572684,
+                  "precision": 0.9631964104481598,
+                  "recall": 0.9870812349463542,
+                  "threshold": 0.20207963616716182
+                }
+              },
+              "average_precision": 0.9945214317981582,
+              "brier": 0.006781468124115315,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.032118825160624795,
+              "positives": 18268,
+              "roc_auc": 0.9978403544217975
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9085181476115934,
+                  "precision": 0.9381161777402968,
+                  "recall": 0.880730659025788,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9105597119115707,
+                  "precision": 0.9306225275049695,
+                  "recall": 0.8913436887347308,
+                  "threshold": 0.46400155375766733
+                }
+              },
+              "average_precision": 0.9754880361462657,
+              "brier": 0.06826665543356389,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.2245714087440269,
+              "positives": 53048,
+              "roc_auc": 0.9689395503923072
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.8959992958056423,
+                  "precision": 0.9569427470151358,
+                  "recall": 0.8423535253227408,
+                  "threshold": 0.5
+                },
+                "dev_f1": {
+                  "f1": 0.9048831574191959,
+                  "precision": 0.8982062780269058,
+                  "recall": 0.9116600463422708,
+                  "threshold": 0.25241713484024936
+                }
+              },
+              "average_precision": 0.9613108205546058,
+              "brier": 0.03691943341740087,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": 0.13733107694018104,
+              "positives": 24168,
+              "roc_auc": 0.98158371976046
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.04317833333333333,
+              "macro_f1": 0.9324797829917592,
+              "micro_f1": 0.938679479744843,
+              "subset_accuracy": 0.77231
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.042135,
+              "macro_f1": 0.9363660931671601,
+              "micro_f1": 0.9412792169633172,
+              "subset_accuracy": 0.77702
+            }
+          }
+        },
+        "word_svc": {
+          "macro": {
+            "average_precision": 0.9789645980426863,
+            "brier": null,
+            "categories": [
+              "IDENTITY",
+              "CONTACT",
+              "FINANCIAL",
+              "HEALTH",
+              "CREDENTIALS",
+              "SPECIAL_CATEGORY"
+            ],
+            "excluded": [],
+            "log_loss": null,
+            "roc_auc": 0.985258830640177
+          },
+          "per_category": {
+            "CONTACT": {
+              "at": {
+                "default": {
+                  "f1": 0.971135277975404,
+                  "precision": 0.9759104704097117,
+                  "recall": 0.9664065886432597,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9710270145728933,
+                  "precision": 0.9677660093573295,
+                  "recall": 0.9743100707990174,
+                  "threshold": -0.08540851808679073
+                }
+              },
+              "average_precision": 0.995626903429514,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 69210,
+              "roc_auc": 0.9905749164033247
+            },
+            "CREDENTIALS": {
+              "at": {
+                "default": {
+                  "f1": 0.8988420362682981,
+                  "precision": 0.9572450700948171,
+                  "recall": 0.8471557271557272,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9039841164791529,
+                  "precision": 0.9304632152588556,
+                  "recall": 0.878970398970399,
+                  "threshold": -0.1618830583769547
+                }
+              },
+              "average_precision": 0.9534297293385271,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 19425,
+              "roc_auc": 0.9783275838757066
+            },
+            "FINANCIAL": {
+              "at": {
+                "default": {
+                  "f1": 0.9702018086773078,
+                  "precision": 0.9843563109852062,
+                  "recall": 0.9564486038474478,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9731014599435652,
+                  "precision": 0.9758850850481375,
+                  "recall": 0.9703336697556351,
+                  "threshold": -0.21406346592965464
+                }
+              },
+              "average_precision": 0.9876751547796229,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 32697,
+              "roc_auc": 0.9917683608843396
+            },
+            "HEALTH": {
+              "at": {
+                "default": {
+                  "f1": 0.987010842644064,
+                  "precision": 0.9924183729939126,
+                  "recall": 0.9816619224874097,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9861187014974314,
+                  "precision": 0.9845045831514623,
+                  "recall": 0.9877381213050143,
+                  "threshold": -0.20681685019921825
+                }
+              },
+              "average_precision": 0.9950975794228755,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 18268,
+              "roc_auc": 0.9978635795643972
+            },
+            "IDENTITY": {
+              "at": {
+                "default": {
+                  "f1": 0.9110505859204622,
+                  "precision": 0.9376334217824153,
+                  "recall": 0.8859334941939375,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9142276537495414,
+                  "precision": 0.9125363883932763,
+                  "recall": 0.9159251998190319,
+                  "threshold": -0.14246110990565375
+                }
+              },
+              "average_precision": 0.9762273188580151,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 53048,
+              "roc_auc": 0.9697097409139408
+            },
+            "SPECIAL_CATEGORY": {
+              "at": {
+                "default": {
+                  "f1": 0.9085936312921922,
+                  "precision": 0.955618464910278,
+                  "recall": 0.8659798080105925,
+                  "threshold": 0.0
+                },
+                "dev_f1": {
+                  "f1": 0.9147541657249697,
+                  "precision": 0.908500999877566,
+                  "recall": 0.9210940086064218,
+                  "threshold": -0.2830492247239407
+                }
+              },
+              "average_precision": 0.9657309024275635,
+              "brier": null,
+              "covered": true,
+              "defined": true,
+              "documents": 100000,
+              "log_loss": null,
+              "positives": 24168,
+              "roc_auc": 0.983308802199353
+            }
+          },
+          "vector": {
+            "default": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.039101666666666667,
+              "macro_f1": 0.9411390304629547,
+              "micro_f1": 0.94472051591986,
+              "subset_accuracy": 0.79164
+            },
+            "dev_f1": {
+              "categories": [
+                "IDENTITY",
+                "CONTACT",
+                "FINANCIAL",
+                "HEALTH",
+                "CREDENTIALS",
+                "SPECIAL_CATEGORY"
+              ],
+              "hamming_loss": 0.03863166666666667,
+              "macro_f1": 0.9438688519945924,
+              "micro_f1": 0.9465220531064922,
+              "subset_accuracy": 0.79455
+            }
+          }
+        }
+      }
+    }
+  }
+}
