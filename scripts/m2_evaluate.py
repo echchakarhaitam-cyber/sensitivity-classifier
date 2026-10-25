@@ -13,17 +13,14 @@ import json
 import sys
 import time
 
-import numpy as np
-
 from sensclf.evaluation import bootstrap_metrics, point_metrics
 from sensclf.guard import calibration_ids, ensure_no_calibration
-from sensclf.labels import CATEGORIES
 from sensclf.models import label_matrix, load_model, load_sidecar
 from sensclf.models.baselines import DetectorBaseline
 from sensclf.predictions import write_predictions
 from sensclf.processed import load_set
 from sensclf.rawdata import REPO_ROOT, load_manifest
-from sensclf.selection import default_threshold, dev_thresholds
+from sensclf.selection import operating_points
 
 SETS = ("dev", "test_shift", "test_ood")
 TRAINED = ("word_lr", "char_lr", "word_svc", "domain_lr")
@@ -50,17 +47,6 @@ def load_models() -> tuple[dict, dict]:
     return models, info
 
 
-def operating_points(model, S_dev: np.ndarray, Y_dev: np.ndarray, dev_ids: list[str],
-                     forbidden: frozenset[str]) -> dict:
-    covered = {c: not np.isnan(S_dev[:, k]).any() for k, c in enumerate(CATEGORIES)}
-    t0 = default_threshold(model)
-    return {
-        "default": {c: (t0 if covered[c] else None) for c in CATEGORIES},
-        "dev_f1": dev_thresholds(S_dev, Y_dev, set_name="dev", doc_ids=dev_ids,
-                                 forbidden=forbidden),
-    }
-
-
 def main() -> int:
     manifest = load_manifest()
     forbidden = calibration_ids()
@@ -80,7 +66,8 @@ def main() -> int:
                   flush=True)
     dev = sets["dev"]
     Y_dev, dev_ids = label_matrix(dev), [d.doc_id for d in dev]
-    ops = {name: operating_points(model, scores[name]["dev"], Y_dev, dev_ids, forbidden)
+    ops = {name: operating_points(model, scores[name]["dev"], Y_dev, set_name="dev",
+                                  doc_ids=dev_ids, forbidden=forbidden)
            for name, model in models.items()}
     results = {"set_sha256": {s: manifest["processed_sets"][s]["sha256"] for s in SETS},
                "models": info, "operating_points": ops, "sets": {}}

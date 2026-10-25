@@ -9,6 +9,7 @@ from sensclf.selection import (
     default_threshold,
     dev_thresholds,
     macro_ap,
+    operating_points,
     per_category_ap,
     select_by_dev,
 )
@@ -60,3 +61,25 @@ def test_default_thresholds_per_model_kind():
     assert default_threshold(TextModel("word_svc", 1.0)) == 0.0
     assert default_threshold(DomainModel()) == 0.5
     assert default_threshold(DetectorBaseline()) == 0.5
+
+
+def test_operating_points_for_tunable_models_use_dev_f1():
+    ops = operating_points(TextModel("word_svc", 1.0), GOOD, Y, set_name="dev", doc_ids=IDS,
+                           forbidden=NONE)
+    assert ops["default"]["IDENTITY"] == 0.0
+    assert ops["dev_f1"]["IDENTITY"] == pytest.approx(0.9)
+
+
+def test_operating_points_keep_the_detectors_own_decision():
+    S = np.full(Y.shape, np.nan)
+    S[:, 1] = [0.0, 1.0, 1.0, 0.0]                  # CONTACT only
+    ops = operating_points(DetectorBaseline(), S, Y, set_name="dev", doc_ids=IDS,
+                           forbidden=NONE)
+    assert ops["dev_f1"] == ops["default"]
+    assert ops["default"]["CONTACT"] == 0.5 and ops["default"]["IDENTITY"] is None
+
+
+def test_operating_points_refuse_non_dev_sets():
+    with pytest.raises(SelectionSetError):
+        operating_points(DomainModel(), GOOD, Y, set_name="test_ood", doc_ids=IDS,
+                         forbidden=NONE)

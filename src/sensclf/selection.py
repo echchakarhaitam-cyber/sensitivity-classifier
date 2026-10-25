@@ -68,6 +68,25 @@ def select_by_dev(candidates: Sequence[tuple[float, np.ndarray]], Y_dev: np.ndar
     return best["C"], rows
 
 
+def operating_points(model: object, S_dev: np.ndarray, Y_dev: np.ndarray, *, set_name: str,
+                     doc_ids: Sequence[str],
+                     forbidden: frozenset[str]) -> dict[str, dict[str, float | None]]:
+    """Both operating points of a model; None for categories it does not cover.
+
+    A model with ``tunable_threshold = False`` (the 0/1 detector) keeps its own decision as
+    its dev-F1 operating point.
+    """
+    _require_dev(set_name, doc_ids, forbidden)
+    t0 = default_threshold(model)
+    covered = {c: not np.isnan(S_dev[:, k]).any() for k, c in enumerate(CATEGORIES)}
+    default = {c: (t0 if covered[c] else None) for c in CATEGORIES}
+    if not getattr(model, "tunable_threshold", True):
+        return {"default": default, "dev_f1": dict(default)}
+    return {"default": default,
+            "dev_f1": dev_thresholds(S_dev, Y_dev, set_name=set_name, doc_ids=doc_ids,
+                                     forbidden=forbidden)}
+
+
 def dev_thresholds(S_dev: np.ndarray, Y_dev: np.ndarray, *, set_name: str,
                    doc_ids: Sequence[str], forbidden: frozenset[str]) -> dict[str, float | None]:
     """Per category the F1-maximising threshold on dev (None if undefined or not covered)."""

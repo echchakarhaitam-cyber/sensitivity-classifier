@@ -40,6 +40,9 @@ class DetectorBaseline:
     name = "regex_detector"
     probabilistic = False
     default_threshold = 0.5   # scores are 0/1
+    # No score to tune: on 0/1 scores "the best dev-F1 threshold" can only be the detector's
+    # own decision or "everything positive", so its dev-F1 operating point is its own output.
+    tunable_threshold = False
     covered = tuple(c for c in CATEGORIES if c in DETECTOR_RULES)
 
     def __init__(self) -> None:
