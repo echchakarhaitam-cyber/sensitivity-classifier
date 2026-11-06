@@ -1,0 +1,222 @@
+{
+  "char_lr": {
+    "isotonic": {
+      "CONTACT": {
+        "steps": 66
+      },
+      "CREDENTIALS": {
+        "steps": 70
+      },
+      "FINANCIAL": {
+        "steps": 54
+      },
+      "HEALTH": {
+        "steps": 30
+      },
+      "IDENTITY": {
+        "steps": 66
+      },
+      "SPECIAL_CATEGORY": {
+        "steps": 54
+      }
+    },
+    "platt": {
+      "CONTACT": {
+        "a": 1.5282026394102404,
+        "b": 0.027088282484226817
+      },
+      "CREDENTIALS": {
+        "a": 1.1315793564705412,
+        "b": 0.30953048285107887
+      },
+      "FINANCIAL": {
+        "a": 1.4790692411141209,
+        "b": 0.6135756877059806
+      },
+      "HEALTH": {
+        "a": 1.3813487303645007,
+        "b": 0.6333871036731579
+      },
+      "IDENTITY": {
+        "a": 1.1449895612310366,
+        "b": 0.1137981736707322
+      },
+      "SPECIAL_CATEGORY": {
+        "a": 1.1660610376949783,
+        "b": 0.36649788574993836
+      }
+    },
+    "raw": {
+      "CONTACT": {},
+      "CREDENTIALS": {},
+      "FINANCIAL": {},
+      "HEALTH": {},
+      "IDENTITY": {},
+      "SPECIAL_CATEGORY": {}
+    },
+    "temperature": {
+      "CONTACT": {
+        "T": 0.6554709439619182
+      },
+      "CREDENTIALS": {
+        "T": 0.9419409432810801
+      },
+      "FINANCIAL": {
+        "T": 0.7457017660677393
+      },
+      "HEALTH": {
+        "T": 0.781068152038656
+      },
+      "IDENTITY": {
+        "T": 0.8884251020925181
+      },
+      "SPECIAL_CATEGORY": {
+        "T": 0.9294918028771494
+      }
+    }
+  },
+  "word_lr": {
+    "isotonic": {
+      "CONTACT": {
+        "steps": 72
+      },
+      "CREDENTIALS": {
+        "steps": 48
+      },
+      "FINANCIAL": {
+        "steps": 48
+      },
+      "HEALTH": {
+        "steps": 30
+      },
+      "IDENTITY": {
+        "steps": 66
+      },
+      "SPECIAL_CATEGORY": {
+        "steps": 64
+      }
+    },
+    "platt": {
+      "CONTACT": {
+        "a": 1.5144061265917397,
+        "b": -0.04483317677265918
+      },
+      "CREDENTIALS": {
+        "a": 1.1696283244208645,
+        "b": 0.45534262308093404
+      },
+      "FINANCIAL": {
+        "a": 1.4059977984385088,
+        "b": 0.7507781949892333
+      },
+      "HEALTH": {
+        "a": 1.8263241709462625,
+        "b": 2.160767067715618
+      },
+      "IDENTITY": {
+        "a": 1.1792080225487516,
+        "b": 0.19044575075360928
+      },
+      "SPECIAL_CATEGORY": {
+        "a": 1.300964640144701,
+        "b": 0.7305971875767208
+      }
+    },
+    "raw": {
+      "CONTACT": {},
+      "CREDENTIALS": {},
+      "FINANCIAL": {},
+      "HEALTH": {},
+      "IDENTITY": {},
+      "SPECIAL_CATEGORY": {}
+    },
+    "temperature": {
+      "CONTACT": {
+        "T": 0.6591402456067027
+      },
+      "CREDENTIALS": {
+        "T": 0.9419587719225186
+      },
+      "FINANCIAL": {
+        "T": 0.8022752169762417
+      },
+      "HEALTH": {
+        "T": 0.7426234313666259
+      },
+      "IDENTITY": {
+        "T": 0.8738015034337266
+      },
+      "SPECIAL_CATEGORY": {
+        "T": 0.9145308603377744
+      }
+    }
+  },
+  "word_svc": {
+    "isotonic": {
+      "CONTACT": {
+        "steps": 58
+      },
+      "CREDENTIALS": {
+        "steps": 50
+      },
+      "FINANCIAL": {
+        "steps": 50
+      },
+      "HEALTH": {
+        "steps": 22
+      },
+      "IDENTITY": {
+        "steps": 70
+      },
+      "SPECIAL_CATEGORY": {
+        "steps": 60
+      }
+    },
+    "platt": {
+      "CONTACT": {
+        "a": 5.03216702954771,
+        "b": 0.05296462023484024
+      },
+      "CREDENTIALS": {
+        "a": 4.447154515354432,
+        "b": 0.33855716480041115
+      },
+      "FINANCIAL": {
+        "a": 5.026188888429352,
+        "b": 0.47292967574208183
+      },
+      "HEALTH": {
+        "a": 7.789479503187365,
+        "b": 1.660572888224905
+      },
+      "IDENTITY": {
+        "a": 3.94966502357947,
+        "b": 0.14401948305330575
+      },
+      "SPECIAL_CATEGORY": {
+        "a": 4.747602299324131,
+        "b": 0.6270203425843003
+      }
+    },
+    "temperature": {
+      "CONTACT": {
+        "T": 0.19920405549738038
+      },
+      "CREDENTIALS": {
+        "T": 0.2416478167185983
+      },
+      "FINANCIAL": {
+        "T": 0.21446814567639674
+      },
+      "HEALTH": {
+        "T": 0.15829624446156793
+      },
+      "IDENTITY": {
+        "T": 0.25893943289420995
+      },
+      "SPECIAL_CATEGORY": {
+        "T": 0.24357475389494598
+      }
+    }
+  }
+}
