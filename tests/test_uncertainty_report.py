@@ -42,5 +42,5 @@ def test_violation_is_counted_and_bolded():
     from sensclf.uncertainty_report import _selective
     text = "\n".join(_selective(sel))
     assert "**2.0%**" in text
-    assert "exceeds the target for 6 of 6 certified thresholds" in text
+    assert "exceeds the target for 6 of 6 certified thresholds on categories" in text
     assert "exceeds the target for 0 of 6" in text

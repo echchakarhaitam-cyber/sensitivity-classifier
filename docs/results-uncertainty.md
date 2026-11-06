@@ -67,7 +67,7 @@ Model: `word_svc` + isotonic calibration. Per category, the decision is p >= 0.5
 
 ### Certified thresholds: coverage / achieved risk
 
-A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstrap interval of the risk; **bold** marks a risk above the target.
+A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstrap interval of the risk; **bold** marks a risk above the target. *(no positives)*: the category has no positive document in that set (HEALTH and SPECIAL_CATEGORY in test_ood), so the risk only counts false alarms; such cells are left out of the counts.
 
 #### r* = 1.0%
 
@@ -76,7 +76,7 @@ A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstr
 | IDENTITY | yes, coverage 31.1% | 32.1% / 0.2% [0.001, 0.003] | 34.0% / 0.3% [0.002, 0.003] | 10.9% / **7.0%** [0.043, 0.099] |
 | CONTACT | yes, coverage 62.5% | 63.5% / 0.3% [0.002, 0.005] | 64.3% / 0.3% [0.003, 0.004] | 39.1% / **15.8%** [0.138, 0.180] |
 | FINANCIAL | yes, coverage 72.8% | 75.0% / 0.7% [0.005, 0.009] | 75.7% / 0.7% [0.006, 0.008] | 38.2% / **15.5%** [0.134, 0.174] |
-| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% [0.005, 0.012] |
+| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% (no positives) |
 | CREDENTIALS | yes, coverage 42.5% | 43.8% / 0.2% [0.001, 0.003] | 41.1% / 0.4% [0.004, 0.005] | 22.2% / **1.9%** [0.009, 0.029] |
 | SPECIAL_CATEGORY | no (abstain on everything) | coverage 0 | coverage 0 | coverage 0 |
 
@@ -87,9 +87,9 @@ A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstr
 | IDENTITY | yes, coverage 50.3% | 51.9% / 0.6% [0.004, 0.008] | 49.3% / 0.8% [0.007, 0.008] | 19.2% / **10.3%** [0.077, 0.127] |
 | CONTACT | yes, coverage 83.2% | 83.0% / 1.0% [0.008, 0.012] | 84.4% / 0.9% [0.009, 0.010] | 59.8% / **19.0%** [0.172, 0.210] |
 | FINANCIAL | yes, coverage 100.0% | 100.0% / 1.4% [0.012, 0.016] | 100.0% / 1.7% [0.017, 0.018] | 100.0% / **20.8%** [0.194, 0.222] |
-| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% [0.005, 0.012] |
+| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% (no positives) |
 | CREDENTIALS | yes, coverage 91.9% | 92.4% / 1.3% [0.011, 0.016] | 91.3% / 1.7% [0.016, 0.018] | 89.2% / **3.3%** [0.026, 0.040] |
-| SPECIAL_CATEGORY | yes, coverage 86.5% | 85.8% / 1.1% [0.009, 0.014] | 84.7% / 1.3% [0.012, 0.013] | 80.0% / 0.4% [0.002, 0.007] |
+| SPECIAL_CATEGORY | yes, coverage 86.5% | 85.8% / 1.1% [0.009, 0.014] | 84.7% / 1.3% [0.012, 0.013] | 80.0% / 0.4% (no positives) |
 
 #### r* = 5.0%
 
@@ -98,15 +98,15 @@ A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstr
 | IDENTITY | yes, coverage 85.8% | 86.9% / 3.0% [0.026, 0.034] | 83.4% / 4.1% [0.039, 0.042] | 64.0% / **20.4%** [0.186, 0.223] |
 | CONTACT | yes, coverage 95.9% | 96.1% / 3.1% [0.027, 0.034] | 96.7% / 2.8% [0.027, 0.029] | 88.7% / **25.1%** [0.233, 0.266] |
 | FINANCIAL | yes, coverage 100.0% | 100.0% / 1.4% [0.012, 0.016] | 100.0% / 1.7% [0.017, 0.018] | 100.0% / **20.8%** [0.194, 0.222] |
-| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% [0.005, 0.012] |
+| HEALTH | yes, coverage 100.0% | 100.0% / 0.2% [0.001, 0.003] | 100.0% / 0.5% [0.005, 0.006] | 99.9% / 0.8% (no positives) |
 | CREDENTIALS | yes, coverage 100.0% | 100.0% / 2.8% [0.025, 0.031] | 100.0% / 3.6% [0.035, 0.037] | 100.0% / **5.9%** [0.051, 0.068] |
-| SPECIAL_CATEGORY | yes, coverage 100.0% | 100.0% / 3.2% [0.029, 0.036] | 100.0% / 4.1% [0.040, 0.042] | 100.0% / 3.9% [0.032, 0.046] |
+| SPECIAL_CATEGORY | yes, coverage 100.0% | 100.0% / 3.2% [0.029, 0.036] | 100.0% / 4.1% [0.040, 0.042] | 100.0% / 3.9% (no positives) |
 
 Counted from the tables above:
 
 - dev (in-domain): the achieved risk exceeds the target for 0 of 17 certified thresholds.
 - test_shift (us -> intl): the achieved risk exceeds the target for 0 of 17 certified thresholds.
-- test_ood (Gretel): the achieved risk exceeds the target for 12 of 17 certified thresholds.
+- test_ood (Gretel): the achieved risk exceeds the target for 12 of 12 certified thresholds on categories with positives.
 - Not certifiable on cal_test (too few accepted documents with few enough errors): SPECIAL_CATEGORY at r* = 1.0%.
 
 ### Whole documents
@@ -132,9 +132,9 @@ Model: `word_svc` + isotonic. Quantiles computed on 2501 cal_test documents (one
 | IDENTITY | 99.4% | 99.2% | **95.8%** | 98.9% | 36.7% | 0.0% |
 | CONTACT | 99.4% | 99.4% | **89.6%** | 99.7% | 19.7% | 0.0% |
 | FINANCIAL | 99.0% | **98.8%** | **85.1%** | 97.3% | 1.8% | 0.0% |
-| HEALTH | 99.3% | **97.8%** | **96.2%** | 99.0% | 0.0% | 0.5% |
+| HEALTH | 99.3% | **97.8%** | 96.2% (no positives) | 99.0% | 0.0% | 0.5% |
 | CREDENTIALS | 99.4% | 99.3% | **97.8%** | 98.4% | 22.5% | 0.0% |
-| SPECIAL_CATEGORY | **98.8%** | **98.7%** | 99.6% | 95.5% | 10.3% | 0.0% |
+| SPECIAL_CATEGORY | **98.8%** | **98.7%** | 99.6% (no positives) | 95.5% | 10.3% | 0.0% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 99.4%, all six decided 1.5%; test_shift joint coverage 99.3%, all six decided 1.5%; test_ood joint coverage 93.3%, all six decided 0.0%.
 
@@ -145,9 +145,9 @@ Joint 6-label sets (alpha / 6 per category): dev joint coverage 99.4%, all six d
 | IDENTITY | 95.7% | **94.3%** | **78.5%** | 93.2% | 6.4% | 0.0% |
 | CONTACT | 95.8% | 96.3% | **72.8%** | 97.5% | 0.6% | 0.0% |
 | FINANCIAL | 96.1% | 95.4% | **61.1%** | 93.7% | 0.0% | 3.0% |
-| HEALTH | 97.3% | **94.9%** | **91.4%** | 90.0% | 0.0% | 2.6% |
+| HEALTH | 97.3% | **94.9%** | 91.4% (no positives) | 90.0% | 0.0% | 2.6% |
 | CREDENTIALS | 96.5% | 95.7% | **93.7%** | 86.9% | 0.0% | 0.9% |
-| SPECIAL_CATEGORY | 95.6% | **94.7%** | 95.5% | 86.6% | 0.0% | 2.0% |
+| SPECIAL_CATEGORY | 95.6% | **94.7%** | 95.5% (no positives) | 86.6% | 0.0% | 2.0% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 96.8%, all six decided 25.9%; test_shift joint coverage 96.1%, all six decided 23.9%; test_ood joint coverage 76.9%, all six decided 4.0%.
 
@@ -158,9 +158,9 @@ Joint 6-label sets (alpha / 6 per category): dev joint coverage 96.8%, all six d
 | IDENTITY | 91.3% | **88.8%** | **66.8%** | 90.2% | 0.0% | 3.2% |
 | CONTACT | 91.2% | 92.1% | **62.0%** | 93.1% | 0.0% | 6.7% |
 | FINANCIAL | 91.0% | 91.0% | **49.7%** | 85.2% | 0.0% | 8.2% |
-| HEALTH | 91.7% | **88.8%** | **76.8%** | 90.0% | 0.0% | 8.2% |
+| HEALTH | 91.7% | **88.8%** | 76.8% (no positives) | 90.0% | 0.0% | 8.2% |
 | CREDENTIALS | 91.2% | **89.7%** | **86.3%** | 76.1% | 0.0% | 7.6% |
-| SPECIAL_CATEGORY | 90.4% | **89.1%** | **89.1%** | 72.9% | 0.0% | 8.1% |
+| SPECIAL_CATEGORY | 90.4% | **89.1%** | 89.1% (no positives) | 72.9% | 0.0% | 8.1% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 92.3%, all six decided 55.3%; test_shift joint coverage 90.2%, all six decided 51.0%; test_ood joint coverage 57.5%, all six decided 19.3%.
 
@@ -173,9 +173,9 @@ Joint 6-label sets (alpha / 6 per category): dev joint coverage 92.3%, all six d
 | IDENTITY | 99.5% | 99.4% | **97.5%** | 99.6% | 44.3% | 0.0% |
 | CONTACT | 99.6% | 99.6% | **92.9%** | 99.7% | 28.2% | 0.0% |
 | FINANCIAL | 99.3% | 99.0% | **83.4%** | 99.1% | 21.4% | 0.0% |
-| HEALTH | 99.3% | **97.9%** | **96.2%** | 99.3% | 0.0% | 0.0% |
+| HEALTH | 99.3% | **97.9%** | 96.2% (no positives) | 99.3% | 0.0% | 0.0% |
 | CREDENTIALS | 99.3% | 99.1% | **96.4%** | 99.6% | 42.5% | 0.0% |
-| SPECIAL_CATEGORY | 99.3% | **98.7%** | **98.5%** | 99.5% | 45.1% | 0.0% |
+| SPECIAL_CATEGORY | 99.3% | **98.7%** | 98.5% (no positives) | 99.5% | 45.1% | 0.0% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 99.7%, all six decided 0.0%; test_shift joint coverage 99.5%, all six decided 0.0%; test_ood joint coverage 95.4%, all six decided 0.0%.
 
@@ -186,9 +186,9 @@ Joint 6-label sets (alpha / 6 per category): dev joint coverage 99.7%, all six d
 | IDENTITY | 96.9% | 95.9% | **85.9%** | 96.6% | 11.5% | 0.0% |
 | CONTACT | 96.6% | 97.0% | **76.9%** | 97.0% | 3.0% | 0.0% |
 | FINANCIAL | 96.1% | 95.5% | **59.7%** | 96.0% | 0.0% | 2.9% |
-| HEALTH | 98.4% | 95.8% | **91.4%** | 99.0% | 0.0% | 1.5% |
+| HEALTH | 98.4% | 95.8% | 91.4% (no positives) | 99.0% | 0.0% | 1.5% |
 | CREDENTIALS | 96.3% | 95.3% | **89.5%** | 97.0% | 7.4% | 0.0% |
-| SPECIAL_CATEGORY | 95.3% | **93.9%** | **89.1%** | 95.2% | 1.6% | 0.0% |
+| SPECIAL_CATEGORY | 95.3% | **93.9%** | 89.1% (no positives) | 95.2% | 1.6% | 0.0% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 97.0%, all six decided 11.5%; test_shift joint coverage 94.7%, all six decided 10.5%; test_ood joint coverage 70.7%, all six decided 0.8%.
 
@@ -199,20 +199,20 @@ Joint 6-label sets (alpha / 6 per category): dev joint coverage 97.0%, all six d
 | IDENTITY | 91.3% | **88.8%** | **66.8%** | 90.2% | 0.0% | 3.2% |
 | CONTACT | 92.4% | 93.4% | **65.2%** | 93.1% | 0.0% | 4.9% |
 | FINANCIAL | 92.6% | 92.4% | **50.6%** | 90.8% | 0.0% | 6.6% |
-| HEALTH | 91.7% | **88.8%** | **76.8%** | 90.0% | 0.0% | 8.2% |
+| HEALTH | 91.7% | **88.8%** | 76.8% (no positives) | 90.0% | 0.0% | 8.2% |
 | CREDENTIALS | 92.1% | 90.1% | **82.0%** | 92.5% | 0.0% | 5.4% |
-| SPECIAL_CATEGORY | 92.3% | 91.0% | **85.2%** | 90.6% | 0.0% | 5.5% |
+| SPECIAL_CATEGORY | 92.3% | 91.0% | 85.2% (no positives) | 90.6% | 0.0% | 5.5% |
 
 Joint 6-label sets (alpha / 6 per category): dev joint coverage 94.5%, all six decided 27.1%; test_shift joint coverage 91.9%, all six decided 24.6%; test_ood joint coverage 58.7%, all six decided 3.0%.
 
 **Bold** marks a coverage below the target. Counted:
 
-- marginal, dev (in-domain): 1 of 18 cells below target (SPECIAL_CATEGORY at alpha 1.0%).
-- marginal, test_shift (us -> intl): 10 of 18 cells below target (FINANCIAL at alpha 1.0%, HEALTH at alpha 1.0%, SPECIAL_CATEGORY at alpha 1.0%, IDENTITY at alpha 5.0%, HEALTH at alpha 5.0%, SPECIAL_CATEGORY at alpha 5.0%, IDENTITY at alpha 10.0%, HEALTH at alpha 10.0%, CREDENTIALS at alpha 10.0%, SPECIAL_CATEGORY at alpha 10.0%).
-- marginal, test_ood (Gretel): 16 of 18 cells below target (IDENTITY at alpha 1.0%, CONTACT at alpha 1.0%, FINANCIAL at alpha 1.0%, HEALTH at alpha 1.0%, CREDENTIALS at alpha 1.0%, IDENTITY at alpha 5.0%, CONTACT at alpha 5.0%, FINANCIAL at alpha 5.0%, HEALTH at alpha 5.0%, CREDENTIALS at alpha 5.0%, IDENTITY at alpha 10.0%, CONTACT at alpha 10.0%, FINANCIAL at alpha 10.0%, HEALTH at alpha 10.0%, CREDENTIALS at alpha 10.0%, SPECIAL_CATEGORY at alpha 10.0%).
-- mondrian, dev (in-domain): 0 of 18 cells below target.
-- mondrian, test_shift (us -> intl): 5 of 18 cells below target (HEALTH at alpha 1.0%, SPECIAL_CATEGORY at alpha 1.0%, SPECIAL_CATEGORY at alpha 5.0%, IDENTITY at alpha 10.0%, HEALTH at alpha 10.0%).
-- mondrian, test_ood (Gretel): 18 of 18 cells below target (IDENTITY at alpha 1.0%, CONTACT at alpha 1.0%, FINANCIAL at alpha 1.0%, HEALTH at alpha 1.0%, CREDENTIALS at alpha 1.0%, SPECIAL_CATEGORY at alpha 1.0%, IDENTITY at alpha 5.0%, CONTACT at alpha 5.0%, FINANCIAL at alpha 5.0%, HEALTH at alpha 5.0%, CREDENTIALS at alpha 5.0%, SPECIAL_CATEGORY at alpha 5.0%, IDENTITY at alpha 10.0%, CONTACT at alpha 10.0%, FINANCIAL at alpha 10.0%, HEALTH at alpha 10.0%, CREDENTIALS at alpha 10.0%, SPECIAL_CATEGORY at alpha 10.0%).
+- marginal, dev (in-domain): 1 of 18 cells (categories with positives) below target (SPECIAL_CATEGORY at alpha 1.0%).
+- marginal, test_shift (us -> intl): 10 of 18 cells (categories with positives) below target (FINANCIAL at alpha 1.0%, HEALTH at alpha 1.0%, SPECIAL_CATEGORY at alpha 1.0%, IDENTITY at alpha 5.0%, HEALTH at alpha 5.0%, SPECIAL_CATEGORY at alpha 5.0%, IDENTITY at alpha 10.0%, HEALTH at alpha 10.0%, CREDENTIALS at alpha 10.0%, SPECIAL_CATEGORY at alpha 10.0%).
+- marginal, test_ood (Gretel): 12 of 12 cells (categories with positives) below target (IDENTITY at alpha 1.0%, CONTACT at alpha 1.0%, FINANCIAL at alpha 1.0%, CREDENTIALS at alpha 1.0%, IDENTITY at alpha 5.0%, CONTACT at alpha 5.0%, FINANCIAL at alpha 5.0%, CREDENTIALS at alpha 5.0%, IDENTITY at alpha 10.0%, CONTACT at alpha 10.0%, FINANCIAL at alpha 10.0%, CREDENTIALS at alpha 10.0%).
+- mondrian, dev (in-domain): 0 of 18 cells (categories with positives) below target.
+- mondrian, test_shift (us -> intl): 5 of 18 cells (categories with positives) below target (HEALTH at alpha 1.0%, SPECIAL_CATEGORY at alpha 1.0%, SPECIAL_CATEGORY at alpha 5.0%, IDENTITY at alpha 10.0%, HEALTH at alpha 10.0%).
+- mondrian, test_ood (Gretel): 12 of 12 cells (categories with positives) below target (IDENTITY at alpha 1.0%, CONTACT at alpha 1.0%, FINANCIAL at alpha 1.0%, CREDENTIALS at alpha 1.0%, IDENTITY at alpha 5.0%, CONTACT at alpha 5.0%, FINANCIAL at alpha 5.0%, CREDENTIALS at alpha 5.0%, IDENTITY at alpha 10.0%, CONTACT at alpha 10.0%, FINANCIAL at alpha 10.0%, CREDENTIALS at alpha 10.0%).
 
 Variability of the dev coverage over 100 different one-per-group draws of the calibration documents (marginal, alpha = 10%):
 

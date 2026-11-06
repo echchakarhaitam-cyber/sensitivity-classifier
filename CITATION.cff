@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "sensclf: sensitive-document classification with calibrated probabilities, abstention and conformal guarantees"
+authors:
+  - family-names: Echchakar
+    given-names: Haitam
+version: 0.1.0
+date-released: 2026-11-06
+license: MIT
+repository-code: "https://github.com/echchakarhaitam-cyber/sensitivity-classifier"
+keywords:
+  - text classification
+  - calibration
+  - selective prediction
+  - conformal prediction
+  - domain shift
+  - personal data

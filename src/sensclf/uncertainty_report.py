@@ -74,9 +74,12 @@ def _selective(sel: Mapping) -> list[str]:
                    + " | ".join(fmt(e[s]["oracle_aurc"], 4) for s in SETS) + " |")
     out += ["", "### Certified thresholds: coverage / achieved risk", "",
             ("A cell shows coverage, achieved selective risk and, in brackets, the 95% bootstrap "
-            "interval of the risk; **bold** marks a risk above the target."), ""]
+            "interval of the risk; **bold** marks a risk above the target. *(no positives)*: the "
+            "category has no positive document in that set (HEALTH and SPECIAL_CATEGORY in "
+            "test_ood), so the risk only counts false alarms; such cells are left out of the "
+            "counts."), ""]
     violations: dict[str, int] = {s: 0 for s in SETS}
-    total = 0
+    total: dict[str, int] = {s: 0 for s in SETS}
     uncertified = []
     for r in targets:
         out += [f"#### r* = {pct(float(r))}", "",
@@ -90,11 +93,14 @@ def _selective(sel: Mapping) -> list[str]:
                 out.append(f"| {c} | no (abstain on everything) | "
                            + " | ".join("coverage 0" for _ in SETS) + " |")
                 continue
-            total += 1
             cells = []
             for s in SETS:
                 a = t["applied"][s]
                 risk = pct(a["risk"])
+                if not sel["categories"][c]["sets"][s]["defined"]:
+                    cells.append(f"{pct(a['coverage'])} / {risk} (no positives)")
+                    continue
+                total[s] += 1
                 if a["violation"]:
                     violations[s] += 1
                     risk = f"**{risk}**"
@@ -105,7 +111,8 @@ def _selective(sel: Mapping) -> list[str]:
     out += ["Counted from the tables above:", ""]
     for s in SETS:
         out.append(f"- {SET_NAMES[s]}: the achieved risk exceeds the target for {violations[s]} "
-                   f"of {total} certified thresholds.")
+                   f"of {total[s]} certified thresholds"
+                   + (" on categories with positives." if s == "test_ood" else "."))
     if uncertified:
         out.append("- Not certifiable on cal_test (too few accepted documents with few enough "
                    "errors): " + ", ".join(uncertified) + ".")
@@ -135,6 +142,7 @@ def _conformal(conf: Mapping) -> list[str]:
            "without ties in the scores, and isotonic calibration produces many ties, so "
            "coverage above it is expected and not an error."), ""]
     shortfalls: dict[str, list[str]] = {}
+    n_cells: dict[str, int] = {}
     for variant in ("marginal", "mondrian"):
         out += [f"### {variant.capitalize()}", ""]
         for a, v in sorted(conf["variants"][variant].items(), key=lambda kv: float(kv[0])):
@@ -149,6 +157,10 @@ def _conformal(conf: Mapping) -> list[str]:
                 for s in SETS:
                     cov = st[s]["coverage"]
                     txt = pct(cov)
+                    if st[s]["n_y1"] == 0:
+                        cells.append(f"{txt} (no positives)")
+                        continue
+                    n_cells[f"{variant}/{s}"] = n_cells.get(f"{variant}/{s}", 0) + 1
                     if round(cov, 3) < round(1 - alpha, 3):
                         txt = f"**{txt}**"
                         shortfalls.setdefault(f"{variant}/{s}", []).append(
@@ -166,8 +178,8 @@ def _conformal(conf: Mapping) -> list[str]:
     for variant in ("marginal", "mondrian"):
         for s in SETS:
             items = shortfalls.get(f"{variant}/{s}", [])
-            n_cells = len(CATEGORIES) * len(conf["variants"][variant])
-            out.append(f"- {variant}, {SET_NAMES[s]}: {len(items)} of {n_cells} cells below "
+            out.append(f"- {variant}, {SET_NAMES[s]}: {len(items)} of "
+                       f"{n_cells.get(f'{variant}/{s}', 0)} cells (categories with positives) below "
                        "target" + (f" ({', '.join(items)})" if items else "") + ".")
     sp = conf["dev_coverage_spread_alpha_0.1"]
     out += ["", (f"Variability of the dev coverage over {sp['draws']} different one-per-group "
