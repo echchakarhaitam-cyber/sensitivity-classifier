@@ -1,0 +1,1342 @@
+{
+  "calibration": "isotonic",
+  "categories": {
+    "CONTACT": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8028599605522683,
+              "risk": 0.007492936985628302,
+              "threshold": 0.9565217391304348
+            },
+            "0.9": {
+              "coverage": 0.9111439842209073,
+              "risk": 0.019590864812209112,
+              "threshold": 0.8354430379746836
+            },
+            "0.95": {
+              "coverage": 0.9610453648915187,
+              "risk": 0.030579784504874294,
+              "threshold": 0.6666666666666667
+            }
+          },
+          "aurc": 0.0059183557766996206,
+          "defined": true,
+          "error_rate_full_coverage": 0.044575936883629194,
+          "oracle_aurc": 0.0010108052833171842
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.812175717744725,
+              "risk": 0.23679727427597955,
+              "threshold": 0.8130841121495327
+            },
+            "0.9": {
+              "coverage": 0.9353164994811484,
+              "risk": 0.2636834319526627,
+              "threshold": 0.6216216216216216
+            },
+            "0.95": {
+              "coverage": 0.9761328260117607,
+              "risk": 0.2763997165131113,
+              "threshold": 0.5753424657534246
+            }
+          },
+          "aurc": 0.19063399462401562,
+          "defined": true,
+          "error_rate_full_coverage": 0.28502248356969906,
+          "oracle_aurc": 0.04519382450689242
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8144,
+              "risk": 0.007134086444007859,
+              "threshold": 0.9565217391304348
+            },
+            "0.9": {
+              "coverage": 0.90526,
+              "risk": 0.014415747961911494,
+              "threshold": 0.8617021276595744
+            },
+            "0.95": {
+              "coverage": 0.95,
+              "risk": 0.02265263157894737,
+              "threshold": 0.68326075225842
+            }
+          },
+          "aurc": 0.00547338331344606,
+          "defined": true,
+          "error_rate_full_coverage": 0.04049,
+          "oracle_aurc": 0.0008312155605459161
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 6437,
+              "coverage": 0.6348126232741618,
+              "risk": 0.0034177411837812647,
+              "risk_ci": [
+                0.0020070015436867636,
+                0.00485756657717925
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 1131,
+              "coverage": 0.39121411276374957,
+              "risk": 0.15826702033598586,
+              "risk_ci": [
+                0.13777166518781425,
+                0.17987626717269323
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 64282,
+              "coverage": 0.64282,
+              "risk": 0.0032201860551943,
+              "risk_ci": [
+                0.0027881321179875082,
+                0.0036505530139955304
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 3125,
+            "cal_coverage": 0.624750099960016,
+            "cal_errors": 12,
+            "cal_risk": 0.00384,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": 0.9850746268656716
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 8417,
+              "coverage": 0.8300788954635109,
+              "risk": 0.009623381252227635,
+              "risk_ci": [
+                0.007598206042641136,
+                0.011687572119652049
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 1728,
+              "coverage": 0.597717052922864,
+              "risk": 0.18981481481481483,
+              "risk_ci": [
+                0.17199483459082993,
+                0.20977481227892353
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 84419,
+              "coverage": 0.84419,
+              "risk": 0.00946469396699795,
+              "risk_ci": [
+                0.00878443635332462,
+                0.010129156700880281
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 4160,
+            "cal_coverage": 0.8316673330667733,
+            "cal_errors": 54,
+            "cal_risk": 0.012980769230769231,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.9419354838709677
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 9745,
+              "coverage": 0.9610453648915187,
+              "risk": 0.030579784504874294,
+              "risk_ci": [
+                0.026988056406438327,
+                0.03415684966649563
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2565,
+              "coverage": 0.8872362504323763,
+              "risk": 0.250682261208577,
+              "risk_ci": [
+                0.2332661699129071,
+                0.26638086077807094
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 96703,
+              "coverage": 0.96703,
+              "risk": 0.027693039512734868,
+              "risk_ci": [
+                0.026582447511586737,
+                0.028811604967015132
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 4799,
+            "cal_coverage": 0.9594162335065973,
+            "cal_errors": 168,
+            "cal_risk": 0.03500729318608043,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.6666666666666667
+          }
+        }
+      }
+    },
+    "CREDENTIALS": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8281065088757397,
+              "risk": 0.00857449088960343,
+              "threshold": 0.9730769230769231
+            },
+            "0.9": {
+              "coverage": 0.9242603550295858,
+              "risk": 0.01333760136577038,
+              "threshold": 0.8976377952755905
+            },
+            "0.95": {
+              "coverage": 0.954240631163708,
+              "risk": 0.01653575857792476,
+              "threshold": 0.8484848484848485
+            }
+          },
+          "aurc": 0.005702346105421953,
+          "defined": true,
+          "error_rate_full_coverage": 0.027909270216962524,
+          "oracle_aurc": 0.00039451447199618194
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8360428917329644,
+              "risk": 0.031857674803475386,
+              "threshold": 0.935483870967742
+            },
+            "0.9": {
+              "coverage": 0.9138706329989623,
+              "risk": 0.03595760787282362,
+              "threshold": 0.875
+            },
+            "0.95": {
+              "coverage": 0.9661016949152542,
+              "risk": 0.047977085571070534,
+              "threshold": 0.7613636363636364
+            }
+          },
+          "aurc": 0.031661856824693246,
+          "defined": true,
+          "error_rate_full_coverage": 0.059494984434451746,
+          "oracle_aurc": 0.0018162965641918439
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.80609,
+              "risk": 0.010830056197198824,
+              "threshold": 0.9730769230769231
+            },
+            "0.9": {
+              "coverage": 0.91292,
+              "risk": 0.01728519475967226,
+              "threshold": 0.8976377952755905
+            },
+            "0.95": {
+              "coverage": 0.95028,
+              "risk": 0.02247758555373153,
+              "threshold": 0.8235294117647058
+            }
+          },
+          "aurc": 0.00824746857645466,
+          "defined": true,
+          "error_rate_full_coverage": 0.03602,
+          "oracle_aurc": 0.0006568326523320509
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 4440,
+              "coverage": 0.4378698224852071,
+              "risk": 0.0018018018018018018,
+              "risk_ci": [
+                0.0006637094754063712,
+                0.003095822430051251
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 643,
+              "coverage": 0.2224143894846074,
+              "risk": 0.01866251944012442,
+              "risk_ci": [
+                0.009100300780403213,
+                0.029455201521444117
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 41117,
+              "coverage": 0.41117,
+              "risk": 0.004475034657197753,
+              "risk_ci": [
+                0.0038207280664888602,
+                0.005174281468529354
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 2126,
+            "cal_coverage": 0.4250299880047981,
+            "cal_errors": 9,
+            "cal_risk": 0.0042333019755409216,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": 0.9949494949494949
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 9372,
+              "coverage": 0.9242603550295858,
+              "risk": 0.01333760136577038,
+              "risk_ci": [
+                0.011172530484077644,
+                0.01561023131506161
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2580,
+              "coverage": 0.8924247665167762,
+              "risk": 0.03333333333333333,
+              "risk_ci": [
+                0.026396492368433725,
+                0.03995461598138091
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 91292,
+              "coverage": 0.91292,
+              "risk": 0.01728519475967226,
+              "risk_ci": [
+                0.016442496069606495,
+                0.01815772614685689
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 4597,
+            "cal_coverage": 0.919032387045182,
+            "cal_errors": 63,
+            "cal_risk": 0.01370458994996737,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.8976377952755905
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.027909270216962524,
+              "risk_ci": [
+                0.02465483234714004,
+                0.031166173570019724
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2891,
+              "coverage": 1.0,
+              "risk": 0.059494984434451746,
+              "risk_ci": [
+                0.05084745762711865,
+                0.06779661016949153
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 100000,
+              "coverage": 1.0,
+              "risk": 0.03602,
+              "risk_ci": [
+                0.03479975,
+                0.03728025
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 168,
+            "cal_risk": 0.03358656537385046,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.5
+          }
+        }
+      }
+    },
+    "FINANCIAL": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8468441814595661,
+              "risk": 0.007220216606498195,
+              "threshold": 0.9788053949903661
+            },
+            "0.9": {
+              "coverage": 0.9176528599605522,
+              "risk": 0.00784524449220849,
+              "threshold": 0.9771428571428571
+            },
+            "0.95": {
+              "coverage": 0.9551282051282052,
+              "risk": 0.008776458440887971,
+              "threshold": 0.9478260869565217
+            }
+          },
+          "aurc": 0.00443707667348473,
+          "defined": true,
+          "error_rate_full_coverage": 0.013905325443786982,
+          "oracle_aurc": 9.781594176294904e-05
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.826011760636458,
+              "risk": 0.16750418760469013,
+              "threshold": 0.9130434782608696
+            },
+            "0.9": {
+              "coverage": 0.9000345901072293,
+              "risk": 0.17909300538047657,
+              "threshold": 0.6930139937316634
+            },
+            "0.95": {
+              "coverage": 0.9501902455897613,
+              "risk": 0.20604295595194758,
+              "threshold": 0.6666666666666667
+            }
+          },
+          "aurc": 0.17557092913170905,
+          "defined": true,
+          "error_rate_full_coverage": 0.20857834659287444,
+          "oracle_aurc": 0.023481588498814546
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.85752,
+              "risk": 0.008268028734023696,
+              "threshold": 0.9788053949903661
+            },
+            "0.9": {
+              "coverage": 0.91885,
+              "risk": 0.009261576971214018,
+              "threshold": 0.9771428571428571
+            },
+            "0.95": {
+              "coverage": 0.95216,
+              "risk": 0.010502436565283145,
+              "threshold": 0.9478260869565217
+            }
+          },
+          "aurc": 0.005675535401076586,
+          "defined": true,
+          "error_rate_full_coverage": 0.0174,
+          "oracle_aurc": 0.00015235272302629825
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 7600,
+              "coverage": 0.7495069033530573,
+              "risk": 0.006842105263157895,
+              "risk_ci": [
+                0.005146657043830471,
+                0.008763068691472404
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 1103,
+              "coverage": 0.3815288827395365,
+              "risk": 0.15503173164097914,
+              "risk_ci": [
+                0.13424406949548948,
+                0.1740996768561627
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 75702,
+              "coverage": 0.75702,
+              "risk": 0.0070143457240231435,
+              "risk_ci": [
+                0.006408887183823413,
+                0.007651690243288886
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 3641,
+            "cal_coverage": 0.7279088364654138,
+            "cal_errors": 20,
+            "cal_risk": 0.005492996429552321,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": 0.9802631578947368
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.013905325443786982,
+              "risk_ci": [
+                0.011637080867850098,
+                0.01617603550295858
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2890,
+              "coverage": 0.9996540989277066,
+              "risk": 0.2083044982698962,
+              "risk_ci": [
+                0.1940435296750804,
+                0.2224932748128266
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 99998,
+              "coverage": 0.99998,
+              "risk": 0.01740034800696014,
+              "risk_ci": [
+                0.016610166101661016,
+                0.018231093865631938
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 71,
+            "cal_risk": 0.014194322271091563,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.625
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.013905325443786982,
+              "risk_ci": [
+                0.011637080867850098,
+                0.01617603550295858
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2890,
+              "coverage": 0.9996540989277066,
+              "risk": 0.2083044982698962,
+              "risk_ci": [
+                0.1940435296750804,
+                0.2224932748128266
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 99998,
+              "coverage": 0.99998,
+              "risk": 0.01740034800696014,
+              "risk_ci": [
+                0.016610166101661016,
+                0.018231093865631938
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 71,
+            "cal_risk": 0.014194322271091563,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.625
+          }
+        }
+      }
+    },
+    "HEALTH": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8719921104536489,
+              "risk": 0.0010178692603483375,
+              "threshold": 0.9986577181208054
+            },
+            "0.9": {
+              "coverage": 0.9181459566074951,
+              "risk": 0.0010741138560687433,
+              "threshold": 0.9958677685950413
+            },
+            "0.95": {
+              "coverage": 0.9740631163708087,
+              "risk": 0.0013161891262529108,
+              "threshold": 0.9935691318327974
+            }
+          },
+          "aurc": 0.0010183701290224568,
+          "defined": true,
+          "error_rate_full_coverage": 0.0022682445759368837,
+          "oracle_aurc": 2.686256630135876e-06
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.9149083362158422,
+              "risk": 0.0011342155009451795,
+              "threshold": 0.9935691318327974
+            },
+            "0.9": {
+              "coverage": 0.9149083362158422,
+              "risk": 0.0011342155009451795,
+              "threshold": 0.9935691318327974
+            },
+            "0.95": {
+              "coverage": 0.962642684192321,
+              "risk": 0.0010779734099892202,
+              "threshold": 0.9807692307692307
+            }
+          },
+          "aurc": 0.0025007549072171504,
+          "defined": false,
+          "error_rate_full_coverage": 0.008993427879626427,
+          "oracle_aurc": 4.211789267017658e-05
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.84755,
+              "risk": 0.0016990148073859949,
+              "threshold": 0.9986577181208054
+            },
+            "0.9": {
+              "coverage": 0.95054,
+              "risk": 0.00194626212468702,
+              "threshold": 0.9935691318327974
+            },
+            "0.95": {
+              "coverage": 0.95054,
+              "risk": 0.00194626212468702,
+              "threshold": 0.9935691318327974
+            }
+          },
+          "aurc": 0.0018179176328204005,
+          "defined": true,
+          "error_rate_full_coverage": 0.00529,
+          "oracle_aurc": 1.4043238026785774e-05
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.0022682445759368837,
+              "risk_ci": [
+                0.0014792899408284023,
+                0.003254437869822485
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2889,
+              "coverage": 0.9993081978554134,
+              "risk": 0.008307372793354102,
+              "risk_ci": [
+                0.005188516084399862,
+                0.011776931070315206
+              ],
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 99968,
+              "coverage": 0.99968,
+              "risk": 0.005121638924455826,
+              "risk_ci": [
+                0.004671070719801345,
+                0.0055722392621157975
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 18,
+            "cal_risk": 0.003598560575769692,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": 0.5804217338214144
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.0022682445759368837,
+              "risk_ci": [
+                0.0014792899408284023,
+                0.003254437869822485
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2889,
+              "coverage": 0.9993081978554134,
+              "risk": 0.008307372793354102,
+              "risk_ci": [
+                0.005188516084399862,
+                0.011776931070315206
+              ],
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 99968,
+              "coverage": 0.99968,
+              "risk": 0.005121638924455826,
+              "risk_ci": [
+                0.004671070719801345,
+                0.0055722392621157975
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 18,
+            "cal_risk": 0.003598560575769692,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.5804217338214144
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 10140,
+              "coverage": 1.0,
+              "risk": 0.0022682445759368837,
+              "risk_ci": [
+                0.0014792899408284023,
+                0.003254437869822485
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2889,
+              "coverage": 0.9993081978554134,
+              "risk": 0.008307372793354102,
+              "risk_ci": [
+                0.005188516084399862,
+                0.011776931070315206
+              ],
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 99968,
+              "coverage": 0.99968,
+              "risk": 0.005121638924455826,
+              "risk_ci": [
+                0.004671070719801345,
+                0.0055722392621157975
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 18,
+            "cal_risk": 0.003598560575769692,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.5804217338214144
+          }
+        }
+      }
+    },
+    "IDENTITY": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8034516765285996,
+              "risk": 0.02074383208543022,
+              "threshold": 0.88
+            },
+            "0.9": {
+              "coverage": 0.904930966469428,
+              "risk": 0.03825196163905841,
+              "threshold": 0.8
+            },
+            "0.95": {
+              "coverage": 0.9683431952662722,
+              "risk": 0.057235971076484364,
+              "threshold": 0.6517857142857143
+            }
+          },
+          "aurc": 0.013484752780767485,
+          "defined": true,
+          "error_rate_full_coverage": 0.06923076923076923,
+          "oracle_aurc": 0.0024571637225479677
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8090626080940851,
+              "risk": 0.2663531423685336,
+              "threshold": 0.70625
+            },
+            "0.9": {
+              "coverage": 0.9062608094085092,
+              "risk": 0.2629770992366412,
+              "threshold": 0.6517857142857143
+            },
+            "0.95": {
+              "coverage": 0.974403320650294,
+              "risk": 0.2878949236776713,
+              "threshold": 0.5982905982905983
+            }
+          },
+          "aurc": 0.19563238066668798,
+          "defined": true,
+          "error_rate_full_coverage": 0.28951919750951227,
+          "oracle_aurc": 0.04671743876478605
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.82136,
+              "risk": 0.03798577968247784,
+              "threshold": 0.8316831683168316
+            },
+            "0.9": {
+              "coverage": 0.91826,
+              "risk": 0.06194324047655348,
+              "threshold": 0.70625
+            },
+            "0.95": {
+              "coverage": 0.96122,
+              "risk": 0.07608039782776055,
+              "threshold": 0.6517857142857143
+            }
+          },
+          "aurc": 0.01997740148911929,
+          "defined": true,
+          "error_rate_full_coverage": 0.09094,
+          "oracle_aurc": 0.004266874080040374
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 3252,
+              "coverage": 0.3207100591715976,
+              "risk": 0.0018450184501845018,
+              "risk_ci": [
+                0.0006084529337351225,
+                0.0034312544449616486
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 314,
+              "coverage": 0.10861293670010377,
+              "risk": 0.07006369426751592,
+              "risk_ci": [
+                0.04320578857002698,
+                0.09904153354632587
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 34039,
+              "coverage": 0.34039,
+              "risk": 0.002644025970210641,
+              "risk_ci": [
+                0.0021301243414296642,
+                0.0032095498139931167
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 1555,
+            "cal_coverage": 0.31087564974010395,
+            "cal_errors": 4,
+            "cal_risk": 0.002572347266881029,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": 0.9929577464788732
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 5260,
+              "coverage": 0.5187376725838264,
+              "risk": 0.006083650190114068,
+              "risk_ci": [
+                0.004158379067733658,
+                0.00817505121304181
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 556,
+              "coverage": 0.19232099619508822,
+              "risk": 0.10251798561151079,
+              "risk_ci": [
+                0.07663139087410666,
+                0.127210925377805
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 49316,
+              "coverage": 0.49316,
+              "risk": 0.0075026360613188415,
+              "risk_ci": [
+                0.00672708510484123,
+                0.00824793956722971
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 2514,
+            "cal_coverage": 0.5025989604158336,
+            "cal_errors": 25,
+            "cal_risk": 0.00994431185361973,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.9772727272727273
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 8808,
+              "coverage": 0.8686390532544379,
+              "risk": 0.02997275204359673,
+              "risk_ci": [
+                0.026461574776492806,
+                0.03361985752807652
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 1849,
+              "coverage": 0.6395710826703562,
+              "risk": 0.2038939967550027,
+              "risk_ci": [
+                0.18641638931325477,
+                0.22271184895450402
+              ],
+              "violation": true
+            },
+            "test_shift": {
+              "accepted": 83356,
+              "coverage": 0.83356,
+              "risk": 0.040524977206199915,
+              "risk_ci": [
+                0.03913479952228097,
+                0.04186781885536394
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 4292,
+            "cal_coverage": 0.8580567772890844,
+            "cal_errors": 144,
+            "cal_risk": 0.033550792171481825,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.82
+          }
+        }
+      }
+    },
+    "SPECIAL_CATEGORY": {
+      "sets": {
+        "dev": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.830473372781065,
+              "risk": 0.010687566797292483,
+              "threshold": 0.9675675675675676
+            },
+            "0.9": {
+              "coverage": 0.9025641025641026,
+              "risk": 0.014313811188811188,
+              "threshold": 0.9
+            },
+            "0.95": {
+              "coverage": 0.951577909270217,
+              "risk": 0.01875842056171624,
+              "threshold": 0.7619047619047619
+            }
+          },
+          "aurc": 0.007435215038518328,
+          "defined": true,
+          "error_rate_full_coverage": 0.03264299802761341,
+          "oracle_aurc": 0.000540285942976488
+        },
+        "test_ood": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.8007609823590454,
+              "risk": 0.005183585313174946,
+              "threshold": 0.9333333333333333
+            },
+            "0.9": {
+              "coverage": 0.9000345901072293,
+              "risk": 0.009992313604919293,
+              "threshold": 0.8505747126436781
+            },
+            "0.95": {
+              "coverage": 0.9609131788308544,
+              "risk": 0.011159107271418287,
+              "threshold": 0.7326732673267327
+            }
+          },
+          "aurc": 0.004068810402770638,
+          "defined": false,
+          "error_rate_full_coverage": 0.03943272224143895,
+          "oracle_aurc": 0.0007947145322536749
+        },
+        "test_shift": {
+          "at_coverage": {
+            "0.8": {
+              "coverage": 0.81868,
+              "risk": 0.010968876728392045,
+              "threshold": 0.9675675675675676
+            },
+            "0.9": {
+              "coverage": 0.90643,
+              "risk": 0.01710005185177013,
+              "threshold": 0.8970588235294118
+            },
+            "0.95": {
+              "coverage": 0.96279,
+              "risk": 0.026433594034005338,
+              "threshold": 0.7326732673267327
+            }
+          },
+          "aurc": 0.008384566709454764,
+          "defined": true,
+          "error_rate_full_coverage": 0.04098,
+          "oracle_aurc": 0.0008515960931173776
+        }
+      },
+      "thresholds": {
+        "0.01": {
+          "applied": {
+            "dev": {
+              "accepted": 0,
+              "coverage": 0.0,
+              "risk": null,
+              "risk_ci": null,
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 0,
+              "coverage": 0.0,
+              "risk": null,
+              "risk_ci": null,
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 0,
+              "coverage": 0.0,
+              "risk": null,
+              "risk_ci": null,
+              "violation": false
+            }
+          },
+          "choice": {
+            "candidates": 20,
+            "certified": false,
+            "delta": 0.05,
+            "target": 0.01,
+            "test_level": 0.0025,
+            "threshold": null
+          }
+        },
+        "0.02": {
+          "applied": {
+            "dev": {
+              "accepted": 8698,
+              "coverage": 0.8577909270216962,
+              "risk": 0.01138192687974247,
+              "risk_ci": [
+                0.009097871788873071,
+                0.013701982004568498
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2312,
+              "coverage": 0.7997232791421653,
+              "risk": 0.0038927335640138406,
+              "risk_ci": [
+                0.0017159098922797553,
+                0.00650216223721283
+              ],
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 84670,
+              "coverage": 0.8467,
+              "risk": 0.012531002716428487,
+              "risk_ci": [
+                0.011796324620857784,
+                0.013282033953224996
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 4325,
+            "cal_coverage": 0.8646541383446621,
+            "cal_errors": 55,
+            "cal_risk": 0.012716763005780347,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.02,
+            "test_level": 0.0025,
+            "threshold": 0.941747572815534
+          }
+        },
+        "0.05": {
+          "applied": {
+            "dev": {
+              "accepted": 10138,
+              "coverage": 0.9998027613412229,
+              "risk": 0.032452160189386466,
+              "risk_ci": [
+                0.029093177334556474,
+                0.036101973312875846
+              ],
+              "violation": false
+            },
+            "test_ood": {
+              "accepted": 2891,
+              "coverage": 1.0,
+              "risk": 0.03943272224143895,
+              "risk_ci": [
+                0.03216879972327914,
+                0.04635074368730543
+              ],
+              "violation": false
+            },
+            "test_shift": {
+              "accepted": 99987,
+              "coverage": 0.99987,
+              "risk": 0.04090531769129987,
+              "risk_ci": [
+                0.039716275177674315,
+                0.042195510695089776
+              ],
+              "violation": false
+            }
+          },
+          "choice": {
+            "cal_accepted": 5002,
+            "cal_coverage": 1.0,
+            "cal_errors": 195,
+            "cal_risk": 0.038984406237505,
+            "candidates": 20,
+            "certified": true,
+            "delta": 0.05,
+            "target": 0.05,
+            "test_level": 0.0025,
+            "threshold": 0.6153846153846154
+          }
+        }
+      }
+    }
+  },
+  "delta": 0.05,
+  "document_level": {
+    "0.01": {
+      "dev": {
+        "accepted": 0,
+        "coverage": 0.0,
+        "doc_error_rate": null
+      },
+      "test_ood": {
+        "accepted": 0,
+        "coverage": 0.0,
+        "doc_error_rate": null
+      },
+      "test_shift": {
+        "accepted": 0,
+        "coverage": 0.0,
+        "doc_error_rate": null
+      }
+    },
+    "0.02": {
+      "dev": {
+        "accepted": 3788,
+        "coverage": 0.3735700197238659,
+        "doc_error_rate": 0.038542766631467794
+      },
+      "test_ood": {
+        "accepted": 317,
+        "coverage": 0.10965063991698375,
+        "doc_error_rate": 0.3943217665615142
+      },
+      "test_shift": {
+        "accepted": 35287,
+        "coverage": 0.35287,
+        "doc_error_rate": 0.051662085187179414
+      }
+    },
+    "0.05": {
+      "dev": {
+        "accepted": 8464,
+        "coverage": 0.8347140039447731,
+        "doc_error_rate": 0.12074669187145558
+      },
+      "test_ood": {
+        "accepted": 1660,
+        "coverage": 0.5741957800069181,
+        "doc_error_rate": 0.5421686746987951
+      },
+      "test_shift": {
+        "accepted": 80626,
+        "coverage": 0.80626,
+        "doc_error_rate": 0.14424627291444447
+      }
+    }
+  },
+  "documents": {
+    "cal_test": 5002,
+    "dev": 10140,
+    "test_ood": 2891,
+    "test_shift": 100000
+  },
+  "model": "word_svc",
+  "set_sha256": {
+    "calibration": "4091e2215c2fa42e541b817c84f515373545a6a527cb6f8b643455a46aaa8372",
+    "dev": "44df60ff56e146a8e81e871849e7f2ac99b9423cae67bb58a8c860229c852adc",
+    "test_ood": "77926c8bf1632cbb574895be942d0ab1d34fbb391eb5a0c9578365716173948b",
+    "test_shift": "ec35a04af00c86d78475e808e5a43107bf332ac7e811a45a8fb977b71df929bb"
+  },
+  "targets": [
+    0.01,
+    0.02,
+    0.05
+  ]
+}
