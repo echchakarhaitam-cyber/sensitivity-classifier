@@ -91,13 +91,14 @@
     <section class="card">
       <h2>Per category</h2>
       <table>
-        <thead><tr><th>category</th><th>probability</th><th>answer</th><th>conformal set</th></tr></thead>
-        <tbody id="rows"><tr><td colspan="4" class="pnum">Results appear here.</td></tr></tbody>
+        <thead><tr><th>category</th><th>probability</th><th>answer</th><th>conformal set</th><th>words pushing towards yes</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="5" class="pnum">Results appear here.</td></tr></tbody>
       </table>
       <div class="note"><b>answer</b>: "not sure" means the confidence is below the certified
         threshold for the chosen error rate; "never answers" means no threshold could be certified
         for that category. <b>conformal set</b>: the labels that cannot be ruled out at level α;
-        {no, yes} means "could be either", an empty set means neither label fits the calibration data well.</div>
+        {no, yes} means "could be either", an empty set means neither label fits the calibration data well. <b>words</b>: the words or word
+        pairs of your text with the largest push towards "yes" (shown when the probability is at least 20 %).</div>
     </section>
   </div>
 
@@ -108,7 +109,7 @@
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.29.4/full/pyodide.js"></script>
 <script>
-const COMMIT = "459b132f8ee5c5fbb7621ad132913b21464979b4";
+const COMMIT = "1088dac41a23f108d542a4dc5d08a370e546dbf9";
 const BASE = `https://cdn.jsdelivr.net/gh/echchakarhaitam-cyber/sensitivity-classifier@${COMMIT}/`;
 const EXAMPLES = [
   "Hi team, the quarterly offsite is moved to Thursday. Please bring your laptops and the slides for the roadmap review.",
@@ -177,7 +178,8 @@ function go() {
     return `<tr><td>${LABELS[r.category]}</td>
       <td><div class="bar"><span style="width:${(100 * r.p).toFixed(1)}%"></span></div>
           <span class="pnum">${(100 * r.p).toFixed(1)} %</span></td>
-      <td>${badge}</td><td class="pnum">${esc(set)}</td></tr>`;
+      <td>${badge}</td><td class="pnum">${esc(set)}</td>
+      <td class="pnum">${r.p >= 0.2 && r.evidence.length ? r.evidence.map((w) => `<code>${esc(w)}</code>`).join(" ") : "–"}</td></tr>`;
   }).join("");
   status(`Classified in ${Math.round(performance.now() - t0)} ms, in your browser.`);
 }
