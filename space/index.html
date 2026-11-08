@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sensitive Text Classifier</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --ink: #1d232b; --muted: #5d6673; --line: #dde1e6;
+    --accent: #1f5fa8; --accent-ink: #ffffff; --yes: #b3261e; --no: #2e7d4f; --unsure: #9a6700;
+    --yes-bg: #fbe3e1; --no-bg: #e1f2e8; --unsure-bg: #fbefd2; --track: #eceff2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161b; --panel: #1a2027; --ink: #e8ecf1; --muted: #9aa5b1; --line: #2c343e;
+      --accent: #6fa8ff; --accent-ink: #0c1117; --yes: #ff8a80; --no: #6cc596; --unsure: #f2c14e;
+      --yes-bg: #4a2422; --no-bg: #1f3b2b; --unsure-bg: #44381a; --track: #262d36;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 16px 40px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  p.lead { margin: 0 0 4px; color: var(--muted); max-width: 860px; }
+  a { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 16px; margin-top: 20px; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+          padding: 16px; min-width: 0; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted);
+             margin: 0 0 10px; font-weight: 600; }
+  textarea { width: 100%; min-height: 150px; resize: vertical; padding: 10px; font: inherit;
+             color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+  .row label.title { color: var(--muted); font-size: 13px; min-width: 150px; }
+  select { font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line);
+           background: var(--bg); color: var(--ink); }
+  button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line);
+           background: var(--bg); color: var(--ink); padding: 6px 12px; }
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
+                   padding: 9px 18px; font-weight: 600; }
+  button:disabled { opacity: .5; cursor: wait; }
+  .examples button { font-size: 13px; text-align: left; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .bar { position: relative; height: 8px; background: var(--track); border-radius: 4px; min-width: 70px; }
+  .bar span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); border-radius: 4px; }
+  .pnum { font-variant-numeric: tabular-nums; font-size: 12px; color: var(--muted); }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12.5px; font-weight: 600; }
+  .b-yes { background: var(--yes-bg); color: var(--yes); }
+  .b-no { background: var(--no-bg); color: var(--no); }
+  .b-unsure { background: var(--unsure-bg); color: var(--unsure); }
+  #status { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  #status.err { color: var(--yes); }
+  .note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+  footer { margin-top: 24px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>A sensitive-text classifier that can say "I don't know"</h1>
+  <p class="lead">Paste a document. For six kinds of personal data (identity, contact, financial,
+    health, credentials, and GDPR Article 9 special categories) the model gives a calibrated
+    probability, then answers <b>yes</b>, <b>no</b> or <b>not sure</b>: it only answers when its
+    confidence reaches a threshold certified on held-out data to keep the error rate under the risk
+    you choose. Runs in your browser; your text is not sent anywhere.</p>
+  <p class="lead">Trained on <b>synthetic</b> English documents: the study shows these guarantees
+    hold on similar text but break on text from another domain. Code and results:
+    <a href="https://github.com/echchakarhaitam-cyber/sensitivity-classifier" target="_blank"
+    rel="noopener">github.com/echchakarhaitam-cyber/sensitivity-classifier</a>.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Document</h2>
+      <textarea id="text" maxlength="20000" placeholder="Type or paste a text, or pick an example below"></textarea>
+      <div class="row"><label class="title" for="risk">Target error rate</label>
+        <select id="risk"><option value="0.01">1 %</option><option value="0.02">2 %</option>
+          <option value="0.05" selected>5 %</option></select></div>
+      <div class="row"><label class="title" for="alpha">Conformal miss rate α</label>
+        <select id="alpha"><option value="0.01">1 %</option><option value="0.05">5 %</option>
+          <option value="0.1" selected>10 %</option></select>
+        <select id="variant"><option value="mondrian" selected>per class (Mondrian)</option>
+          <option value="marginal">marginal</option></select></div>
+      <div class="row"><button class="primary" id="go" disabled>Classify</button></div>
+      <div id="status">Loading Python, NumPy and the model (about 15 MB, the first time)...</div>
+      <div class="row examples" id="examples"></div>
+    </section>
+
+    <section class="card">
+      <h2>Per category</h2>
+      <table>
+        <thead><tr><th>category</th><th>probability</th><th>answer</th><th>conformal set</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="4" class="pnum">Results appear here.</td></tr></tbody>
+      </table>
+      <div class="note"><b>answer</b>: "not sure" means the confidence is below the certified
+        threshold for the chosen error rate; "never answers" means no threshold could be certified
+        for that category. <b>conformal set</b>: the labels that cannot be ruled out at level α;
+        {no, yes} means "could be either", an empty set means neither label fits the calibration data well.</div>
+    </section>
+  </div>
+
+  <footer>Model: word 1-2-gram TF-IDF + linear SVM per category, isotonic calibration (the model
+    selected in the study), recomputed here with NumPy. Training data: Nemotron-PII (NVIDIA, CC BY
+    4.0) and Gretel synthetic PII finance (Apache-2.0). MIT licence.</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.4/full/pyodide.js"></script>
+<script>
+const COMMIT = "459b132f8ee5c5fbb7621ad132913b21464979b4";
+const BASE = `https://cdn.jsdelivr.net/gh/echchakarhaitam-cyber/sensitivity-classifier@${COMMIT}/`;
+const EXAMPLES = [
+  "Hi team, the quarterly offsite is moved to Thursday. Please bring your laptops and the slides for the roadmap review.",
+  "Your new login is jdupont and the temporary password is Xk9#pL2q. Please change it after first sign-in.",
+  "Please transfer the invoice amount of 3,450 EUR to account FR76 3000 6000 0112 3456 7890 189 before the end of the month.",
+  "Patient: Maria Lopez, DOB 04/11/1987. Diagnosis: type 2 diabetes, prescribed metformin 500 mg. Next appointment with Dr. Chen on 12 March.",
+];
+const LABELS = {IDENTITY: "Identity", CONTACT: "Contact", FINANCIAL: "Financial", HEALTH: "Health",
+  CREDENTIALS: "Credentials", SPECIAL_CATEGORY: "Special category (Art. 9)"};
+const $ = (id) => document.getElementById(id);
+const status = (m, err) => { $("status").textContent = m; $("status").className = err ? "err" : ""; };
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+let py = null;
+
+async function boot() {
+  try {
+    py = await loadPyodide();
+    await py.loadPackage("numpy");
+    py.FS.mkdirTree("/app/sensclf");
+    const get = async (p, bin) => {
+      const r = await fetch(BASE + p);
+      if (!r.ok) throw new Error(`could not load ${p} (${r.status})`);
+      return bin ? new Uint8Array(await r.arrayBuffer()) : await r.text();
+    };
+    const [src, model, rules] = await Promise.all([get("src/sensclf/portable.py"),
+      get("demo/model.npz", true), get("demo/rules.json")]);
+    py.FS.writeFile("/app/sensclf/__init__.py", "");
+    py.FS.writeFile("/app/sensclf/portable.py", src);
+    py.FS.writeFile("/app/model.npz", model);
+    py.FS.writeFile("/app/rules.json", rules);
+    await py.runPythonAsync(`
+import sys, json
+sys.path.insert(0, "/app")
+from sensclf.portable import PortableModel, explain
+MODEL = PortableModel.load("/app/model.npz")
+RULES = json.load(open("/app/rules.json"))
+def run(text, risk, alpha, variant):
+    try:
+        return json.dumps({"ok": True, **explain(MODEL, RULES, text, risk, alpha, variant)})
+    except Exception as exc:
+        return json.dumps({"ok": False, "error": str(exc)})
+`);
+    EXAMPLES.forEach((ex) => {
+      const b = document.createElement("button");
+      b.textContent = ex.length > 60 ? ex.slice(0, 57) + "..." : ex; b.title = ex;
+      b.onclick = () => { $("text").value = ex; go(); };
+      $("examples").appendChild(b);
+    });
+    $("go").disabled = false;
+    status("Ready.");
+  } catch (e) { status("Could not start the demo: " + e.message, true); }
+}
+
+function go() {
+  if (!py) return;
+  const t0 = performance.now();
+  const res = JSON.parse(py.globals.get("run")($("text").value, $("risk").value, $("alpha").value, $("variant").value));
+  if (!res.ok) { status(res.error, true); return; }
+  $("rows").innerHTML = res.rows.map((r) => {
+    let badge;
+    if (r.decision === "yes") badge = `<span class="badge b-yes">yes</span>`;
+    else if (r.decision === "no") badge = `<span class="badge b-no">no</span>`;
+    else if (r.decision === "not sure") badge = `<span class="badge b-unsure" title="confidence ${r.confidence.toFixed(3)} < threshold ${r.threshold.toFixed(3)}">not sure</span>`;
+    else badge = `<span class="badge b-unsure">never answers</span>`;
+    const set = "{" + r.set.join(", ") + "}";
+    return `<tr><td>${LABELS[r.category]}</td>
+      <td><div class="bar"><span style="width:${(100 * r.p).toFixed(1)}%"></span></div>
+          <span class="pnum">${(100 * r.p).toFixed(1)} %</span></td>
+      <td>${badge}</td><td class="pnum">${esc(set)}</td></tr>`;
+  }).join("");
+  status(`Classified in ${Math.round(performance.now() - t0)} ms, in your browser.`);
+}
+
+$("go").onclick = go;
+["risk", "alpha", "variant"].forEach((id) => $(id).addEventListener("change", () => { if ($("text").value.trim()) go(); }));
+boot();
+</script>
+</body>
+</html>
