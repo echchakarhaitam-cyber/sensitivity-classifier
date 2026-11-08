@@ -1,5 +1,8 @@
 # sensclf -- sensitive-document classification with calibrated probabilities, abstention and conformal guarantees
 
+**Try it in your browser:** [live demo on Hugging Face](https://huggingface.co/spaces/haitam1255/sensitivity-classifier-demo)
+(the selected model, its certified abstention thresholds and conformal sets, run in the page).
+
 An independent research project. Given a whole document, predict which of six categories of
 personal data it contains (IDENTITY, CONTACT, FINANCIAL, HEALTH, CREDENTIALS and the GDPR
 Article 9 SPECIAL_CATEGORY). Then ask whether the predicted probabilities can be trusted:
