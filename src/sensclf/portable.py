@@ -68,6 +68,19 @@ class PortableModel:
         norm = np.sqrt(np.sum(val * val))
         return idx, (val / norm if norm > 0 else val)
 
+    def top_terms(self, text: str, k: int, n: int = 3) -> list[str]:
+        """The n words or word pairs of ``text`` that push category k most towards "yes"."""
+        idx, val = self.features(text)
+        if len(idx) == 0:
+            return []
+        contrib = self.coef[k, idx].astype(np.float64) * val
+        if not hasattr(self, "_terms"):
+            self._terms = [""] * len(self.vocabulary)
+            for t, i in self.vocabulary.items():
+                self._terms[i] = t
+        order = np.argsort(-contrib, kind="stable")
+        return [self._terms[int(idx[j])] for j in order[:n] if contrib[j] > 0]
+
     def margins(self, text: str) -> np.ndarray:
         idx, val = self.features(text)
         return self.coef[:, idx].astype(np.float64) @ val.astype(np.float64) + self.intercept
@@ -116,7 +129,8 @@ def explain(model: PortableModel, rules: dict, text: str, risk: str = "0.01",
         labels = [y for y in (0, 1) if (1 - p[k] if y == 1 else p[k]) <= q[str(y)] + 1e-12]
         rows.append({"category": cat, "p": float(p[k]), "confidence": float(conf),
                      "threshold": t, "decision": decision,
-                     "set": ["yes" if y else "no" for y in labels]})
+                     "set": ["yes" if y else "no" for y in labels],
+                     "evidence": model.top_terms(text, k)})
     return {"rows": rows}
 
 

@@ -85,3 +85,15 @@ def test_margins_match_the_trained_model(model):
     S = np.column_stack([h.decision_function(X) for h in m.heads])
     P = np.array([model.margins(t) for t in TEXTS])
     assert np.abs(S - P).max() < 1e-5
+
+
+def test_evidence_terms_come_from_the_text_and_push_towards_yes(model, rules):
+    text = TEXTS[2]
+    out = explain(model, rules, text)
+    tokens = set(analyze(text))
+    for k, r in enumerate(out["rows"]):
+        assert len(r["evidence"]) <= 3
+        assert set(r["evidence"]) <= tokens
+        for term in r["evidence"]:
+            assert model.coef[k, model.vocabulary[term]] > 0
+    assert model.top_terms("zzqxv qqqzzx", 0) == []
